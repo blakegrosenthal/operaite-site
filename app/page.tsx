@@ -45,19 +45,19 @@ export default function HomePage() {
               Operations consulting
             </p>
             <h1 className="mt-4 text-3xl leading-tight tracking-tight text-foreground sm:text-5xl">
-              When the Right Systems Are in Place, Your Business Gets Easier to
-              Run
+              When the Right Systems Are in Place, Your Business Gets Easier to Run
             </h1>
             <p className="mt-5 text-base leading-8 text-muted sm:text-lg">
-              We help owner-led service businesses reduce mix-ups, missed steps,
-              and wasted time using practical automation.
+              We install practical automation for owner-led service businesses so
+              chasing leads, reminders, and invoices stop creating daily stress,
+              and nothing slips through the cracks.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
                 href={env.calendlyUrl}
                 className="rounded-md bg-accent px-5 py-3 text-sm font-semibold text-white transition hover:bg-accent-strong"
               >
-                Book a 30-Minute Operations Review
+                Start With a Free Systems Review
               </Link>
               <Link
                 href="#process"
