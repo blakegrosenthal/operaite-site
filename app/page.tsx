@@ -13,45 +13,55 @@ export const metadata: Metadata = {
 
 const faqItems = [
   {
-    question: 'How technical does my team need to be?',
+    question: 'Do we need new software?',
     answer:
-      'Not very. We build workflows so day-to-day actions are straightforward and documented.'
+      'Usually not. We start with what you already use and keep changes simple.'
   },
   {
-    question: 'Do you replace our current software?',
+    question: 'Will my team actually use this?',
     answer:
-      'Usually no. We start with what is already in place and improve handoffs, consistency, and automation.'
+      'Yes. We keep the process practical, train your team, and avoid unnecessary complexity.'
   },
   {
-    question: 'How quickly can we see results?',
+    question: 'How long does a typical project take?',
     answer:
-      'Most teams see early improvements within weeks, then stronger stability as the new workflow settles.'
+      'Most projects are implemented in a few weeks, with a clear scope and minimal disruption.'
   },
   {
-    question: 'Where does AI fit in?',
+    question: 'What kinds of businesses are a good fit?',
     answer:
-      'AI is used selectively for drafting, classification, and triage where it reduces manual work. It is not treated as the core strategy.'
+      'Owner-led service businesses that are busy, growing, and want smoother follow through.'
+  },
+  {
+    question: 'What if we already have tools in place?',
+    answer:
+      'That is common. We improve how your current tools work together so daily tasks are easier to run.'
+  },
+  {
+    question: 'Is this “AI” or automation?',
+    answer:
+      'Mostly practical automation. If AI is used, it is only in small, helpful ways that keep things simple.'
   }
 ]
 
 export default function HomePage() {
   return (
     <>
-      <section className="border-b border-line py-16 sm:py-24">
+      <section className="reveal-up border-b border-line bg-white py-16 sm:py-24">
         <div className="mx-auto flex w-full max-w-6xl flex-col gap-10 px-5 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <p className="text-xs font-semibold uppercase tracking-[0.16em] text-accent">
               Operations consulting
             </p>
-            <h1 className="mt-4 text-3xl leading-tight tracking-tight text-foreground sm:text-5xl">
+            <h1 className="reveal-up reveal-delay-1 mt-4 text-3xl leading-tight tracking-tight text-foreground sm:text-5xl">
               When the Right Systems Are in Place, Your Business Gets Easier to Run
             </h1>
-            <p className="mt-5 text-base leading-8 text-muted sm:text-lg">
+            <p className="reveal-up reveal-delay-2 mt-5 text-base leading-8 text-muted sm:text-lg">
               We install practical automation for owner-led service businesses so
               chasing leads, reminders, and invoices stop creating daily stress,
               and nothing slips through the cracks.
             </p>
-            <div className="mt-8 flex flex-wrap gap-3">
+            <div className="reveal-up reveal-delay-3 mt-8 flex flex-wrap gap-3">
               <Link
                 href={env.calendlyUrl}
                 className="rounded-md bg-accent px-5 py-3 text-sm font-semibold text-white transition hover:bg-accent-strong"
@@ -66,7 +76,7 @@ export default function HomePage() {
               </Link>
             </div>
           </div>
-          <div className="grid gap-4 sm:grid-cols-3">
+          <div className="reveal-up reveal-delay-4 grid gap-4 sm:grid-cols-3">
             <MetricCard label="Projects Built for SMB Teams" value="1-20" />
             <MetricCard label="Focus" value="Operational Reliability" />
             <MetricCard label="Approach" value="Structured and Practical" />
@@ -75,10 +85,28 @@ export default function HomePage() {
       </section>
 
       <Section
+        id="where-work-gets-stuck"
+        title="Where Work Gets Stuck"
+        description="Owner led businesses usually do not have growth problems first. They have follow through problems."
+        className="reveal-up"
+      >
+        <ul className="grid gap-4 text-sm sm:grid-cols-2">
+          <PainPoint text="Leads do not get a fast response" />
+          <PainPoint text="Follow ups depend on memory" />
+          <PainPoint text="Reminders are manual" />
+          <PainPoint text="Invoices go out late" />
+          <PainPoint text="Information gets re entered" />
+          <PainPoint text="Staff is unsure what the next step is" />
+          <PainPoint text="The owner ends up checking everything" />
+        </ul>
+      </Section>
+
+      <Section
         id="problems"
         eyebrow="Common friction"
         title="Operations should support growth, not slow it down."
         description="Most owner-led firms we work with are already busy and capable. The issue is usually inconsistent handoffs and too much manual coordination."
+        className="bg-neutral-50 reveal-up"
       >
         <ul className="grid gap-4 text-sm sm:grid-cols-2">
           <PainPoint text="Missed follow-ups after calls, estimates, or appointments." />
@@ -91,58 +119,54 @@ export default function HomePage() {
 
       <Section
         id="what-we-do"
-        eyebrow="What we do"
-        title="We install practical operational systems that hold up under pressure."
-        description="Our core service is automation-backed workflow design. We map handoffs, remove duplication, and create repeatable execution standards."
+        eyebrow="Benefits"
+        title="What you get when the right systems are in place."
+        description="Simple improvements that help your business run more consistently day to day."
+        className="reveal-up"
       >
-        <div className="grid gap-4 sm:grid-cols-2">
+        <div className="grid gap-4 sm:grid-cols-3">
           <ValueCard
-            title="Reduce repetitive office work"
-            text="Automate reminders, status updates, and routing so the team spends less time coordinating."
+            title="Fast follow through"
+            text="Leads, reminders, and next steps happen consistently without someone needing to remember."
           />
           <ValueCard
-            title="Protect revenue"
-            text="Introduce checks that reduce dropped jobs, missed invoices, and untracked follow-ups."
+            title="Less manual admin work"
+            text="We remove repetitive tasks that slow the business down and create errors."
           />
           <ValueCard
-            title="Improve reliability"
-            text="Use clear ownership and trigger-based steps to keep work moving without constant supervision."
-          />
-          <ValueCard
-            title="Speed up payments"
-            text="Tighten invoice timing and collection workflows to improve cash consistency."
+            title="More peace of mind"
+            text="You know what is happening without checking everything or relying on one person."
           />
         </div>
-        <p className="mt-6 rounded-md border border-line bg-white p-4 text-sm leading-7 text-muted">
-          AI may be used as a supporting tool for classification, drafting, or
-          triage where appropriate. The primary service is building stable
-          operational systems.
-        </p>
       </Section>
 
       <Section
         id="process"
         eyebrow="Process"
-        title="Discover. Build. Stabilize."
-        description="Every project follows a clear three-step framework so decisions are traceable and implementation stays disciplined."
+        title="How it works"
+        description="A straightforward process designed for owner-led businesses."
+        className="bg-neutral-50 reveal-up"
       >
         <div className="grid gap-4 md:grid-cols-3">
           <ProcessCard
             step="01"
-            title="Discover"
-            text="Review current workflows, identify weak handoffs, and define measurable outcomes."
+            title="Free Systems Review"
+            text="We learn how your business runs today and where things are getting stuck."
           />
           <ProcessCard
             step="02"
-            title="Build"
-            text="Implement automation and workflow guardrails in your existing tools where possible."
+            title="Simple Plan"
+            text="You get a short plan outlining what to fix first, what it will change, and what it costs."
           />
           <ProcessCard
             step="03"
-            title="Stabilize"
-            text="Document the system, train the team, and tune performance after launch."
+            title="Build and Stabilize"
+            text="We implement the system, test it, and make sure your team actually uses it."
           />
         </div>
+        <p className="mt-6 text-sm leading-7 text-muted">
+          No pressure. Clear scope. Simple implementation.
+        </p>
       </Section>
 
       <Section
@@ -150,6 +174,7 @@ export default function HomePage() {
         eyebrow="Who it is for"
         title="Designed for owner-led service businesses in a growth phase."
         description="Best fit for teams that are gaining demand but feel operationally stretched."
+        className="reveal-up"
       >
         <div className="grid gap-4 sm:grid-cols-3">
           <FitCard title="Business Type" text="Owner-led service businesses" />
@@ -162,15 +187,40 @@ export default function HomePage() {
       </Section>
 
       <Section
+        id="trust-and-approach"
+        eyebrow="Trust and approach"
+        title="Trust and Approach"
+        className="bg-neutral-50 reveal-up"
+      >
+        <ul className="grid gap-4 text-sm sm:grid-cols-3">
+          <li className="rounded-xl border border-line bg-white p-5 text-sm leading-7 text-foreground">
+            Clear scope before we build anything
+          </li>
+          <li className="rounded-xl border border-line bg-white p-5 text-sm leading-7 text-foreground">
+            Simple systems your staff will actually use
+          </li>
+          <li className="rounded-xl border border-line bg-white p-5 text-sm leading-7 text-foreground">
+            Reliable follow through, not hype
+          </li>
+        </ul>
+        <p className="mt-6 text-sm leading-7 text-muted">
+          If it does not reduce daily stress or protect revenue, we do not
+          recommend it.
+        </p>
+      </Section>
+
+      <Section
         id="pricing"
         eyebrow="Pricing"
-        title="Typical projects range from $2,500–$7,500 depending on complexity."
+        title="Typical Project Pricing"
+        description="Most installations focus on one to three revenue critical areas first, like lead response, reminders, or billing follow through."
+        className="reveal-up"
       >
-        <p className="max-w-3xl text-base leading-8 text-muted">
-          Scope depends on workflow depth, number of systems involved, and
-          current process clarity. After the initial review, we provide a
-          defined project outline with milestones and expected implementation
-          timeline.
+        <p className="max-w-3xl text-base font-semibold leading-8 text-foreground">
+          Typical projects range from $2,500 to $7,500 depending on complexity.
+        </p>
+        <p className="mt-2 max-w-3xl text-base leading-8 text-muted">
+          We start small, prove reliability, then expand if it makes sense.
         </p>
       </Section>
 
@@ -179,6 +229,7 @@ export default function HomePage() {
         eyebrow="Pilot implementation"
         title="Pilot Implementation"
         description="We recently implemented a simple lead response system for a small service business. New leads receive an immediate text with a booking link, so follow up happens fast without manual effort."
+        className="bg-neutral-50 reveal-up"
       >
         <ul className="grid gap-4 text-sm sm:grid-cols-3">
           <li className="rounded-xl border border-line bg-white p-5 text-sm leading-7 text-foreground">
@@ -198,20 +249,23 @@ export default function HomePage() {
         eyebrow="FAQ"
         title="Common questions before a first review."
         description="Straightforward answers to help you evaluate fit."
+        className="reveal-up"
       >
         <FAQ items={faqItems} />
       </Section>
 
-      <section className="pb-16 sm:pb-24">
+      <section className="reveal-up py-16 sm:py-24">
         <div className="mx-auto w-full max-w-6xl px-5 sm:px-6 lg:px-8">
-          <CTA
-            title="Book a 30-Minute Operations Review"
-            description="You will leave with a clear diagnosis of your biggest workflow risks and practical next steps. No pressure, no long sales process."
-            primaryLabel="Book a 30-Minute Operations Review"
-            primaryHref={env.calendlyUrl}
-            secondaryLabel="Contact Us Instead"
-            secondaryHref="/contact"
-          />
+          <div className="rounded-3xl bg-neutral-100 p-6 sm:p-8 lg:p-10">
+            <CTA
+              title="Book a 30-Minute Operations Review"
+              description="You will leave with a clear diagnosis of your biggest workflow risks and practical next steps. No pressure, no long sales process."
+              primaryLabel="Book a 30-Minute Operations Review"
+              primaryHref={env.calendlyUrl}
+              secondaryLabel="Contact Us Instead"
+              secondaryHref="/contact"
+            />
+          </div>
         </div>
       </section>
     </>
@@ -229,7 +283,7 @@ function MetricCard({ label, value }: { label: string; value: string }) {
 
 function PainPoint({ text }: { text: string }) {
   return (
-    <li className="rounded-xl border border-line bg-white p-5 text-sm leading-7 text-foreground">
+    <li className="rounded-xl border border-line bg-white p-5 text-sm leading-7 text-foreground transition-all duration-200 ease-out hover:-translate-y-1 hover:shadow-soft">
       {text}
     </li>
   )
@@ -237,7 +291,7 @@ function PainPoint({ text }: { text: string }) {
 
 function ValueCard({ title, text }: { title: string; text: string }) {
   return (
-    <article className="rounded-xl border border-line bg-white p-5">
+    <article className="rounded-xl border border-line bg-white p-5 transition-all duration-200 ease-out hover:-translate-y-1 hover:shadow-soft">
       <h3 className="text-base font-semibold text-foreground">{title}</h3>
       <p className="mt-2 text-sm leading-7 text-muted">{text}</p>
     </article>
@@ -254,7 +308,7 @@ function ProcessCard({
   text: string
 }) {
   return (
-    <article className="rounded-xl border border-line bg-white p-5">
+    <article className="rounded-xl border border-line bg-white p-5 transition-all duration-200 ease-out hover:-translate-y-1 hover:shadow-soft">
       <p className="text-xs font-semibold uppercase tracking-[0.16em] text-accent">
         {step}
       </p>
@@ -266,7 +320,7 @@ function ProcessCard({
 
 function FitCard({ title, text }: { title: string; text: string }) {
   return (
-    <article className="rounded-xl border border-line bg-white p-5">
+    <article className="rounded-xl border border-line bg-white p-5 transition-all duration-200 ease-out hover:-translate-y-1 hover:shadow-soft">
       <h3 className="text-sm font-semibold uppercase tracking-wide text-muted">
         {title}
       </h3>
