@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
-      <section className="border-b border-line py-16 sm:py-20">
+      <section className="border-b border-line bg-white py-16 sm:py-20">
         <div className="mx-auto w-full max-w-6xl px-5 sm:px-6 lg:px-8">
           <p className="text-xs font-semibold uppercase tracking-[0.16em] text-accent">
             About Operaite
@@ -29,61 +29,48 @@ export default function AboutPage() {
       </section>
 
       <Section
-        title="How we think about operations"
-        description="Well-run operations are built, tested, documented, and maintained with discipline."
+        title="What We Believe"
+        description="Principles that guide how we design and implement systems."
+        className="bg-neutral-50"
       >
         <div className="grid gap-4 md:grid-cols-3">
-          <Pillar
-            title="Clarity"
-            text="Responsibilities and handoffs are explicit, so progress is visible without guesswork."
+          <BeliefCard
+            title="Clarity over complexity"
+            text="Systems should be easy to understand so your team can run them consistently."
           />
-          <Pillar
-            title="Control"
-            text="Critical steps are systemized with automation and safeguards to reduce avoidable variance."
+          <BeliefCard
+            title="Reliability over hype"
+            text="We focus on dependable follow-through, not flashy ideas that are hard to maintain."
           />
-          <Pillar
-            title="Continuity"
-            text="Workflows are designed to keep running as the team grows, changes, and delegates."
+          <BeliefCard
+            title="Small first, then expand"
+            text="We start with practical improvements, make them stable, then grow from there."
           />
         </div>
       </Section>
 
       <Section
-        title="Our role"
-        description="We partner with owners and team leads to define standards, implement them in tools, and stabilize behavior over time."
+        title="What You Can Expect"
+        description="A practical engagement with clear steps and low disruption."
       >
-        <div className="rounded-2xl border border-line bg-white p-6 shadow-soft sm:p-8">
-          <ul className="space-y-4 text-sm leading-7 text-muted">
-            <li>
-              Map critical workflows where revenue, schedule quality, or
-              customer experience is at risk.
-            </li>
-            <li>
-              Build practical automation that removes repetitive coordination
-              and reduces dropped tasks.
-            </li>
-            <li>
-              Establish documentation and operating rules that can be followed
-              without owner intervention.
-            </li>
-            <li>
-              Measure adoption and refine weak points until the system performs
-              consistently.
-            </li>
-          </ul>
-        </div>
+        <ul className="grid gap-4 sm:grid-cols-2">
+          <ChecklistItem text="Clear scope before anything is built" />
+          <ChecklistItem text="Work inside your current tools where possible" />
+          <ChecklistItem text="Documentation your team can follow" />
+          <ChecklistItem text="Follow-up after launch to stabilize" />
+        </ul>
       </Section>
 
       <Section
-        title="What this means for your business"
-        description="A calmer operation with fewer surprises, cleaner execution, and a stronger base for growth."
+        title="Why This Exists"
+        className="bg-neutral-50"
       >
-        <div className="grid gap-4 sm:grid-cols-2">
-          <Outcome text="Less rework and fewer avoidable mistakes." />
-          <Outcome text="Better confidence in schedule and delivery quality." />
-          <Outcome text="Faster cash cycle with clearer follow-through." />
-          <Outcome text="More owner capacity for planning and leadership." />
-        </div>
+        <p className="max-w-3xl rounded-xl border border-line bg-white p-5 text-sm leading-7 text-muted">
+          We started building systems because we saw how much operational stress
+          falls on owners and teams. Our work focuses on practical automation
+          that reduces that load and helps the business run with more
+          consistency.
+        </p>
       </Section>
 
       <section className="pb-16 sm:pb-24">
@@ -102,7 +89,7 @@ export default function AboutPage() {
   )
 }
 
-function Pillar({ title, text }: { title: string; text: string }) {
+function BeliefCard({ title, text }: { title: string; text: string }) {
   return (
     <article className="rounded-xl border border-line bg-white p-5">
       <h3 className="text-lg font-semibold text-foreground">{title}</h3>
@@ -111,10 +98,10 @@ function Pillar({ title, text }: { title: string; text: string }) {
   )
 }
 
-function Outcome({ text }: { text: string }) {
+function ChecklistItem({ text }: { text: string }) {
   return (
-    <p className="rounded-xl border border-line bg-white p-5 text-sm font-medium leading-7 text-foreground">
+    <li className="rounded-xl border border-line bg-white p-5 text-sm font-medium leading-7 text-foreground">
       {text}
-    </p>
+    </li>
   )
 }
