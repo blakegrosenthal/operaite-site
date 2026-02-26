@@ -24,11 +24,15 @@ body {
 
 body {
   background:
-    radial-gradient(circle at 10% 10%, rgba(13, 148, 136, 0.12), transparent 35%),
+    radial-gradient(
+      circle at 10% 10%,
+      rgba(13, 148, 136, 0.12),
+      transparent 35%
+    ),
     radial-gradient(circle at 90% 0%, rgba(15, 23, 42, 0.08), transparent 25%),
     var(--background);
   color: var(--foreground);
-  font-family: "Trebuchet MS", "Gill Sans", "Noto Sans", sans-serif;
+  font-family: 'Trebuchet MS', 'Gill Sans', 'Noto Sans', sans-serif;
   line-height: 1.5;
 }
 
@@ -41,5 +45,5 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", serif;
+  font-family: 'Iowan Old Style', 'Palatino Linotype', 'Book Antiqua', serif;
 }

@@ -1,27 +1,27 @@
-"use client";
+'use client'
 
-import { useMemo, useState } from "react";
-import { estimateRoi } from "@/lib/roi-calculator";
+import { useMemo, useState } from 'react'
+import { estimateRoi } from '@/lib/roi-calculator'
 
-const currency = new Intl.NumberFormat("en-US", {
-  style: "currency",
-  currency: "USD",
+const currency = new Intl.NumberFormat('en-US', {
+  style: 'currency',
+  currency: 'USD',
   maximumFractionDigits: 0
-});
+})
 
-const decimal = new Intl.NumberFormat("en-US", {
+const decimal = new Intl.NumberFormat('en-US', {
   maximumFractionDigits: 1
-});
+})
 
 export function RoiCalculator() {
-  const [monthlyLeads, setMonthlyLeads] = useState(60);
-  const [closeRate, setCloseRate] = useState(45);
-  const [averageInvoice, setAverageInvoice] = useState(850);
-  const [noShowRate, setNoShowRate] = useState(12);
-  const [adminHoursPerWeek, setAdminHoursPerWeek] = useState(20);
-  const [adminHourlyRate, setAdminHourlyRate] = useState(35);
-  const [slowPaymentRate, setSlowPaymentRate] = useState(30);
-  const [conservative, setConservative] = useState(true);
+  const [monthlyLeads, setMonthlyLeads] = useState(60)
+  const [closeRate, setCloseRate] = useState(45)
+  const [averageInvoice, setAverageInvoice] = useState(850)
+  const [noShowRate, setNoShowRate] = useState(12)
+  const [adminHoursPerWeek, setAdminHoursPerWeek] = useState(20)
+  const [adminHourlyRate, setAdminHourlyRate] = useState(35)
+  const [slowPaymentRate, setSlowPaymentRate] = useState(30)
+  const [conservative, setConservative] = useState(true)
 
   const results = useMemo(
     () =>
@@ -45,7 +45,7 @@ export function RoiCalculator() {
       slowPaymentRate,
       conservative
     ]
-  );
+  )
 
   return (
     <div className="grid gap-8 lg:grid-cols-[1fr_1fr]">
@@ -144,19 +144,20 @@ export function RoiCalculator() {
           />
         </dl>
         <p className="mt-6 rounded-md border border-line bg-stone-50 p-4 text-xs leading-6 text-muted">
-          This calculator is directional and meant for planning. Final impact depends on
-          current process consistency, adoption by staff, and existing software.
+          This calculator is directional and meant for planning. Final impact
+          depends on current process consistency, adoption by staff, and
+          existing software.
         </p>
       </div>
     </div>
-  );
+  )
 }
 
 interface InputRowProps {
-  label: string;
-  value: number;
-  onChange: (value: number) => void;
-  helpText: string;
+  label: string
+  value: number
+  onChange: (value: number) => void
+  helpText: string
 }
 
 function InputRow({ label, value, onChange, helpText }: InputRowProps) {
@@ -172,12 +173,12 @@ function InputRow({ label, value, onChange, helpText }: InputRowProps) {
       />
       <span className="mt-1 block text-xs text-muted">{helpText}</span>
     </label>
-  );
+  )
 }
 
 interface ResultRowProps {
-  label: string;
-  value: string;
+  label: string
+  value: string
 }
 
 function ResultRow({ label, value }: ResultRowProps) {
@@ -186,6 +187,5 @@ function ResultRow({ label, value }: ResultRowProps) {
       <dt className="text-muted">{label}</dt>
       <dd className="font-semibold text-foreground">{value}</dd>
     </div>
-  );
+  )
 }
-

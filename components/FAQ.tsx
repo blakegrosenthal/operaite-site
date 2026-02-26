@@ -1,10 +1,10 @@
 interface FAQItem {
-  question: string;
-  answer: string;
+  question: string
+  answer: string
 }
 
 interface FAQProps {
-  items: FAQItem[];
+  items: FAQItem[]
 }
 
 export function FAQ({ items }: FAQProps) {
@@ -22,6 +22,5 @@ export function FAQ({ items }: FAQProps) {
         </details>
       ))}
     </div>
-  );
+  )
 }
-

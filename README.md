@@ -64,4 +64,3 @@ npm run start
   - [`app/sitemap.ts`](./app/sitemap.ts)
   - [`app/robots.ts`](./app/robots.ts)
 - ROI calculator logic is isolated in [`lib/roi-calculator.ts`](./lib/roi-calculator.ts).
-

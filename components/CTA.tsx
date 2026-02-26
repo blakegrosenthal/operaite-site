@@ -1,12 +1,12 @@
-import Link from "next/link";
+import Link from 'next/link'
 
 interface CTAProps {
-  title: string;
-  description: string;
-  primaryLabel: string;
-  primaryHref: string;
-  secondaryLabel?: string;
-  secondaryHref?: string;
+  title: string
+  description: string
+  primaryLabel: string
+  primaryHref: string
+  secondaryLabel?: string
+  secondaryHref?: string
 }
 
 export function CTA({
@@ -19,8 +19,12 @@ export function CTA({
 }: CTAProps) {
   return (
     <div className="rounded-2xl border border-line bg-surface p-6 shadow-soft sm:p-8">
-      <h3 className="text-xl font-semibold text-foreground sm:text-2xl">{title}</h3>
-      <p className="mt-3 max-w-2xl text-base leading-7 text-muted">{description}</p>
+      <h3 className="text-xl font-semibold text-foreground sm:text-2xl">
+        {title}
+      </h3>
+      <p className="mt-3 max-w-2xl text-base leading-7 text-muted">
+        {description}
+      </p>
       <div className="mt-6 flex flex-wrap gap-3">
         <Link
           href={primaryHref}
@@ -38,6 +42,5 @@ export function CTA({
         ) : null}
       </div>
     </div>
-  );
+  )
 }
-

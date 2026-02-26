@@ -1,39 +1,39 @@
-import Link from "next/link";
-import type { Metadata } from "next";
-import { CaseStudyCard } from "@/components/CaseStudyCard";
-import { CTA } from "@/components/CTA";
-import { FAQ } from "@/components/FAQ";
-import { Section } from "@/components/Section";
-import { env } from "@/lib/env";
+import Link from 'next/link'
+import type { Metadata } from 'next'
+import { CaseStudyCard } from '@/components/CaseStudyCard'
+import { CTA } from '@/components/CTA'
+import { FAQ } from '@/components/FAQ'
+import { Section } from '@/components/Section'
+import { env } from '@/lib/env'
 
 export const metadata: Metadata = {
-  title: "Operational Systems for Owner-Led Service Businesses",
+  title: 'Operational Systems for Owner-Led Service Businesses',
   description:
-    "Practical operational systems and automation for owner-led service businesses that want fewer mix-ups, faster payments, and clearer execution."
-};
+    'Practical operational systems and automation for owner-led service businesses that want fewer mix-ups, faster payments, and clearer execution.'
+}
 
 const faqItems = [
   {
-    question: "How technical does my team need to be?",
+    question: 'How technical does my team need to be?',
     answer:
-      "Not very. We build workflows so day-to-day actions are straightforward and documented."
+      'Not very. We build workflows so day-to-day actions are straightforward and documented.'
   },
   {
-    question: "Do you replace our current software?",
+    question: 'Do you replace our current software?',
     answer:
-      "Usually no. We start with what is already in place and improve handoffs, consistency, and automation."
+      'Usually no. We start with what is already in place and improve handoffs, consistency, and automation.'
   },
   {
-    question: "How quickly can we see results?",
+    question: 'How quickly can we see results?',
     answer:
-      "Most teams see early improvements within weeks, then stronger stability as the new workflow settles."
+      'Most teams see early improvements within weeks, then stronger stability as the new workflow settles.'
   },
   {
-    question: "Where does AI fit in?",
+    question: 'Where does AI fit in?',
     answer:
-      "AI is used selectively for drafting, classification, and triage where it reduces manual work. It is not treated as the core strategy."
+      'AI is used selectively for drafting, classification, and triage where it reduces manual work. It is not treated as the core strategy.'
   }
-];
+]
 
 export default function HomePage() {
   return (
@@ -45,11 +45,12 @@ export default function HomePage() {
               Operations consulting
             </p>
             <h1 className="mt-4 text-3xl leading-tight tracking-tight text-foreground sm:text-5xl">
-              When the Right Systems Are in Place, Your Business Gets Easier to Run
+              When the Right Systems Are in Place, Your Business Gets Easier to
+              Run
             </h1>
             <p className="mt-5 text-base leading-8 text-muted sm:text-lg">
-              We help owner-led service businesses reduce mix-ups, missed steps, and
-              wasted time using practical automation.
+              We help owner-led service businesses reduce mix-ups, missed steps,
+              and wasted time using practical automation.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
@@ -114,8 +115,9 @@ export default function HomePage() {
           />
         </div>
         <p className="mt-6 rounded-md border border-line bg-white p-4 text-sm leading-7 text-muted">
-          AI may be used as a supporting tool for classification, drafting, or triage
-          where appropriate. The primary service is building stable operational systems.
+          AI may be used as a supporting tool for classification, drafting, or
+          triage where appropriate. The primary service is building stable
+          operational systems.
         </p>
       </Section>
 
@@ -153,7 +155,10 @@ export default function HomePage() {
         <div className="grid gap-4 sm:grid-cols-3">
           <FitCard title="Business Type" text="Owner-led service businesses" />
           <FitCard title="Team Size" text="Usually 1-20 employees" />
-          <FitCard title="Current Stage" text="Growing, but carrying too much process overhead" />
+          <FitCard
+            title="Current Stage"
+            text="Growing, but carrying too much process overhead"
+          />
         </div>
       </Section>
 
@@ -163,9 +168,10 @@ export default function HomePage() {
         title="Typical projects range from $2,500–$7,500 depending on complexity."
       >
         <p className="max-w-3xl text-base leading-8 text-muted">
-          Scope depends on workflow depth, number of systems involved, and current process
-          clarity. After the initial review, we provide a defined project outline with
-          milestones and expected implementation timeline.
+          Scope depends on workflow depth, number of systems involved, and
+          current process clarity. After the initial review, we provide a
+          defined project outline with milestones and expected implementation
+          timeline.
         </p>
       </Section>
 
@@ -222,7 +228,7 @@ export default function HomePage() {
         </div>
       </section>
     </>
-  );
+  )
 }
 
 function MetricCard({ label, value }: { label: string; value: string }) {
@@ -231,7 +237,7 @@ function MetricCard({ label, value }: { label: string; value: string }) {
       <p className="text-xs uppercase tracking-wide text-muted">{label}</p>
       <p className="mt-2 text-lg font-semibold text-foreground">{value}</p>
     </div>
-  );
+  )
 }
 
 function PainPoint({ text }: { text: string }) {
@@ -239,7 +245,7 @@ function PainPoint({ text }: { text: string }) {
     <li className="rounded-xl border border-line bg-white p-5 text-sm leading-7 text-foreground">
       {text}
     </li>
-  );
+  )
 }
 
 function ValueCard({ title, text }: { title: string; text: string }) {
@@ -248,7 +254,7 @@ function ValueCard({ title, text }: { title: string; text: string }) {
       <h3 className="text-base font-semibold text-foreground">{title}</h3>
       <p className="mt-2 text-sm leading-7 text-muted">{text}</p>
     </article>
-  );
+  )
 }
 
 function ProcessCard({
@@ -256,24 +262,28 @@ function ProcessCard({
   title,
   text
 }: {
-  step: string;
-  title: string;
-  text: string;
+  step: string
+  title: string
+  text: string
 }) {
   return (
     <article className="rounded-xl border border-line bg-white p-5">
-      <p className="text-xs font-semibold uppercase tracking-[0.16em] text-accent">{step}</p>
+      <p className="text-xs font-semibold uppercase tracking-[0.16em] text-accent">
+        {step}
+      </p>
       <h3 className="mt-2 text-lg font-semibold text-foreground">{title}</h3>
       <p className="mt-2 text-sm leading-7 text-muted">{text}</p>
     </article>
-  );
+  )
 }
 
 function FitCard({ title, text }: { title: string; text: string }) {
   return (
     <article className="rounded-xl border border-line bg-white p-5">
-      <h3 className="text-sm font-semibold uppercase tracking-wide text-muted">{title}</h3>
+      <h3 className="text-sm font-semibold uppercase tracking-wide text-muted">
+        {title}
+      </h3>
       <p className="mt-2 text-base font-semibold text-foreground">{text}</p>
     </article>
-  );
+  )
 }

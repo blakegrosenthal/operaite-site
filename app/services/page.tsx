@@ -1,14 +1,14 @@
-import type { Metadata } from "next";
-import Link from "next/link";
-import { CTA } from "@/components/CTA";
-import { Section } from "@/components/Section";
-import { env } from "@/lib/env";
+import type { Metadata } from 'next'
+import Link from 'next/link'
+import { CTA } from '@/components/CTA'
+import { Section } from '@/components/Section'
+import { env } from '@/lib/env'
 
 export const metadata: Metadata = {
-  title: "Services",
+  title: 'Services',
   description:
-    "Workflow stabilization, revenue protection, and reliability systems for owner-led service businesses."
-};
+    'Workflow stabilization, revenue protection, and reliability systems for owner-led service businesses.'
+}
 
 export default function ServicesPage() {
   return (
@@ -22,8 +22,9 @@ export default function ServicesPage() {
             Systems designed to make daily operations predictable.
           </h1>
           <p className="mt-5 max-w-3xl text-base leading-8 text-muted">
-            We help small service teams stabilize core workflows so fewer tasks slip,
-            payments arrive faster, and leadership can step out of daily admin firefighting.
+            We help small service teams stabilize core workflows so fewer tasks
+            slip, payments arrive faster, and leadership can step out of daily
+            admin firefighting.
           </p>
         </div>
       </section>
@@ -83,8 +84,9 @@ export default function ServicesPage() {
           />
         </div>
         <p className="mt-6 rounded-md border border-line bg-white p-4 text-sm leading-7 text-muted">
-          AI is used selectively when it supports consistency, such as classifying notes or
-          drafting standard responses. It remains secondary to clear workflow design.
+          AI is used selectively when it supports consistency, such as
+          classifying notes or drafting standard responses. It remains secondary
+          to clear workflow design.
         </p>
       </Section>
 
@@ -99,8 +101,11 @@ export default function ServicesPage() {
             secondaryHref="/contact"
           />
           <p className="mt-4 text-xs text-muted">
-            Prefer email? Reach us directly at{" "}
-            <Link href={`mailto:${env.contactEmail}`} className="font-medium text-foreground">
+            Prefer email? Reach us directly at{' '}
+            <Link
+              href={`mailto:${env.contactEmail}`}
+              className="font-medium text-foreground"
+            >
               {env.contactEmail}
             </Link>
             .
@@ -108,7 +113,7 @@ export default function ServicesPage() {
         </div>
       </section>
     </>
-  );
+  )
 }
 
 function ServiceDetail({ title, text }: { title: string; text: string }) {
@@ -117,7 +122,7 @@ function ServiceDetail({ title, text }: { title: string; text: string }) {
       <h3 className="text-base font-semibold text-foreground">{title}</h3>
       <p className="mt-2 text-sm leading-7 text-muted">{text}</p>
     </article>
-  );
+  )
 }
 
 function ListItem({ text }: { text: string }) {
@@ -125,7 +130,7 @@ function ListItem({ text }: { text: string }) {
     <li className="rounded-xl border border-line bg-white p-5 text-sm leading-7 text-foreground">
       {text}
     </li>
-  );
+  )
 }
 
 function ReliabilityCard({ title, text }: { title: string; text: string }) {
@@ -134,6 +139,5 @@ function ReliabilityCard({ title, text }: { title: string; text: string }) {
       <h3 className="text-lg font-semibold text-foreground">{title}</h3>
       <p className="mt-2 text-sm leading-7 text-muted">{text}</p>
     </article>
-  );
+  )
 }
-

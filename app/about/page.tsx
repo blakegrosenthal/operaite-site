@@ -1,13 +1,13 @@
-import type { Metadata } from "next";
-import { CTA } from "@/components/CTA";
-import { Section } from "@/components/Section";
-import { env } from "@/lib/env";
+import type { Metadata } from 'next'
+import { CTA } from '@/components/CTA'
+import { Section } from '@/components/Section'
+import { env } from '@/lib/env'
 
 export const metadata: Metadata = {
-  title: "About",
+  title: 'About',
   description:
-    "Operaite Consulting is a systems-focused firm that helps owner-led service businesses build disciplined operational infrastructure."
-};
+    'Operaite Consulting is a systems-focused firm that helps owner-led service businesses build disciplined operational infrastructure.'
+}
 
 export default function AboutPage() {
   return (
@@ -21,8 +21,9 @@ export default function AboutPage() {
             A systems-focused operations firm for service businesses.
           </h1>
           <p className="mt-5 max-w-3xl text-base leading-8 text-muted">
-            Operaite Consulting works with owner-led teams that need stronger operational
-            structure. The objective is not temporary cleanup. It is long-term reliability.
+            Operaite Consulting works with owner-led teams that need stronger
+            operational structure. The objective is not temporary cleanup. It is
+            long-term reliability.
           </p>
         </div>
       </section>
@@ -54,19 +55,20 @@ export default function AboutPage() {
         <div className="rounded-2xl border border-line bg-white p-6 shadow-soft sm:p-8">
           <ul className="space-y-4 text-sm leading-7 text-muted">
             <li>
-              Map critical workflows where revenue, schedule quality, or customer experience
-              is at risk.
+              Map critical workflows where revenue, schedule quality, or
+              customer experience is at risk.
             </li>
             <li>
-              Build practical automation that removes repetitive coordination and reduces
-              dropped tasks.
+              Build practical automation that removes repetitive coordination
+              and reduces dropped tasks.
             </li>
             <li>
-              Establish documentation and operating rules that can be followed without
-              owner intervention.
+              Establish documentation and operating rules that can be followed
+              without owner intervention.
             </li>
             <li>
-              Measure adoption and refine weak points until the system performs consistently.
+              Measure adoption and refine weak points until the system performs
+              consistently.
             </li>
           </ul>
         </div>
@@ -97,7 +99,7 @@ export default function AboutPage() {
         </div>
       </section>
     </>
-  );
+  )
 }
 
 function Pillar({ title, text }: { title: string; text: string }) {
@@ -106,7 +108,7 @@ function Pillar({ title, text }: { title: string; text: string }) {
       <h3 className="text-lg font-semibold text-foreground">{title}</h3>
       <p className="mt-2 text-sm leading-7 text-muted">{text}</p>
     </article>
-  );
+  )
 }
 
 function Outcome({ text }: { text: string }) {
@@ -114,6 +116,5 @@ function Outcome({ text }: { text: string }) {
     <p className="rounded-xl border border-line bg-white p-5 text-sm font-medium leading-7 text-foreground">
       {text}
     </p>
-  );
+  )
 }
-

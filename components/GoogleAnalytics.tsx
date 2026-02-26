@@ -1,12 +1,12 @@
-import Script from "next/script";
+import Script from 'next/script'
 
 interface GoogleAnalyticsProps {
-  gaId?: string;
+  gaId?: string
 }
 
 export function GoogleAnalytics({ gaId }: GoogleAnalyticsProps) {
   if (!gaId) {
-    return null;
+    return null
   }
 
   return (
@@ -24,6 +24,5 @@ export function GoogleAnalytics({ gaId }: GoogleAnalyticsProps) {
         `}
       </Script>
     </>
-  );
+  )
 }
-

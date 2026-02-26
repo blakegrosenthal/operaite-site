@@ -1,9 +1,9 @@
 interface CaseStudyCardProps {
-  title: string;
-  industry: string;
-  before: string;
-  after: string;
-  testimonial: string;
+  title: string
+  industry: string
+  before: string
+  after: string
+  testimonial: string
 }
 
 export function CaseStudyCard({
@@ -33,6 +33,5 @@ export function CaseStudyCard({
         "{testimonial}"
       </blockquote>
     </article>
-  );
+  )
 }
-

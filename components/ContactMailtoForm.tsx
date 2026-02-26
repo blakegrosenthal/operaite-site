@@ -1,38 +1,38 @@
-"use client";
+'use client'
 
-import { FormEvent, useMemo, useState } from "react";
+import { FormEvent, useMemo, useState } from 'react'
 
 interface ContactMailtoFormProps {
-  contactEmail: string;
+  contactEmail: string
 }
 
 function encode(value: string): string {
-  return encodeURIComponent(value);
+  return encodeURIComponent(value)
 }
 
 export function ContactMailtoForm({ contactEmail }: ContactMailtoFormProps) {
-  const [name, setName] = useState("");
-  const [company, setCompany] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-  const [subject, setSubject] = useState("Operations Review Inquiry");
+  const [name, setName] = useState('')
+  const [company, setCompany] = useState('')
+  const [email, setEmail] = useState('')
+  const [message, setMessage] = useState('')
+  const [subject, setSubject] = useState('Operations Review Inquiry')
 
   const mailtoHref = useMemo(() => {
     const body = [
       `Name: ${name}`,
       `Company: ${company}`,
       `Email: ${email}`,
-      "",
-      "Notes:",
+      '',
+      'Notes:',
       message
-    ].join("\n");
+    ].join('\n')
 
-    return `mailto:${contactEmail}?subject=${encode(subject)}&body=${encode(body)}`;
-  }, [name, company, email, message, subject, contactEmail]);
+    return `mailto:${contactEmail}?subject=${encode(subject)}&body=${encode(body)}`
+  }, [name, company, email, message, subject, contactEmail])
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    window.location.href = mailtoHref;
+    event.preventDefault()
+    window.location.href = mailtoHref
   }
 
   return (
@@ -108,6 +108,5 @@ export function ContactMailtoForm({ contactEmail }: ContactMailtoFormProps) {
         This form opens your local email app and pre-fills details.
       </p>
     </form>
-  );
+  )
 }
-

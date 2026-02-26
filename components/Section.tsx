@@ -1,12 +1,12 @@
-import { ReactNode } from "react";
+import { ReactNode } from 'react'
 
 interface SectionProps {
-  id?: string;
-  title: string;
-  eyebrow?: string;
-  description?: string;
-  children: ReactNode;
-  className?: string;
+  id?: string
+  title: string
+  eyebrow?: string
+  description?: string
+  children: ReactNode
+  className?: string
 }
 
 export function Section({
@@ -18,7 +18,7 @@ export function Section({
   className
 }: SectionProps) {
   return (
-    <section id={id} className={`py-14 sm:py-20 ${className ?? ""}`}>
+    <section id={id} className={`py-14 sm:py-20 ${className ?? ''}`}>
       <div className="mx-auto w-full max-w-6xl px-5 sm:px-6 lg:px-8">
         <header className="max-w-3xl">
           {eyebrow ? (
@@ -36,6 +36,5 @@ export function Section({
         <div className="mt-8">{children}</div>
       </div>
     </section>
-  );
+  )
 }
-

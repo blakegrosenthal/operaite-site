@@ -1,14 +1,14 @@
-import type { Metadata } from "next";
-import Link from "next/link";
-import type { ReactNode } from "react";
-import { ContactMailtoForm } from "@/components/ContactMailtoForm";
-import { env } from "@/lib/env";
+import type { Metadata } from 'next'
+import Link from 'next/link'
+import type { ReactNode } from 'react'
+import { ContactMailtoForm } from '@/components/ContactMailtoForm'
+import { env } from '@/lib/env'
 
 export const metadata: Metadata = {
-  title: "Contact",
+  title: 'Contact',
   description:
-    "Contact Operaite Consulting to discuss operational systems, automation, and workflow stabilization."
-};
+    'Contact Operaite Consulting to discuss operational systems, automation, and workflow stabilization.'
+}
 
 export default function ContactPage() {
   return (
@@ -22,8 +22,8 @@ export default function ContactPage() {
             Start with a direct operations conversation.
           </h1>
           <p className="mt-5 max-w-3xl text-base leading-8 text-muted">
-            Share current workflow issues, where bottlenecks are showing up, and what
-            outcomes you need. We reply with practical next steps.
+            Share current workflow issues, where bottlenecks are showing up, and
+            what outcomes you need. We reply with practical next steps.
           </p>
         </div>
       </section>
@@ -62,7 +62,7 @@ export default function ContactPage() {
         </div>
       </section>
     </>
-  );
+  )
 }
 
 function InfoCard({
@@ -70,9 +70,9 @@ function InfoCard({
   text,
   children
 }: {
-  title: string;
-  text: string;
-  children?: ReactNode;
+  title: string
+  text: string
+  children?: ReactNode
 }) {
   return (
     <article className="rounded-2xl border border-line bg-white p-6 shadow-soft">
@@ -80,5 +80,5 @@ function InfoCard({
       <p className="mt-2 text-sm leading-7 text-muted">{text}</p>
       {children}
     </article>
-  );
+  )
 }
