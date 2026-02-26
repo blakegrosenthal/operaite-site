@@ -170,6 +170,51 @@ export default function HomePage() {
       </Section>
 
       <Section
+        id="example-system"
+        title="Example System We Build"
+        description="A simple example of how practical automation reduces daily stress without changing your whole business"
+        className="reveal-up"
+      >
+        <div className="flex flex-col gap-2 md:flex-row md:items-stretch md:gap-3">
+          <div className="rounded-xl border border-line bg-white p-5 text-sm font-medium leading-7 text-foreground md:flex-1">
+            New lead comes in
+          </div>
+          <div className="flex items-center justify-center text-lg text-muted md:px-1">
+            <span className="md:hidden">↓</span>
+            <span className="hidden md:inline">→</span>
+          </div>
+          <div className="rounded-xl border border-line bg-white p-5 text-sm font-medium leading-7 text-foreground md:flex-1">
+            Instant text reply goes out
+          </div>
+          <div className="flex items-center justify-center text-lg text-muted md:px-1">
+            <span className="md:hidden">↓</span>
+            <span className="hidden md:inline">→</span>
+          </div>
+          <div className="rounded-xl border border-line bg-white p-5 text-sm font-medium leading-7 text-foreground md:flex-1">
+            Booking link sent and appointment scheduled
+          </div>
+          <div className="flex items-center justify-center text-lg text-muted md:px-1">
+            <span className="md:hidden">↓</span>
+            <span className="hidden md:inline">→</span>
+          </div>
+          <div className="rounded-xl border border-line bg-white p-5 text-sm font-medium leading-7 text-foreground md:flex-1">
+            Confirmation and reminders run automatically
+          </div>
+        </div>
+
+        <div className="mt-8 rounded-xl border border-line bg-white p-5">
+          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-accent">
+            What changes
+          </p>
+          <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-foreground">
+            <li>Faster response times</li>
+            <li>Less manual follow up</li>
+            <li>A more professional customer experience</li>
+          </ul>
+        </div>
+      </Section>
+
+      <Section
         id="who-its-for"
         eyebrow="Who it is for"
         title="Designed for owner-led service businesses in a growth phase."
