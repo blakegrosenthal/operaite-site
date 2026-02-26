@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
-import { CaseStudyCard } from '@/components/CaseStudyCard'
 import { CTA } from '@/components/CTA'
 import { FAQ } from '@/components/FAQ'
 import { Section } from '@/components/Section'
@@ -176,34 +175,22 @@ export default function HomePage() {
       </Section>
 
       <Section
-        id="case-studies"
-        eyebrow="Case studies"
-        title="Examples designed for easy replacement with live client stories."
-        description="These cards are placeholders so real results can be dropped in without redesign."
+        id="pilot-implementation"
+        eyebrow="Pilot implementation"
+        title="Pilot Implementation"
+        description="We recently implemented a simple lead response system for a small service business. New leads receive an immediate text with a booking link, so follow up happens fast without manual effort."
       >
-        <div className="grid gap-4 md:grid-cols-3">
-          <CaseStudyCard
-            title="Dispatch and Follow-up System"
-            industry="Home Services"
-            before="17% of quoted jobs had no follow-up within 48 hours."
-            after="Follow-up completion increased to 96% with automated reminders."
-            testimonial="The process is now clear enough that we can scale without constant owner oversight."
-          />
-          <CaseStudyCard
-            title="Invoice and Collection Workflow"
-            industry="Field Services"
-            before="Invoices were often delayed several days after completion."
-            after="Average invoice send time dropped to same-day on 88% of jobs."
-            testimonial="Cash is arriving earlier and our office team has fewer exceptions to handle."
-          />
-          <CaseStudyCard
-            title="Scheduling Reliability Framework"
-            industry="Professional Services"
-            before="No-show rates were affecting weekly revenue targets."
-            after="No-shows reduced by 34% with confirmation and escalation steps."
-            testimonial="The schedule is now much more predictable, which helped team morale."
-          />
-        </div>
+        <ul className="grid gap-4 text-sm sm:grid-cols-3">
+          <li className="rounded-xl border border-line bg-white p-5 text-sm leading-7 text-foreground">
+            Faster response to new inquiries
+          </li>
+          <li className="rounded-xl border border-line bg-white p-5 text-sm leading-7 text-foreground">
+            Less manual chasing
+          </li>
+          <li className="rounded-xl border border-line bg-white p-5 text-sm leading-7 text-foreground">
+            A smoother, more professional booking experience
+          </li>
+        </ul>
       </Section>
 
       <Section
