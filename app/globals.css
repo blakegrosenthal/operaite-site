@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #f7f7f3;
+  --foreground: #0f172a;
+  --muted: #475569;
+  --line: #d7d9de;
+  --surface: #ffffff;
+  --accent: #0f766e;
+  --accent-strong: #115e59;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background:
+    radial-gradient(circle at 10% 10%, rgba(13, 148, 136, 0.12), transparent 35%),
+    radial-gradient(circle at 90% 0%, rgba(15, 23, 42, 0.08), transparent 25%),
+    var(--background);
+  color: var(--foreground);
+  font-family: "Trebuchet MS", "Gill Sans", "Noto Sans", sans-serif;
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", serif;
+}
