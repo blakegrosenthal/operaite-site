@@ -238,6 +238,40 @@ export default function HomePage() {
       </Section>
 
       <Section
+        id="what-you-receive"
+        title="What You Receive"
+        description="Clear deliverables you can use immediately after implementation."
+        className="reveal-up"
+      >
+        <div className="grid gap-4 md:grid-cols-2">
+          <DeliverableCard
+            iconLabel="FP"
+            title="Fix Plan (1-2 pages)"
+            text="A focused summary of the top leaks and the simplest first fixes."
+            format="PDF"
+          />
+          <DeliverableCard
+            iconLabel="WM"
+            title="Workflow Map (current vs future)"
+            text="A side-by-side map showing how work runs now and how it will run after rollout."
+            format="PDF"
+          />
+          <DeliverableCard
+            iconLabel="SOP"
+            title="SOPs (1-page checklists)"
+            text="Short checklists your team can follow without guessing the next step."
+            format="Checklist"
+          />
+          <DeliverableCard
+            iconLabel="MON"
+            title="Monitoring (simple alerts when things slip)"
+            text="Basic visibility so stalled tasks are noticed early and handled quickly."
+            format="Recorded walkthrough"
+          />
+        </div>
+      </Section>
+
+      <Section
         id="example-system"
         title="Example System We Build"
         description="A simple example of how practical automation reduces daily stress without changing your whole business"
@@ -564,6 +598,31 @@ function PracticalStepCard({
           <dd className="text-muted">{time}</dd>
         </div>
       </dl>
+    </article>
+  )
+}
+
+function DeliverableCard({
+  iconLabel,
+  title,
+  text,
+  format
+}: {
+  iconLabel: string
+  title: string
+  text: string
+  format: string
+}) {
+  return (
+    <article className="rounded-xl border border-line bg-white p-5 shadow-soft transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md">
+      <span className="inline-flex h-8 min-w-8 items-center justify-center rounded-md border border-line bg-neutral-50 px-2 text-[11px] font-semibold uppercase tracking-wide text-muted">
+        {iconLabel}
+      </span>
+      <h3 className="mt-3 text-base font-semibold text-foreground">{title}</h3>
+      <p className="mt-2 text-sm leading-7 text-muted">{text}</p>
+      <p className="mt-3 text-xs font-semibold uppercase tracking-[0.14em] text-accent">
+        Format: {format}
+      </p>
     </article>
   )
 }
