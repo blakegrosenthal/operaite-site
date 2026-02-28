@@ -153,24 +153,27 @@ export default function HomePage() {
         className="reveal-up border-t border-line bg-neutral-50 py-28 sm:py-36"
         titleClassName="text-3xl font-bold sm:text-[2.4rem]"
       >
-        <div className="max-w-3xl space-y-5 text-sm leading-7 text-muted">
-          <p>
-            I studied business management at San Diego State University, focusing
-            on how small service businesses struggle with daily operations.
+        <div className="max-w-3xl space-y-6 text-sm leading-7 text-muted sm:text-base sm:leading-8">
+          <p>Service businesses do not need more software.</p>
+          <p className="text-lg font-semibold leading-8 text-foreground sm:text-xl">
+            They need reliability.
           </p>
           <p>
-            During a difficult period in my family&apos;s chiropractic practice, I
-            built systems that reduced administrative strain and stabilized
-            revenue under pressure.
+            Most revenue leakage happens quietly inside daily workflows. Slow
+            lead response. Missed follow-ups. No-shows. Delayed invoicing. Tasks
+            that depend on memory instead of systems.
           </p>
           <p>
-            I&apos;ve conducted structured interviews with service business owners
-            to understand where workflows break and why automation efforts fail.
+            I&apos;ve seen these patterns across owner-led service businesses under
+            real pressure. The issue is rarely effort. It is structure.
           </p>
-          <p className="font-medium text-foreground">
-            Operaite applies practical systems designed to reduce stress and
-            protect revenue.
+          <p>Operaite exists to install that structure.</p>
+          <p>
+            We stabilize the workflows that protect revenue and reduce
+            operational fragility. Calm systems. Clear ownership. Built-in
+            verification.
           </p>
+          <p>Because predictable execution is what actually protects growth.</p>
         </div>
       </Section>
 
