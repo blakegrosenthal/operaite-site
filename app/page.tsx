@@ -64,57 +64,33 @@ export default function HomePage() {
         className="reveal-up border-t border-line py-24 sm:py-32"
         titleClassName="text-3xl sm:text-[2.3rem]"
       >
-        <ul className="max-w-3xl space-y-6">
-          <li>
-            <h3 className="text-base font-semibold text-foreground">
-              Leads go unanswered
-            </h3>
-            <p className="mt-2 text-sm leading-7 text-muted">
-              Industry research consistently shows that responding within minutes
-              — not hours — dramatically increases booking likelihood. Yet many
-              businesses take hours to reply or never reach leads at all.
-            </p>
-          </li>
-          <li>
-            <h3 className="text-base font-semibold text-foreground">
-              Next steps aren’t systemized
-            </h3>
-            <p className="mt-2 text-sm leading-7 text-muted">
-              After the first conversation, there&apos;s no automatic
-              follow-through. Without defined triggers and reminders, potential
-              jobs depend on memory instead of process.
-            </p>
-          </li>
-          <li>
-            <h3 className="text-base font-semibold text-foreground">
-              Appointments get missed or rescheduled late
-            </h3>
-            <p className="mt-2 text-sm leading-7 text-muted">
-              When confirmations and reminders aren&apos;t built into the
-              workflow, no-shows and last-minute changes reduce billable time
-              and create unnecessary friction.
-            </p>
-          </li>
-          <li>
-            <h3 className="text-base font-semibold text-foreground">
-              Invoices go out late or sit unpaid
-            </h3>
-            <p className="mt-2 text-sm leading-7 text-muted">
-              More than half of small businesses report being owed money from
-              unpaid invoices, many overdue by more than 30 days, slowing cash
-              flow and limiting growth.
-            </p>
-          </li>
-          <li>
-            <h3 className="text-base font-semibold text-foreground">
-              The owner becomes the safety net
-            </h3>
-            <p className="mt-2 text-sm leading-7 text-muted">
-              Without clear visibility into what&apos;s pending, completed, or
-              overdue, daily operations depend on the owner catching breakdowns
-              before they escalate.
-            </p>
-          </li>
+        <ul className="grid gap-5 md:grid-cols-2">
+          <ProblemBlock
+            title="Leads go unanswered"
+            text="Industry research consistently shows that responding within minutes — not hours — dramatically increases booking likelihood. Yet many businesses take hours to reply or never reach leads at all."
+            icon={<IconMessage />}
+          />
+          <ProblemBlock
+            title="Next steps aren’t systemized"
+            text="After the first conversation, there's no automatic follow-through. Without defined triggers and reminders, potential jobs depend on memory instead of process."
+            icon={<IconChecklist />}
+          />
+          <ProblemBlock
+            title="Appointments get missed or rescheduled late"
+            text="When confirmations and reminders aren't built into the workflow, no-shows and last-minute changes reduce billable time and create unnecessary friction."
+            icon={<IconCalendarAlert />}
+          />
+          <ProblemBlock
+            title="Invoices go out late or sit unpaid"
+            text="More than half of small businesses report being owed money from unpaid invoices, many overdue by more than 30 days, slowing cash flow and limiting growth."
+            icon={<IconInvoice />}
+          />
+          <ProblemBlock
+            title="The owner becomes the safety net"
+            text="Without clear visibility into what's pending, completed, or overdue, daily operations depend on the owner catching breakdowns before they escalate."
+            icon={<IconOwnerRisk />}
+            className="md:col-span-2"
+          />
         </ul>
       </Section>
 
@@ -261,6 +237,122 @@ function BeforeAfterPanel() {
         </div>
       </div>
     </div>
+  )
+}
+
+function ProblemBlock({
+  title,
+  text,
+  icon,
+  className
+}: {
+  title: string
+  text: string
+  icon: React.ReactNode
+  className?: string
+}) {
+  return (
+    <li
+      className={`rounded-xl border border-line bg-white p-5 shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-soft ${className ?? ''}`}
+    >
+      <div className="mb-3 inline-flex h-9 w-9 items-center justify-center rounded-md border border-line bg-stone-50 text-muted">
+        {icon}
+      </div>
+      <h3 className="text-base font-semibold text-foreground">{title}</h3>
+      <p className="mt-2 text-sm leading-7 text-muted">{text}</p>
+    </li>
+  )
+}
+
+function IconMessage() {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      className="h-4 w-4"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z" />
+      <path d="M8 10h8M8 14h5" />
+    </svg>
+  )
+}
+
+function IconChecklist() {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      className="h-4 w-4"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <path d="M9 6h11M9 12h11M9 18h11" />
+      <path d="m3.5 6 1.5 1.5L7.5 5M3.5 12 5 13.5 7.5 11M3.5 18 5 19.5 7.5 17" />
+    </svg>
+  )
+}
+
+function IconCalendarAlert() {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      className="h-4 w-4"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <rect x="3" y="4" width="18" height="17" rx="2" />
+      <path d="M8 2v4M16 2v4M3 9h18" />
+      <path d="M12 13v4M12 11h.01" />
+    </svg>
+  )
+}
+
+function IconInvoice() {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      className="h-4 w-4"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <path d="M7 3h10l3 3v15H4V3h3z" />
+      <path d="M14 3v4h4M8 11h8M8 15h5" />
+      <path d="M10 19h4" />
+    </svg>
+  )
+}
+
+function IconOwnerRisk() {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      className="h-4 w-4"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <path d="M12 21s7-3 7-9V5l-7-2-7 2v7c0 6 7 9 7 9z" />
+      <path d="M12 8v4M12 16h.01" />
+    </svg>
   )
 }
 
