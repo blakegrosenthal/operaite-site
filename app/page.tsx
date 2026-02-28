@@ -364,6 +364,61 @@ export default function HomePage() {
         <FAQ items={faqItems} />
       </Section>
 
+      <Section id="why-operaite" title="Why Operaite" className="bg-neutral-50 reveal-up">
+        <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-start">
+          <div className="max-w-3xl space-y-3 text-sm leading-7 text-muted">
+            <p>
+              Operaite was built on a business management background from San
+              Diego State University.
+            </p>
+            <p>
+              In our family chiropractic practice, we built systems to stabilize
+              operations during my dad&apos;s AML diagnosis.
+            </p>
+            <p>
+              That period made clear how quickly manual processes create daily
+              strain for owners and teams.
+            </p>
+            <p>
+              We then conducted structured interviews with small business owners
+              to identify where workflows break and why implementations fail.
+            </p>
+            <p>
+              Our philosophy is simple: systems should reduce stress, not create
+              more.
+            </p>
+            <p className="font-medium text-foreground">
+              The approach is low-risk and practical: start small, stabilize,
+              then expand only when it clearly helps.
+            </p>
+          </div>
+          <div className="rounded-xl border border-line bg-white p-5">
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-accent">
+              Approach
+            </p>
+            <div className="mt-4 grid grid-cols-4 items-start gap-2 text-center text-[11px] font-medium text-muted">
+              <div className="space-y-2">
+                <span className="mx-auto block h-2.5 w-2.5 rounded-full bg-accent" />
+                <span>Context</span>
+              </div>
+              <div className="space-y-2">
+                <span className="mx-auto block h-2.5 w-2.5 rounded-full bg-accent" />
+                <span>Interviews</span>
+              </div>
+              <div className="space-y-2">
+                <span className="mx-auto block h-2.5 w-2.5 rounded-full bg-accent" />
+                <span>Build</span>
+              </div>
+              <div className="space-y-2">
+                <span className="mx-auto block h-2.5 w-2.5 rounded-full bg-accent" />
+                <span>Stabilize</span>
+              </div>
+            </div>
+            <div className="mt-2 h-px w-full bg-line" />
+          </div>
+        </div>
+      </Section>
+
       <section className="reveal-up py-16 sm:py-24">
         <div className="mx-auto w-full max-w-6xl px-5 sm:px-6 lg:px-8">
           <div className="rounded-3xl bg-neutral-100 p-6 sm:p-8 lg:p-10">
