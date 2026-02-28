@@ -99,40 +99,38 @@ export default function HomePage() {
       <Section
         id="process"
         title="How It Works"
-        description="Short, structured, and low-risk."
+        description="Practical delivery with clear steps."
         className="reveal-up border-t border-line py-24 sm:py-32"
         titleClassName="text-3xl sm:text-[2.3rem]"
         descriptionClassName="max-w-2xl"
       >
-        <div className="grid gap-4 md:grid-cols-2">
+        <div className="space-y-4">
           <PracticalStepCard
             step="01"
-            title="Diagnose"
-            lineOne="45-minute call + quick tool review. Your time: 60 minutes."
-            lineTwo='You get: Fix Plan with the top 2-3 leaks and first system.'
+            title="Discovery"
+            lineOne="30-minute call to understand your operations and priorities."
           />
           <PracticalStepCard
             step="02"
-            title="Build"
-            lineOne="We build the smallest system that stops one leak. Your time: 30 minutes."
-            lineTwo="You get: working flow and simple checklist."
+            title="System Plan"
+            lineOne="I analyze your workflows and deliver a short plan outlining:"
+            bullets={[
+              'What we will fix',
+              'How it works',
+              'Expected time and revenue impact'
+            ]}
           />
           <PracticalStepCard
             step="03"
-            title="Train"
-            lineOne="Owner and admin walkthrough. Your time: 45 minutes."
-            lineTwo="You get: 1-page SOP and recorded walkthrough."
+            title="Build & Train"
+            lineOne="I implement the systems and train your team so everything runs predictably."
           />
           <PracticalStepCard
             step="04"
-            title="Stabilize"
-            lineOne="We tighten edge cases for two weeks. Your time: 15 minutes weekly."
-            lineTwo='You get: basic monitoring and a clear "done" definition.'
+            title="Ongoing Support"
+            lineOne="Monthly check-ins to monitor results and refine as needed."
           />
         </div>
-        <p className="mt-6 text-sm leading-7 text-muted">
-          Clear scope. Small first step. Stable rollout.
-        </p>
       </Section>
 
       <Section
@@ -285,12 +283,14 @@ function PracticalStepCard({
   step,
   title,
   lineOne,
-  lineTwo
+  lineTwo,
+  bullets
 }: {
   step: string
   title: string
   lineOne: string
-  lineTwo: string
+  lineTwo?: string
+  bullets?: string[]
 }) {
   return (
     <article className="rounded-xl border border-line bg-white p-5 shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-soft">
@@ -299,7 +299,16 @@ function PracticalStepCard({
       </p>
       <h3 className="mt-2 text-lg font-semibold text-foreground">{title}</h3>
       <p className="mt-3 text-sm leading-7 text-muted">{lineOne}</p>
-      <p className="mt-2 text-sm leading-7 text-muted">{lineTwo}</p>
+      {lineTwo ? <p className="mt-2 text-sm leading-7 text-muted">{lineTwo}</p> : null}
+      {bullets ? (
+        <ul className="mt-3 space-y-2 pl-5 text-sm leading-7 text-muted">
+          {bullets.map((item) => (
+            <li key={item} className="list-disc">
+              {item}
+            </li>
+          ))}
+        </ul>
+      ) : null}
     </article>
   )
 }
