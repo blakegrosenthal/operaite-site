@@ -107,6 +107,36 @@ export default function HomePage() {
       </Section>
 
       <Section
+        id="industry-benchmarks"
+        title="Industry Benchmarks"
+        description="Accepted patterns from published research that align with what owners report in daily operations."
+        className="reveal-up"
+      >
+        <div className="grid gap-4 md:grid-cols-3">
+          <BenchmarkCard
+            title="Speed to Lead"
+            headline="Fast responses win work"
+            body="Studies found the odds of contacting a lead drop dramatically when response time moves from 5 minutes to 30 minutes."
+          />
+          <BenchmarkCard
+            title="First Hour Matters"
+            headline="The first hour is a window"
+            body="Research has shown companies responding within an hour are far more likely to qualify leads than those who wait longer."
+          />
+          <BenchmarkCard
+            title="No-shows are reducible"
+            headline="Reminders reduce no-shows"
+            body="Peer-reviewed studies across healthcare and service settings show reminders can reduce no-shows, especially when two-way confirmations are used."
+          />
+        </div>
+        <p className="mt-5 text-xs leading-6 text-muted">
+          Benchmarks compiled from published research (MIT Lead Response
+          Management study, Harvard Business Review, and peer-reviewed
+          appointment reminder studies).
+        </p>
+      </Section>
+
+      <Section
         id="where-work-gets-stuck"
         title="Where Work Gets Stuck"
         description="Owner led businesses usually do not have growth problems first. They have follow through problems."
@@ -389,6 +419,26 @@ function QuoteCard({ quote }: { quote: string }) {
         “
       </div>
       <p className="text-sm leading-7 text-foreground">{quote}</p>
+    </article>
+  )
+}
+
+function BenchmarkCard({
+  title,
+  headline,
+  body
+}: {
+  title: string
+  headline: string
+  body: string
+}) {
+  return (
+    <article className="rounded-xl border border-line bg-white p-6 shadow-soft transition-all duration-200 ease-out hover:-translate-y-1 hover:shadow-md">
+      <p className="text-xs font-semibold uppercase tracking-[0.16em] text-accent">
+        {title}
+      </p>
+      <h3 className="mt-2 text-lg font-semibold text-foreground">{headline}</h3>
+      <p className="mt-3 text-sm leading-7 text-muted">{body}</p>
     </article>
   )
 }
