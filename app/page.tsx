@@ -80,26 +80,20 @@ export default function HomePage() {
 
       <Section
         id="what-we-fix"
-        title="What We Fix"
-        description="Practical fixes that reduce admin load and missed steps."
+        title="Where Work Quietly Breaks Down"
         className="reveal-up border-t border-line bg-neutral-50 py-24 sm:py-32"
         titleClassName="text-3xl sm:text-[2.3rem]"
-        descriptionClassName="max-w-2xl"
       >
-        <div className="grid gap-4 sm:grid-cols-3">
-          <ValueCard
-            title="Lead Response"
-            text="New inquiries get timely follow-up without manual chasing."
-          />
-          <ValueCard
-            title="Admin Follow-Through"
-            text="Reminders, updates, and handoffs run the same way every time."
-          />
-          <ValueCard
-            title="Owner Visibility"
-            text="You can see what is done and what is still pending."
-          />
-        </div>
+        <ul className="grid gap-x-10 gap-y-4 pl-5 text-sm leading-7 text-foreground sm:grid-cols-2">
+          <li className="list-disc">Leads come in, but no one responds quickly</li>
+          <li className="list-disc">Estimates are sent but never followed up</li>
+          <li className="list-disc">Jobs are completed, but invoices wait</li>
+          <li className="list-disc">Team members ask, “Who’s handling this?”</li>
+          <li className="list-disc">Information lives in inboxes instead of systems</li>
+          <li className="list-disc">
+            The owner becomes the safety net for everything
+          </li>
+        </ul>
       </Section>
 
       <Section
