@@ -16,13 +16,13 @@ export default function HomePage() {
     <>
       <ScrollReveal />
 
-      <section className="reveal-up border-b border-line bg-white py-20 sm:py-28">
+      <section className="reveal-up bg-white py-24 sm:py-32">
         <div className="mx-auto grid w-full max-w-6xl gap-10 px-5 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:px-8">
           <div className="max-w-2xl">
             <p className="text-xs font-semibold uppercase tracking-[0.16em] text-accent">
               Operations consulting
             </p>
-            <h1 className="mt-4 text-3xl leading-tight tracking-tight text-foreground sm:text-5xl">
+            <h1 className="mt-4 text-[2.3rem] leading-tight tracking-tight text-foreground sm:text-[3.2rem]">
               Keep work moving without constant owner intervention.
             </h1>
             <p className="mt-5 text-base leading-8 text-muted sm:text-lg">
@@ -60,7 +60,9 @@ export default function HomePage() {
         id="what-breaks"
         title="What Breaks in Owner-Led Service Businesses"
         description="These are the issues owners see week after week."
-        className="reveal-up py-20 sm:py-28"
+        className="reveal-up border-t border-line py-24 sm:py-32"
+        titleClassName="text-3xl sm:text-[2.3rem]"
+        descriptionClassName="max-w-2xl"
       >
         <ul className="grid gap-4 text-sm sm:grid-cols-2">
           <PainPoint text="Leads wait too long for a response." />
@@ -79,7 +81,9 @@ export default function HomePage() {
         id="what-we-fix"
         title="What We Fix"
         description="Practical fixes that reduce admin load and missed steps."
-        className="reveal-up bg-neutral-50 py-20 sm:py-28"
+        className="reveal-up border-t border-line bg-neutral-50 py-24 sm:py-32"
+        titleClassName="text-3xl sm:text-[2.3rem]"
+        descriptionClassName="max-w-2xl"
       >
         <div className="grid gap-4 sm:grid-cols-3">
           <ValueCard
@@ -101,7 +105,9 @@ export default function HomePage() {
         id="process"
         title="How It Works"
         description="Short, structured, and low-risk."
-        className="reveal-up py-20 sm:py-28"
+        className="reveal-up border-t border-line py-24 sm:py-32"
+        titleClassName="text-3xl sm:text-[2.3rem]"
+        descriptionClassName="max-w-2xl"
       >
         <div className="grid gap-4 md:grid-cols-2">
           <PracticalStepCard
@@ -137,7 +143,8 @@ export default function HomePage() {
       <Section
         id="why-operaite"
         title="Why Operaite"
-        className="reveal-up bg-neutral-50 py-20 sm:py-28"
+        className="reveal-up border-t border-line bg-neutral-50 py-24 sm:py-32"
+        titleClassName="text-3xl sm:text-[2.3rem]"
       >
         <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-start">
           <div className="max-w-3xl space-y-3 text-sm leading-7 text-muted">
@@ -177,7 +184,7 @@ export default function HomePage() {
         </div>
       </Section>
 
-      <section className="reveal-up py-20 sm:py-28">
+      <section className="reveal-up border-t border-line py-24 sm:py-32">
         <div className="mx-auto w-full max-w-6xl px-5 sm:px-6 lg:px-8">
           <div className="rounded-3xl bg-neutral-100 p-8 shadow-soft sm:p-10 lg:p-14">
             <CTA
@@ -240,15 +247,18 @@ function SystemSnapshot() {
 
 function PainPoint({ text }: { text: string }) {
   return (
-    <li className="rounded-xl border border-line bg-white p-5 text-sm leading-7 text-foreground shadow-soft">
-      {text}
+    <li className="flex items-start gap-3 rounded-xl border border-line bg-white p-5 text-sm leading-7 text-foreground shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-soft">
+      <span className="mt-1 inline-flex h-5 w-5 items-center justify-center rounded-full bg-stone-100 text-[11px] font-semibold text-accent">
+        •
+      </span>
+      <span>{text}</span>
     </li>
   )
 }
 
 function ValueCard({ title, text }: { title: string; text: string }) {
   return (
-    <article className="rounded-xl border border-line bg-white p-5 shadow-soft">
+    <article className="rounded-xl border border-line bg-white p-5 shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-soft">
       <h3 className="text-base font-semibold text-foreground">{title}</h3>
       <p className="mt-2 text-sm leading-7 text-muted">{text}</p>
     </article>
@@ -267,7 +277,7 @@ function PracticalStepCard({
   lineTwo: string
 }) {
   return (
-    <article className="rounded-xl border border-line bg-white p-5 shadow-soft">
+    <article className="rounded-xl border border-line bg-white p-5 shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-soft">
       <p className="text-xs font-semibold uppercase tracking-[0.16em] text-accent">
         {step}
       </p>
