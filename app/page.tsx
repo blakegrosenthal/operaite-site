@@ -139,18 +139,21 @@ export default function HomePage() {
       <Section
         id="where-work-gets-stuck"
         title="Where Work Gets Stuck"
-        description="Owner led businesses usually do not have growth problems first. They have follow through problems."
+        description="These are common symptoms owners notice when follow-through depends on memory."
         className="reveal-up"
       >
         <ul className="grid gap-4 text-sm sm:grid-cols-2">
-          <PainPoint text="Leads do not get a fast response" />
-          <PainPoint text="Follow ups depend on memory" />
-          <PainPoint text="Reminders are manual" />
-          <PainPoint text="Invoices go out late" />
-          <PainPoint text="Information gets re entered" />
-          <PainPoint text="Staff is unsure what the next step is" />
-          <PainPoint text="The owner ends up checking everything" />
+          <PainPoint text="New leads sit unclaimed until someone remembers to reply." />
+          <PainPoint text="Estimates go out late or are never sent." />
+          <PainPoint text="Appointments get booked, but confirmations are inconsistent." />
+          <PainPoint text="Jobs are completed, but invoices lag behind." />
+          <PainPoint text="The same details are re-entered across tools and spreadsheets." />
+          <PainPoint text="No one can see what is done versus pending without asking around." />
         </ul>
+        <p className="mt-6 text-sm leading-7 text-muted">
+          We fix these with simple systems that make follow-through visible and
+          automatic.
+        </p>
       </Section>
 
       <Section
