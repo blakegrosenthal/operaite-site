@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
 import { CTA } from '@/components/CTA'
-import { FAQ } from '@/components/FAQ'
+import { ScrollReveal } from '@/components/ScrollReveal'
 import { Section } from '@/components/Section'
 import { env } from '@/lib/env'
 
@@ -11,60 +11,29 @@ export const metadata: Metadata = {
     'Practical operational systems and automation for owner-led service businesses that want fewer mix-ups, faster payments, and clearer execution.'
 }
 
-const faqItems = [
-  {
-    question: 'Do we need new software?',
-    answer:
-      'Usually not. We start with what you already use and keep changes simple.'
-  },
-  {
-    question: 'Will my team actually use this?',
-    answer:
-      'Yes. We keep the process practical, train your team, and avoid unnecessary complexity.'
-  },
-  {
-    question: 'How long does a typical project take?',
-    answer:
-      'Most projects are implemented in a few weeks, with a clear scope and minimal disruption.'
-  },
-  {
-    question: 'What kinds of businesses are a good fit?',
-    answer:
-      'Owner-led service businesses that are busy, growing, and want smoother follow through.'
-  },
-  {
-    question: 'What if we already have tools in place?',
-    answer:
-      'That is common. We improve how your current tools work together so daily tasks are easier to run.'
-  },
-  {
-    question: 'Is this “AI” or automation?',
-    answer:
-      'Mostly practical automation. If AI is used, it is only in small, helpful ways that keep things simple.'
-  }
-]
-
 export default function HomePage() {
   return (
     <>
-      <section className="reveal-up border-b border-line bg-white py-16 sm:py-24">
+      <ScrollReveal />
+
+      <section className="reveal-up border-b border-line bg-white py-20 sm:py-28">
         <div className="mx-auto grid w-full max-w-6xl gap-10 px-5 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:px-8">
           <div className="max-w-2xl">
             <p className="text-xs font-semibold uppercase tracking-[0.16em] text-accent">
               Operations consulting
             </p>
-            <h1 className="reveal-up reveal-delay-1 mt-4 text-3xl leading-tight tracking-tight text-foreground sm:text-5xl">
+            <h1 className="mt-4 text-3xl leading-tight tracking-tight text-foreground sm:text-5xl">
               Practical systems that keep your business moving day to day.
             </h1>
-            <p className="reveal-up reveal-delay-2 mt-5 text-base leading-8 text-muted sm:text-lg">
+            <p className="mt-5 text-base leading-8 text-muted sm:text-lg">
               We build practical automation and clear handoffs so leads, jobs,
               and admin work move forward without constant owner oversight.
             </p>
-            <p className="reveal-up reveal-delay-2 mt-4 text-sm font-semibold leading-7 text-foreground sm:text-base">
+            <p className="mt-4 text-sm font-semibold leading-7 text-foreground sm:text-base">
               What you get: faster response, fewer dropped tasks, and clear
               visibility into what is done and what is next.
             </p>
-            <div className="reveal-up reveal-delay-3 mt-8 flex flex-wrap gap-3">
+            <div className="mt-8 flex flex-wrap gap-3">
               <Link
                 href={env.calendlyUrl}
                 className="rounded-md bg-accent px-5 py-3 text-sm font-semibold text-white transition hover:bg-accent-strong"
@@ -72,75 +41,27 @@ export default function HomePage() {
                 Book a Call
               </Link>
               <Link
-                href="#where-work-gets-stuck"
+                href="#what-breaks"
                 className="rounded-md border border-line px-5 py-3 text-sm font-semibold text-foreground transition hover:bg-white"
               >
                 See What Gets Fixed
               </Link>
             </div>
-            <p className="reveal-up reveal-delay-4 mt-4 text-xs leading-6 text-muted">
+            <p className="mt-4 text-xs leading-6 text-muted">
               Built from real owner interviews + real operational constraints
             </p>
           </div>
-          <div className="reveal-up reveal-delay-3">
+          <div>
             <SystemSnapshot />
           </div>
         </div>
       </section>
 
       <Section
-        id="owner-interviews"
-        title="What We Heard From Owners"
-        description="Across interviews, we heard the same pattern: too much work is still manual, tools are fragmented, follow-through depends on memory, and implementation is the blocker."
-        className="reveal-up bg-neutral-50"
-      >
-        <div className="grid gap-4 sm:grid-cols-2">
-          <QuoteCard quote="“Purchasing… That’s all pretty much done by hand.”" />
-          <QuoteCard quote="“We’re just not set up… where it just does it on its own yet.”" />
-          <QuoteCard quote="“Cash flow is the name of the game with small business, and that’s the most difficult part.”" />
-          <QuoteCard quote="“There’s no manual to really implement it.”" />
-        </div>
-        <p className="mt-5 text-xs leading-6 text-muted">
-          Quotes from owner interviews across construction, healthcare, and
-          service businesses. These are not paid endorsements.
-        </p>
-      </Section>
-
-      <Section
-        id="industry-benchmarks"
-        title="Industry Benchmarks"
-        description="Accepted patterns from published research that align with what owners report in daily operations."
-        className="reveal-up"
-      >
-        <div className="grid gap-4 md:grid-cols-3">
-          <BenchmarkCard
-            title="Speed to Lead"
-            headline="Fast responses win work"
-            body="Studies found the odds of contacting a lead drop dramatically when response time moves from 5 minutes to 30 minutes."
-          />
-          <BenchmarkCard
-            title="First Hour Matters"
-            headline="The first hour is a window"
-            body="Research has shown companies responding within an hour are far more likely to qualify leads than those who wait longer."
-          />
-          <BenchmarkCard
-            title="No-shows are reducible"
-            headline="Reminders reduce no-shows"
-            body="Peer-reviewed studies across healthcare and service settings show reminders can reduce no-shows, especially when two-way confirmations are used."
-          />
-        </div>
-        <p className="mt-5 text-xs leading-6 text-muted">
-          Benchmarks compiled from published research (MIT Lead Response
-          Management study, Harvard Business Review, and peer-reviewed
-          appointment reminder studies).
-        </p>
-      </Section>
-
-      <Section
-        id="where-work-gets-stuck"
-        title="Where Work Gets Stuck"
+        id="what-breaks"
+        title="What Breaks in Owner-Led Service Businesses"
         description="These are common symptoms owners notice when follow-through depends on memory."
-        className="reveal-up"
+        className="reveal-up py-20 sm:py-28"
       >
         <ul className="grid gap-4 text-sm sm:grid-cols-2">
           <PainPoint text="New leads sit unclaimed until someone remembers to reply." />
@@ -157,27 +78,10 @@ export default function HomePage() {
       </Section>
 
       <Section
-        id="problems"
-        eyebrow="Common friction"
-        title="Operations should support growth, not slow it down."
-        description="Most owner-led firms we work with are already busy and capable. The issue is usually inconsistent handoffs and too much manual coordination."
-        className="bg-neutral-50 reveal-up"
-      >
-        <ul className="grid gap-4 text-sm sm:grid-cols-2">
-          <PainPoint text="Missed follow-ups after calls, estimates, or appointments." />
-          <PainPoint text="No-shows and dropped tasks caused by unclear reminders or ownership." />
-          <PainPoint text="Slow payments due to delayed invoicing and inconsistent collection steps." />
-          <PainPoint text="Re-entering the same information in multiple places." />
-          <PainPoint text="Owner still involved in daily admin to keep operations moving." />
-        </ul>
-      </Section>
-
-      <Section
-        id="what-we-do"
-        eyebrow="Benefits"
-        title="What you get when the right systems are in place."
+        id="what-we-fix"
+        title="What We Fix"
         description="Simple improvements that help your business run more consistently day to day."
-        className="reveal-up"
+        className="reveal-up bg-neutral-50 py-20 sm:py-28"
       >
         <div className="grid gap-4 sm:grid-cols-3">
           <ValueCard
@@ -197,10 +101,9 @@ export default function HomePage() {
 
       <Section
         id="process"
-        eyebrow="Process"
-        title="How it works"
+        title="How It Works"
         description="Low-risk rollout with clear deliverables and limited owner time."
-        className="bg-neutral-50 reveal-up"
+        className="reveal-up py-20 sm:py-28"
       >
         <div className="grid gap-4 md:grid-cols-2">
           <PracticalStepCard
@@ -238,170 +141,10 @@ export default function HomePage() {
       </Section>
 
       <Section
-        id="what-you-receive"
-        title="What You Receive"
-        description="Clear deliverables you can use immediately after implementation."
-        className="reveal-up"
+        id="why-operaite"
+        title="Why Operaite"
+        className="reveal-up bg-neutral-50 py-20 sm:py-28"
       >
-        <div className="grid gap-4 md:grid-cols-2">
-          <DeliverableCard
-            iconLabel="FP"
-            title="Fix Plan (1-2 pages)"
-            text="A focused summary of the top leaks and the simplest first fixes."
-            format="PDF"
-          />
-          <DeliverableCard
-            iconLabel="WM"
-            title="Workflow Map (current vs future)"
-            text="A side-by-side map showing how work runs now and how it will run after rollout."
-            format="PDF"
-          />
-          <DeliverableCard
-            iconLabel="SOP"
-            title="SOPs (1-page checklists)"
-            text="Short checklists your team can follow without guessing the next step."
-            format="Checklist"
-          />
-          <DeliverableCard
-            iconLabel="MON"
-            title="Monitoring (simple alerts when things slip)"
-            text="Basic visibility so stalled tasks are noticed early and handled quickly."
-            format="Recorded walkthrough"
-          />
-        </div>
-      </Section>
-
-      <Section
-        id="example-system"
-        title="Example System We Build"
-        description="A simple example of how practical automation reduces daily stress without changing your whole business"
-        className="reveal-up"
-      >
-        <div className="flex flex-col gap-2 md:flex-row md:items-stretch md:gap-3">
-          <div className="rounded-xl border border-line bg-white p-5 text-sm font-medium leading-7 text-foreground md:flex-1">
-            New lead comes in
-          </div>
-          <div className="flex items-center justify-center text-lg text-muted md:px-1">
-            <span className="md:hidden">↓</span>
-            <span className="hidden md:inline">→</span>
-          </div>
-          <div className="rounded-xl border border-line bg-white p-5 text-sm font-medium leading-7 text-foreground md:flex-1">
-            Instant text reply goes out
-          </div>
-          <div className="flex items-center justify-center text-lg text-muted md:px-1">
-            <span className="md:hidden">↓</span>
-            <span className="hidden md:inline">→</span>
-          </div>
-          <div className="rounded-xl border border-line bg-white p-5 text-sm font-medium leading-7 text-foreground md:flex-1">
-            Booking link sent and appointment scheduled
-          </div>
-          <div className="flex items-center justify-center text-lg text-muted md:px-1">
-            <span className="md:hidden">↓</span>
-            <span className="hidden md:inline">→</span>
-          </div>
-          <div className="rounded-xl border border-line bg-white p-5 text-sm font-medium leading-7 text-foreground md:flex-1">
-            Confirmation and reminders run automatically
-          </div>
-        </div>
-
-        <div className="mt-8 rounded-xl border border-line bg-white p-5">
-          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-accent">
-            What changes
-          </p>
-          <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-foreground">
-            <li>Faster response times</li>
-            <li>Less manual follow up</li>
-            <li>A more professional customer experience</li>
-          </ul>
-        </div>
-      </Section>
-
-      <Section
-        id="who-its-for"
-        eyebrow="Who it is for"
-        title="Designed for owner-led service businesses in a growth phase."
-        description="Best fit for teams that are gaining demand but feel operationally stretched."
-        className="reveal-up"
-      >
-        <div className="grid gap-4 sm:grid-cols-3">
-          <FitCard title="Business Type" text="Owner-led service businesses" />
-          <FitCard title="Team Size" text="Usually 1-20 employees" />
-          <FitCard
-            title="Current Stage"
-            text="Growing, but carrying too much process overhead"
-          />
-        </div>
-      </Section>
-
-      <Section
-        id="trust-and-approach"
-        eyebrow="Trust and approach"
-        title="Trust and Approach"
-        className="bg-neutral-50 reveal-up"
-      >
-        <ul className="grid gap-4 text-sm sm:grid-cols-3">
-          <li className="rounded-xl border border-line bg-white p-5 text-sm leading-7 text-foreground">
-            Clear scope before we build anything
-          </li>
-          <li className="rounded-xl border border-line bg-white p-5 text-sm leading-7 text-foreground">
-            Simple systems your staff will actually use
-          </li>
-          <li className="rounded-xl border border-line bg-white p-5 text-sm leading-7 text-foreground">
-            Reliable follow through, not hype
-          </li>
-        </ul>
-        <p className="mt-6 text-sm leading-7 text-muted">
-          If it does not reduce daily stress or protect revenue, we do not
-          recommend it.
-        </p>
-      </Section>
-
-      <Section
-        id="pricing"
-        eyebrow="Pricing"
-        title="Typical Project Pricing"
-        description="Most installations focus on one to three revenue critical areas first, like lead response, reminders, or billing follow through."
-        className="reveal-up"
-      >
-        <p className="max-w-3xl text-base font-semibold leading-8 text-foreground">
-          Typical projects range from $2,500 to $7,500 depending on complexity.
-        </p>
-        <p className="mt-2 max-w-3xl text-base leading-8 text-muted">
-          We start small, prove reliability, then expand if it makes sense.
-        </p>
-      </Section>
-
-      <Section
-        id="pilot-implementation"
-        eyebrow="Pilot implementation"
-        title="Pilot Implementation"
-        description="We recently implemented a simple lead response system for a small service business. New leads receive an immediate text with a booking link, so follow up happens fast without manual effort."
-        className="bg-neutral-50 reveal-up"
-      >
-        <ul className="grid gap-4 text-sm sm:grid-cols-3">
-          <li className="rounded-xl border border-line bg-white p-5 text-sm leading-7 text-foreground">
-            Faster response to new inquiries
-          </li>
-          <li className="rounded-xl border border-line bg-white p-5 text-sm leading-7 text-foreground">
-            Less manual chasing
-          </li>
-          <li className="rounded-xl border border-line bg-white p-5 text-sm leading-7 text-foreground">
-            A smoother, more professional booking experience
-          </li>
-        </ul>
-      </Section>
-
-      <Section
-        id="faq"
-        eyebrow="FAQ"
-        title="Common questions before a first review."
-        description="Straightforward answers to help you evaluate fit."
-        className="reveal-up"
-      >
-        <FAQ items={faqItems} />
-      </Section>
-
-      <Section id="why-operaite" title="Why Operaite" className="bg-neutral-50 reveal-up">
         <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-start">
           <div className="max-w-3xl space-y-3 text-sm leading-7 text-muted">
             <p>
@@ -456,9 +199,9 @@ export default function HomePage() {
         </div>
       </Section>
 
-      <section className="reveal-up py-16 sm:py-24">
+      <section className="reveal-up py-20 sm:py-28">
         <div className="mx-auto w-full max-w-6xl px-5 sm:px-6 lg:px-8">
-          <div className="rounded-3xl bg-neutral-100 p-8 shadow-soft transition-transform duration-300 ease-out hover:-translate-y-0.5 sm:p-10 lg:p-14">
+          <div className="rounded-3xl bg-neutral-100 p-8 shadow-soft sm:p-10 lg:p-14">
             <CTA
               title="Start with a practical 30-minute call."
               description="We&apos;ll identify the top 2–3 operational leaks. You&apos;ll leave with a short plan and clear next steps. No prep required."
@@ -517,40 +260,9 @@ function SystemSnapshot() {
   )
 }
 
-function QuoteCard({ quote }: { quote: string }) {
-  return (
-    <article className="rounded-xl bg-white p-5 shadow-soft">
-      <div className="mb-3 inline-flex h-7 w-7 items-center justify-center rounded-full bg-stone-100 text-sm font-semibold text-accent">
-        “
-      </div>
-      <p className="text-sm leading-7 text-foreground">{quote}</p>
-    </article>
-  )
-}
-
-function BenchmarkCard({
-  title,
-  headline,
-  body
-}: {
-  title: string
-  headline: string
-  body: string
-}) {
-  return (
-    <article className="rounded-xl border border-line bg-white p-6 shadow-soft transition-all duration-200 ease-out hover:-translate-y-1 hover:shadow-md">
-      <p className="text-xs font-semibold uppercase tracking-[0.16em] text-accent">
-        {title}
-      </p>
-      <h3 className="mt-2 text-lg font-semibold text-foreground">{headline}</h3>
-      <p className="mt-3 text-sm leading-7 text-muted">{body}</p>
-    </article>
-  )
-}
-
 function PainPoint({ text }: { text: string }) {
   return (
-    <li className="rounded-xl border border-line bg-white p-5 text-sm leading-7 text-foreground transition-all duration-200 ease-out hover:-translate-y-1 hover:shadow-soft">
+    <li className="rounded-xl border border-line bg-white p-5 text-sm leading-7 text-foreground shadow-soft">
       {text}
     </li>
   )
@@ -558,7 +270,7 @@ function PainPoint({ text }: { text: string }) {
 
 function ValueCard({ title, text }: { title: string; text: string }) {
   return (
-    <article className="rounded-xl border border-line bg-white p-5 transition-all duration-200 ease-out hover:-translate-y-1 hover:shadow-soft">
+    <article className="rounded-xl border border-line bg-white p-5 shadow-soft">
       <h3 className="text-base font-semibold text-foreground">{title}</h3>
       <p className="mt-2 text-sm leading-7 text-muted">{text}</p>
     </article>
@@ -579,7 +291,7 @@ function PracticalStepCard({
   time: string
 }) {
   return (
-    <article className="rounded-xl border border-line bg-white p-5 transition-all duration-200 ease-out hover:-translate-y-1 hover:shadow-soft">
+    <article className="rounded-xl border border-line bg-white p-5 shadow-soft">
       <p className="text-xs font-semibold uppercase tracking-[0.16em] text-accent">
         {step}
       </p>
@@ -598,42 +310,6 @@ function PracticalStepCard({
           <dd className="text-muted">{time}</dd>
         </div>
       </dl>
-    </article>
-  )
-}
-
-function DeliverableCard({
-  iconLabel,
-  title,
-  text,
-  format
-}: {
-  iconLabel: string
-  title: string
-  text: string
-  format: string
-}) {
-  return (
-    <article className="rounded-xl border border-line bg-white p-5 shadow-soft transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md">
-      <span className="inline-flex h-8 min-w-8 items-center justify-center rounded-md border border-line bg-neutral-50 px-2 text-[11px] font-semibold uppercase tracking-wide text-muted">
-        {iconLabel}
-      </span>
-      <h3 className="mt-3 text-base font-semibold text-foreground">{title}</h3>
-      <p className="mt-2 text-sm leading-7 text-muted">{text}</p>
-      <p className="mt-3 text-xs font-semibold uppercase tracking-[0.14em] text-accent">
-        Format: {format}
-      </p>
-    </article>
-  )
-}
-
-function FitCard({ title, text }: { title: string; text: string }) {
-  return (
-    <article className="rounded-xl border border-line bg-white p-5 transition-all duration-200 ease-out hover:-translate-y-1 hover:shadow-soft">
-      <h3 className="text-sm font-semibold uppercase tracking-wide text-muted">
-        {title}
-      </h3>
-      <p className="mt-2 text-base font-semibold text-foreground">{text}</p>
     </article>
   )
 }
