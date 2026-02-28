@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
-import { env } from '@/lib/env'
 
 export const metadata: Metadata = {
   title: 'About',
@@ -78,10 +77,10 @@ export default function AboutPage() {
 
             <div className="pt-2">
               <Link
-                href={env.calendlyUrl}
+                href="/#process"
                 className="mt-6 inline-flex rounded-md bg-accent px-5 py-3 text-sm font-semibold text-white transition hover:bg-accent-strong"
               >
-                Book a 30 Minute Clarity Call
+                See How It Works
               </Link>
             </div>
           </div>

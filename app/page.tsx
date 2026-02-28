@@ -36,16 +36,16 @@ export default function HomePage() {
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
-                href={env.calendlyUrl}
+                href="#where-work-quietly-breaks-down"
                 className="rounded-md bg-accent px-5 py-3 text-sm font-semibold text-white transition hover:bg-accent-strong"
               >
-                Book a Call
+                See Where Revenue Is Leaking
               </Link>
               <Link
-                href="#where-work-quietly-breaks-down"
+                href={env.calendlyUrl}
                 className="rounded-md border border-line px-5 py-3 text-sm font-semibold text-foreground transition hover:bg-white"
               >
-                See What Gets Fixed
+                Book a Clarity Call
               </Link>
             </div>
             <p className="mt-4 text-xs leading-6 text-muted">
@@ -92,6 +92,14 @@ export default function HomePage() {
             className="md:col-span-2"
           />
         </ul>
+        <div className="mt-10">
+          <Link
+            href="#process"
+            className="inline-flex rounded-md bg-accent px-5 py-3 text-sm font-semibold text-white transition hover:bg-accent-strong"
+          >
+            Stabilize These Workflows
+          </Link>
+        </div>
       </Section>
 
       <Section
@@ -128,6 +136,14 @@ export default function HomePage() {
             title="Ongoing Support"
             lineOne="Monthly check-ins to monitor results and refine as needed."
           />
+        </div>
+        <div className="mt-10">
+          <Link
+            href={env.calendlyUrl}
+            className="inline-flex rounded-md bg-accent px-5 py-3 text-sm font-semibold text-white transition hover:bg-accent-strong"
+          >
+            Get Your Revenue Reliability Scan
+          </Link>
         </div>
       </Section>
 
