@@ -424,13 +424,13 @@ export default function HomePage() {
 
       <section className="reveal-up py-16 sm:py-24">
         <div className="mx-auto w-full max-w-6xl px-5 sm:px-6 lg:px-8">
-          <div className="rounded-3xl bg-neutral-100 p-6 sm:p-8 lg:p-10">
+          <div className="rounded-3xl bg-neutral-100 p-8 shadow-soft transition-transform duration-300 ease-out hover:-translate-y-0.5 sm:p-10 lg:p-14">
             <CTA
-              title="Book a 30-Minute Operations Review"
-              description="You will leave with a clear diagnosis of your biggest workflow risks and practical next steps. No pressure, no long sales process."
-              primaryLabel="Book a 30-Minute Operations Review"
+              title="Start with a practical 30-minute call."
+              description="We&apos;ll identify the top 2–3 operational leaks. You&apos;ll leave with a short plan and clear next steps. No prep required."
+              primaryLabel="Book a Call"
               primaryHref={env.calendlyUrl}
-              secondaryLabel="Contact Us Instead"
+              secondaryLabel="Contact"
               secondaryHref="/contact"
             />
           </div>
