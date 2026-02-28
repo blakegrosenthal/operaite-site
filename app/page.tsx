@@ -205,23 +205,23 @@ export default function HomePage() {
 function SystemSnapshot() {
   const rows = [
     {
-      flow: 'Lead captured → follow-up sent',
-      status: 'Automated'
-    },
-    {
-      flow: 'Appointment booked → reminder confirmed',
+      flow: 'Lead comes in → Follow-up sent automatically',
       status: 'Tracked'
     },
     {
-      flow: 'Job completed → invoice sent',
-      status: 'Automated'
+      flow: 'Appointment booked → Reminder confirmed',
+      status: 'Tracked'
+    },
+    {
+      flow: 'Job completed → Invoice sent',
+      status: 'Tracked'
     }
   ] as const
 
   return (
-    <div className="rounded-2xl border border-line bg-neutral-50 p-5 shadow-soft sm:p-6">
+    <div className="rounded-2xl border border-line bg-neutral-50 p-5 shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow sm:p-6">
       <p className="text-xs font-semibold uppercase tracking-[0.16em] text-accent">
-        System Snapshot
+        Workflow Snapshot
       </p>
       <div className="mt-4 space-y-3">
         {rows.map((row) => (
@@ -233,7 +233,7 @@ function SystemSnapshot() {
               {row.flow}
             </p>
             <div className="inline-flex items-center gap-2 rounded-full border border-line bg-stone-50 px-3 py-1 text-xs font-semibold text-muted">
-              <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-emerald-100 text-emerald-700">
+              <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-stone-200 text-stone-700">
                 ✓
               </span>
               <span>Status: {row.status}</span>
