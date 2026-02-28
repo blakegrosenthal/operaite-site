@@ -139,41 +139,24 @@ export default function HomePage() {
         className="reveal-up border-t border-line bg-neutral-50 py-24 sm:py-32"
         titleClassName="text-3xl sm:text-[2.3rem]"
       >
-        <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-start">
-          <div className="max-w-3xl space-y-3 text-sm leading-7 text-muted">
-            <p>Business management background from San Diego State University.</p>
-            <p>First systems were built inside our family chiropractic practice.</p>
-            <p>That work stabilized operations during my dad&apos;s AML diagnosis.</p>
-            <p>We also ran structured interviews with small business owners.</p>
-            <p>The pattern was clear: good teams still lose follow-through.</p>
-            <p className="font-medium text-foreground">
-              Systems should reduce stress, not create more. Start small, prove it, then expand.
-            </p>
-          </div>
-          <div className="rounded-xl border border-line bg-white p-5">
-            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-accent">
-              Approach
-            </p>
-            <div className="mt-4 grid grid-cols-4 items-start gap-2 text-center text-[11px] font-medium text-muted">
-              <div className="space-y-2">
-                <span className="mx-auto block h-2.5 w-2.5 rounded-full bg-accent" />
-                <span>Context</span>
-              </div>
-              <div className="space-y-2">
-                <span className="mx-auto block h-2.5 w-2.5 rounded-full bg-accent" />
-                <span>Interviews</span>
-              </div>
-              <div className="space-y-2">
-                <span className="mx-auto block h-2.5 w-2.5 rounded-full bg-accent" />
-                <span>Build</span>
-              </div>
-              <div className="space-y-2">
-                <span className="mx-auto block h-2.5 w-2.5 rounded-full bg-accent" />
-                <span>Stabilize</span>
-              </div>
-            </div>
-            <div className="mt-2 h-px w-full bg-line" />
-          </div>
+        <div className="max-w-3xl space-y-5 text-sm leading-7 text-muted">
+          <p>
+            I studied business management at San Diego State University, focusing
+            on how small service businesses struggle with daily operations.
+          </p>
+          <p>
+            During a difficult period in my family&apos;s chiropractic practice, I
+            built systems that reduced administrative strain and stabilized
+            revenue under pressure.
+          </p>
+          <p>
+            I&apos;ve conducted structured interviews with service business owners
+            to understand where workflows break and why automation efforts fail.
+          </p>
+          <p className="font-medium text-foreground">
+            Operaite applies practical systems designed to reduce stress and
+            protect revenue.
+          </p>
         </div>
       </Section>
 
