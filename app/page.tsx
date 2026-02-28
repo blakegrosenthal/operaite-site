@@ -48,38 +48,42 @@ export default function HomePage() {
   return (
     <>
       <section className="reveal-up border-b border-line bg-white py-16 sm:py-24">
-        <div className="mx-auto flex w-full max-w-6xl flex-col gap-10 px-5 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
+        <div className="mx-auto grid w-full max-w-6xl gap-10 px-5 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:px-8">
+          <div className="max-w-2xl">
             <p className="text-xs font-semibold uppercase tracking-[0.16em] text-accent">
               Operations consulting
             </p>
             <h1 className="reveal-up reveal-delay-1 mt-4 text-3xl leading-tight tracking-tight text-foreground sm:text-5xl">
-              When the Right Systems Are in Place, Your Business Gets Easier to Run
+              Practical systems that keep your business moving day to day.
             </h1>
             <p className="reveal-up reveal-delay-2 mt-5 text-base leading-8 text-muted sm:text-lg">
-              We install practical automation for owner-led service businesses so
-              chasing leads, reminders, and invoices stop creating daily stress,
-              and nothing slips through the cracks.
+              We build practical automation and clear handoffs so leads, jobs,
+              and admin work move forward without constant owner oversight.
+            </p>
+            <p className="reveal-up reveal-delay-2 mt-4 text-sm font-semibold leading-7 text-foreground sm:text-base">
+              What you get: faster response, fewer dropped tasks, and clear
+              visibility into what is done and what is next.
             </p>
             <div className="reveal-up reveal-delay-3 mt-8 flex flex-wrap gap-3">
               <Link
                 href={env.calendlyUrl}
                 className="rounded-md bg-accent px-5 py-3 text-sm font-semibold text-white transition hover:bg-accent-strong"
               >
-                Start With a Free Systems Review
+                Book a Call
               </Link>
               <Link
-                href="#process"
+                href="#where-work-gets-stuck"
                 className="rounded-md border border-line px-5 py-3 text-sm font-semibold text-foreground transition hover:bg-white"
               >
-                See How It Works
+                See What Gets Fixed
               </Link>
             </div>
+            <p className="reveal-up reveal-delay-4 mt-4 text-xs leading-6 text-muted">
+              Built from real owner interviews + real operational constraints
+            </p>
           </div>
-          <div className="reveal-up reveal-delay-4 grid gap-4 sm:grid-cols-3">
-            <MetricCard label="Projects Built for SMB Teams" value="1-20" />
-            <MetricCard label="Focus" value="Operational Reliability" />
-            <MetricCard label="Approach" value="Structured and Practical" />
+          <div className="reveal-up reveal-delay-3">
+            <SystemSnapshot />
           </div>
         </div>
       </section>
@@ -317,11 +321,45 @@ export default function HomePage() {
   )
 }
 
-function MetricCard({ label, value }: { label: string; value: string }) {
+function SystemSnapshot() {
+  const rows = [
+    {
+      flow: 'Lead captured → follow-up sent',
+      status: 'Automated'
+    },
+    {
+      flow: 'Appointment booked → reminder confirmed',
+      status: 'Tracked'
+    },
+    {
+      flow: 'Job completed → invoice sent',
+      status: 'Automated'
+    }
+  ] as const
+
   return (
-    <div className="rounded-xl border border-line bg-white p-5">
-      <p className="text-xs uppercase tracking-wide text-muted">{label}</p>
-      <p className="mt-2 text-lg font-semibold text-foreground">{value}</p>
+    <div className="rounded-2xl border border-line bg-neutral-50 p-5 shadow-soft sm:p-6">
+      <p className="text-xs font-semibold uppercase tracking-[0.16em] text-accent">
+        System Snapshot
+      </p>
+      <div className="mt-4 space-y-3">
+        {rows.map((row) => (
+          <div
+            key={row.flow}
+            className="flex flex-col gap-3 rounded-xl border border-line bg-white p-4 sm:flex-row sm:items-center sm:justify-between"
+          >
+            <p className="text-sm font-medium leading-6 text-foreground">
+              {row.flow}
+            </p>
+            <div className="inline-flex items-center gap-2 rounded-full border border-line bg-stone-50 px-3 py-1 text-xs font-semibold text-muted">
+              <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-emerald-100 text-emerald-700">
+                ✓
+              </span>
+              <span>Status: {row.status}</span>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   )
 }
