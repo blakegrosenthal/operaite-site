@@ -196,28 +196,41 @@ export default function HomePage() {
         id="process"
         eyebrow="Process"
         title="How it works"
-        description="A straightforward process designed for owner-led businesses."
+        description="Low-risk rollout with clear deliverables and limited owner time."
         className="bg-neutral-50 reveal-up"
       >
-        <div className="grid gap-4 md:grid-cols-3">
-          <ProcessCard
+        <div className="grid gap-4 md:grid-cols-2">
+          <PracticalStepCard
             step="01"
-            title="Free Systems Review"
-            text="We learn how your business runs today and where things are getting stuck."
+            title="Diagnose"
+            happens="45-minute call + quick review of current tools."
+            receive='A short "Fix Plan" outlining top 2-3 revenue-critical leaks and the simplest systems to stop them.'
+            time="60 minutes."
           />
-          <ProcessCard
+          <PracticalStepCard
             step="02"
-            title="Simple Plan"
-            text="You get a short plan outlining what to fix first, what it will change, and what it costs."
+            title="Build"
+            happens="Implement the smallest reliable system that stops the leak."
+            receive="Working automations + a simple operating checklist."
+            time="30 minutes for review."
           />
-          <ProcessCard
+          <PracticalStepCard
             step="03"
-            title="Build and Stabilize"
-            text="We implement the system, test it, and make sure your team actually uses it."
+            title="Train"
+            happens="Teach the admin and owner the new flow."
+            receive="A 1-page SOP + recorded walkthrough."
+            time="45 minutes."
+          />
+          <PracticalStepCard
+            step="04"
+            title="Stabilize"
+            happens="Tighten edge cases, add monitoring, ensure handoffs are clean."
+            receive='"Done means silence" definition and basic monitoring.'
+            time="15 minutes weekly for 2 weeks."
           />
         </div>
         <p className="mt-6 text-sm leading-7 text-muted">
-          No pressure. Clear scope. Simple implementation.
+          Clear scope. Small first step. Structured follow-through.
         </p>
       </Section>
 
@@ -460,14 +473,18 @@ function ValueCard({ title, text }: { title: string; text: string }) {
   )
 }
 
-function ProcessCard({
+function PracticalStepCard({
   step,
   title,
-  text
+  happens,
+  receive,
+  time
 }: {
   step: string
   title: string
-  text: string
+  happens: string
+  receive: string
+  time: string
 }) {
   return (
     <article className="rounded-xl border border-line bg-white p-5 transition-all duration-200 ease-out hover:-translate-y-1 hover:shadow-soft">
@@ -475,7 +492,20 @@ function ProcessCard({
         {step}
       </p>
       <h3 className="mt-2 text-lg font-semibold text-foreground">{title}</h3>
-      <p className="mt-2 text-sm leading-7 text-muted">{text}</p>
+      <dl className="mt-3 space-y-3 text-sm leading-7">
+        <div>
+          <dt className="font-semibold text-foreground">What happens</dt>
+          <dd className="text-muted">{happens}</dd>
+        </div>
+        <div>
+          <dt className="font-semibold text-foreground">You receive</dt>
+          <dd className="text-muted">{receive}</dd>
+        </div>
+        <div>
+          <dt className="font-semibold text-foreground">Your time</dt>
+          <dd className="text-muted">{time}</dd>
+        </div>
+      </dl>
     </article>
   )
 }
