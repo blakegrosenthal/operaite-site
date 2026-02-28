@@ -64,30 +64,56 @@ export default function HomePage() {
         className="reveal-up border-t border-line py-24 sm:py-32"
         titleClassName="text-3xl sm:text-[2.3rem]"
       >
-        <ul className="max-w-3xl list-disc space-y-5 pl-5 text-sm leading-7 text-muted">
+        <ul className="max-w-3xl space-y-6">
           <li>
-            <span className="font-semibold text-foreground">Leads go unanswered</span>
-            <br />
-            Responding to new inquiries quickly significantly increases
-            engagement and conversion, yet many businesses take hours to reply
-            or never reach leads at all.
+            <h3 className="text-base font-semibold text-foreground">
+              Leads go unanswered
+            </h3>
+            <p className="mt-2 text-sm leading-7 text-muted">
+              Industry research consistently shows that responding within minutes
+              — not hours — dramatically increases booking likelihood. Yet many
+              businesses take hours to reply or never reach leads at all.
+            </p>
           </li>
           <li>
-            <span className="font-semibold text-foreground">
-              Follow-ups depend on memory
-            </span>
-            <br />
-            When follow-up tasks rely on recollection rather than systems,
-            opportunities often slip through the cracks before action is taken.
+            <h3 className="text-base font-semibold text-foreground">
+              Next steps aren’t systemized
+            </h3>
+            <p className="mt-2 text-sm leading-7 text-muted">
+              After the first conversation, there&apos;s no automatic
+              follow-through. Without defined triggers and reminders, potential
+              jobs depend on memory instead of process.
+            </p>
           </li>
           <li>
-            <span className="font-semibold text-foreground">
-              Invoices linger unpaid
-            </span>
-            <br />
-            More than half of small businesses report being owed money from
-            unpaid invoices, and many invoices are overdue by more than 30
-            days, slowing cash flow and straining operations.
+            <h3 className="text-base font-semibold text-foreground">
+              Appointments get missed or rescheduled late
+            </h3>
+            <p className="mt-2 text-sm leading-7 text-muted">
+              When confirmations and reminders aren&apos;t built into the
+              workflow, no-shows and last-minute changes reduce billable time
+              and create unnecessary friction.
+            </p>
+          </li>
+          <li>
+            <h3 className="text-base font-semibold text-foreground">
+              Invoices go out late or sit unpaid
+            </h3>
+            <p className="mt-2 text-sm leading-7 text-muted">
+              More than half of small businesses report being owed money from
+              unpaid invoices, many overdue by more than 30 days, slowing cash
+              flow and limiting growth.
+            </p>
+          </li>
+          <li>
+            <h3 className="text-base font-semibold text-foreground">
+              The owner becomes the safety net
+            </h3>
+            <p className="mt-2 text-sm leading-7 text-muted">
+              Without clear visibility into what&apos;s pending, completed, or
+              overdue, daily operations depend on the owner catching breakdowns
+              before they escalate.
+            </p>
           </li>
         </ul>
       </Section>
