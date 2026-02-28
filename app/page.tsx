@@ -23,10 +23,11 @@ export default function HomePage() {
               Operations consulting
             </p>
             <h1 className="mt-4 text-[2.3rem] leading-tight tracking-tight text-foreground sm:text-[3.2rem]">
-              Keep work moving without constant owner intervention.
+              Dependable operations for owner-led service businesses
             </h1>
             <p className="mt-5 text-base leading-8 text-muted sm:text-lg">
-              For owner-led service businesses with 1-25 employees.
+              We build practical workflows for leads, follow-ups, scheduling,
+              and billing so daily work gets done without constant oversight.
             </p>
             <p className="mt-4 text-sm font-semibold leading-7 text-foreground sm:text-base">
               You get faster response, cleaner handoffs, and fewer dropped
