@@ -26,8 +26,9 @@ export default function HomePage() {
               Dependable operations for owner-led service businesses
             </h1>
             <p className="mt-5 text-base leading-8 text-muted sm:text-lg">
-              We build practical workflows for leads, follow-ups, scheduling,
-              and billing so daily work gets done without constant oversight.
+              We fix the key operational bottlenecks — from follow-ups and
+              scheduling to billing and internal handoffs — so your business
+              runs predictably without you chasing every detail.
             </p>
             <p className="mt-4 text-sm font-semibold leading-7 text-foreground sm:text-base">
               You get faster response, cleaner handoffs, and fewer dropped
