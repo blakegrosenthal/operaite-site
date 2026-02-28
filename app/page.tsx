@@ -16,13 +16,13 @@ export default function HomePage() {
     <>
       <ScrollReveal />
 
-      <section className="reveal-up bg-white py-24 sm:py-32">
+      <section className="reveal-up bg-white py-28 sm:py-36">
         <div className="mx-auto grid w-full max-w-6xl gap-10 px-5 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:px-8">
           <div className="max-w-2xl">
             <p className="text-xs font-semibold uppercase tracking-[0.16em] text-accent">
               Operations consulting
             </p>
-            <h1 className="mt-4 text-[2.3rem] leading-tight tracking-tight text-foreground sm:text-[3.2rem]">
+            <h1 className="mt-4 text-[2.35rem] font-bold leading-tight tracking-tight text-foreground sm:text-[3.35rem]">
               Dependable operations for owner-led service businesses
             </h1>
             <p className="mt-5 text-base leading-8 text-muted sm:text-lg">
@@ -34,7 +34,7 @@ export default function HomePage() {
               You get faster response, cleaner handoffs, and fewer dropped
               tasks.
             </p>
-            <div className="mt-8 flex flex-wrap gap-3">
+            <div className="mt-10 flex flex-wrap gap-4">
               <Link
                 href="#where-work-quietly-breaks-down"
                 className="rounded-md bg-accent px-5 py-3 text-sm font-semibold text-white transition hover:bg-accent-strong"
@@ -61,8 +61,8 @@ export default function HomePage() {
       <Section
         id="where-work-quietly-breaks-down"
         title="Where Work Quietly Breaks Down"
-        className="reveal-up border-t border-line py-24 sm:py-32"
-        titleClassName="text-3xl sm:text-[2.3rem]"
+        className="reveal-up border-t border-line bg-neutral-50 py-28 sm:py-36"
+        titleClassName="text-3xl font-bold sm:text-[2.4rem]"
       >
         <ul className="grid gap-5 md:grid-cols-2">
           <ProblemBlock
@@ -92,7 +92,7 @@ export default function HomePage() {
             className="md:col-span-2"
           />
         </ul>
-        <div className="mt-10">
+        <div className="mt-12">
           <Link
             href="#process"
             className="inline-flex rounded-md bg-accent px-5 py-3 text-sm font-semibold text-white transition hover:bg-accent-strong"
@@ -106,8 +106,8 @@ export default function HomePage() {
         id="process"
         title="How It Works"
         description="Practical delivery with clear steps."
-        className="reveal-up border-t border-line py-24 sm:py-32"
-        titleClassName="text-3xl sm:text-[2.3rem]"
+        className="reveal-up border-t border-line bg-white py-28 sm:py-36"
+        titleClassName="text-3xl font-bold sm:text-[2.4rem]"
         descriptionClassName="max-w-2xl"
       >
         <div className="space-y-4">
@@ -137,7 +137,7 @@ export default function HomePage() {
             lineOne="Monthly check-ins to monitor results and refine as needed."
           />
         </div>
-        <div className="mt-10">
+        <div className="mt-12">
           <Link
             href={env.calendlyUrl}
             className="inline-flex rounded-md bg-accent px-5 py-3 text-sm font-semibold text-white transition hover:bg-accent-strong"
@@ -150,8 +150,8 @@ export default function HomePage() {
       <Section
         id="why-operaite"
         title="Why Operaite"
-        className="reveal-up border-t border-line bg-neutral-50 py-24 sm:py-32"
-        titleClassName="text-3xl sm:text-[2.3rem]"
+        className="reveal-up border-t border-line bg-neutral-50 py-28 sm:py-36"
+        titleClassName="text-3xl font-bold sm:text-[2.4rem]"
       >
         <div className="max-w-3xl space-y-5 text-sm leading-7 text-muted">
           <p>
@@ -174,9 +174,9 @@ export default function HomePage() {
         </div>
       </Section>
 
-      <section className="reveal-up border-t border-line py-24 sm:py-32">
+      <section className="reveal-up border-t border-line bg-white py-28 sm:py-36">
         <div className="mx-auto w-full max-w-6xl px-5 sm:px-6 lg:px-8">
-          <div className="rounded-3xl bg-neutral-100 p-8 shadow-soft sm:p-10 lg:p-14">
+          <div className="rounded-3xl bg-neutral-100 p-10 shadow-soft sm:p-12 lg:p-16">
             <CTA
               title="Book a 30-minute call."
               description="We&apos;ll identify the top 2-3 operational leaks. You&apos;ll leave with a short plan and next step. No prep required. Low pressure."
@@ -269,7 +269,7 @@ function ProblemBlock({
 }) {
   return (
     <li
-      className={`rounded-xl border border-line bg-white p-5 shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-soft ${className ?? ''}`}
+      className={`rounded-xl border border-line bg-white p-5 shadow-soft transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow ${className ?? ''}`}
     >
       <div className="mb-3 inline-flex h-9 w-9 items-center justify-center rounded-md border border-line bg-stone-50 text-muted">
         {icon}
