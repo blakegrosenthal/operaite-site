@@ -52,7 +52,7 @@ export default function HomePage() {
             </p>
           </div>
           <div>
-            <SystemSnapshot />
+            <BeforeAfterPanel />
           </div>
         </div>
       </section>
@@ -203,44 +203,65 @@ export default function HomePage() {
   )
 }
 
-function SystemSnapshot() {
-  const rows = [
-    {
-      flow: 'Lead comes in → Follow-up sent automatically',
-      status: 'Tracked'
-    },
-    {
-      flow: 'Appointment booked → Reminder confirmed',
-      status: 'Tracked'
-    },
-    {
-      flow: 'Job completed → Invoice sent',
-      status: 'Tracked'
-    }
-  ] as const
-
+function BeforeAfterPanel() {
   return (
     <div className="rounded-2xl border border-line bg-neutral-50 p-5 shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow sm:p-6">
-      <p className="text-xs font-semibold uppercase tracking-[0.16em] text-accent">
-        Workflow Snapshot
-      </p>
-      <div className="mt-4 space-y-3">
-        {rows.map((row) => (
-          <div
-            key={row.flow}
-            className="flex flex-col gap-3 rounded-xl border border-line bg-white p-4 sm:flex-row sm:items-center sm:justify-between"
-          >
-            <p className="text-sm font-medium leading-6 text-foreground">
-              {row.flow}
-            </p>
-            <div className="inline-flex items-center gap-2 rounded-full border border-line bg-stone-50 px-3 py-1 text-xs font-semibold text-muted">
-              <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-stone-200 text-stone-700">
+      <div className="grid gap-4 sm:grid-cols-2">
+        <div className="rounded-xl border border-line bg-white p-4">
+          <p className="text-xs font-semibold uppercase tracking-[0.14em] text-muted">
+            Before
+          </p>
+          <ul className="mt-3 space-y-2 text-sm leading-7 text-foreground">
+            <li className="flex items-start gap-2">
+              <span className="mt-2 block h-1.5 w-1.5 rounded-full bg-stone-400" />
+              <span>Leads sit in inboxes</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="mt-2 block h-1.5 w-1.5 rounded-full bg-stone-400" />
+              <span>Follow-ups depend on memory</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="mt-2 block h-1.5 w-1.5 rounded-full bg-stone-400" />
+              <span>Invoices get delayed</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="mt-2 block h-1.5 w-1.5 rounded-full bg-stone-400" />
+              <span>The owner checks everything</span>
+            </li>
+          </ul>
+        </div>
+
+        <div className="rounded-xl border border-line bg-white p-4">
+          <p className="text-xs font-semibold uppercase tracking-[0.14em] text-accent">
+            After
+          </p>
+          <ul className="mt-3 space-y-2 text-sm leading-7 text-foreground">
+            <li className="flex items-start gap-2">
+              <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-stone-200 text-[11px] text-stone-700">
                 ✓
               </span>
-              <span>Status: {row.status}</span>
-            </div>
-          </div>
-        ))}
+              <span>Leads are logged and tracked</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-stone-200 text-[11px] text-stone-700">
+                ✓
+              </span>
+              <span>Follow-ups trigger automatically</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-stone-200 text-[11px] text-stone-700">
+                ✓
+              </span>
+              <span>Invoices send on completion</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-stone-200 text-[11px] text-stone-700">
+                ✓
+              </span>
+              <span>Clear status across all jobs</span>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   )
