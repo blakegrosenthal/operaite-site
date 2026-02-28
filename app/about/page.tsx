@@ -1,107 +1,92 @@
+import Link from 'next/link'
 import type { Metadata } from 'next'
-import { CTA } from '@/components/CTA'
-import { Section } from '@/components/Section'
 import { env } from '@/lib/env'
 
 export const metadata: Metadata = {
   title: 'About',
   description:
-    'Operaite Consulting is a systems-focused firm that helps owner-led service businesses build disciplined operational infrastructure.'
+    'About Blake Rosenthal and Operaite Consulting: practical systems that help owner-led service businesses run with more reliability and less operational strain.'
 }
 
 export default function AboutPage() {
   return (
-    <>
-      <section className="border-b border-line bg-white py-16 sm:py-20">
-        <div className="mx-auto w-full max-w-6xl px-5 sm:px-6 lg:px-8">
-          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-accent">
-            About Operaite
-          </p>
-          <h1 className="mt-3 text-3xl tracking-tight text-foreground sm:text-5xl">
-            A systems-focused operations firm for service businesses.
-          </h1>
-          <p className="mt-5 max-w-3xl text-base leading-8 text-muted">
-            Operaite Consulting works with owner-led teams that need stronger
-            operational structure. The objective is not temporary cleanup. It is
-            long-term reliability.
-          </p>
+    <section className="border-t border-line py-20 sm:py-24">
+      <div className="mx-auto w-full max-w-6xl px-5 sm:px-6 lg:px-8">
+        <h1 className="text-3xl tracking-tight text-foreground sm:text-5xl">About</h1>
+
+        <div className="mt-10 grid gap-8 md:grid-cols-[0.85fr_1.15fr] md:items-start lg:gap-12">
+          <div>
+            <div className="rounded-2xl border border-line bg-white p-4 shadow-sm">
+              <div className="flex aspect-[4/5] items-center justify-center rounded-xl border border-line bg-neutral-50 text-muted">
+                <svg
+                  viewBox="0 0 24 24"
+                  className="h-14 w-14"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.7"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  aria-hidden="true"
+                >
+                  <circle cx="12" cy="8" r="3.5" />
+                  <path d="M5 20a7 7 0 0 1 14 0" />
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <div className="space-y-5 text-sm leading-7 text-muted sm:text-base sm:leading-8">
+            <p>Hi, I’m Blake Rosenthal, founder of Operaite Consulting.</p>
+
+            <p>
+              I work with owner-led service businesses that are tired of chasing
+              follow-ups, checking calendars twice, and wondering what slipped
+              through the cracks. Most owners don’t need more tools. They need
+              their operations to run predictably without constant oversight.
+            </p>
+
+            <p>
+              I grew up around small business, and I’ve seen firsthand how easy
+              it is for manual processes to quietly drain time, cash flow, and
+              energy. When my dad was undergoing treatment and couldn’t carry
+              the day-to-day weight of the business, I stepped in and rebuilt
+              the operational systems inside our family practice. The goal
+              wasn’t complexity. It was reliability. Fewer dropped tasks. Faster
+              response. Clear visibility.
+            </p>
+
+            <p>That experience shaped how I approach every engagement.</p>
+
+            <p>
+              Since then, I’ve spoken with dozens of small and midsized business
+              owners across industries. The patterns are consistent. Leads go
+              unanswered. Follow-ups rely on memory. Invoices lag. Critical
+              tasks live in inboxes instead of systems. Over time, that
+              instability compounds.
+            </p>
+
+            <p>
+              My work focuses on stabilizing the revenue-critical workflows that
+              protect your business. Not with buzzwords. Not with overengineered
+              platforms. With structured systems that make execution dependable.
+            </p>
+
+            <p>
+              When the right systems are in place, the business feels different.
+              Fewer surprises. Fewer fire drills. More clarity. More control.
+            </p>
+
+            <div className="pt-2">
+              <Link
+                href={env.calendlyUrl}
+                className="mt-6 inline-flex rounded-md bg-accent px-5 py-3 text-sm font-semibold text-white transition hover:bg-accent-strong"
+              >
+                Book a 30 Minute Clarity Call
+              </Link>
+            </div>
+          </div>
         </div>
-      </section>
-
-      <Section
-        title="What We Believe"
-        description="Principles that guide how we design and implement systems."
-        className="bg-neutral-50"
-      >
-        <div className="grid gap-4 md:grid-cols-3">
-          <BeliefCard
-            title="Clarity over complexity"
-            text="Systems should be easy to understand so your team can run them consistently."
-          />
-          <BeliefCard
-            title="Reliability over hype"
-            text="We focus on dependable follow-through, not flashy ideas that are hard to maintain."
-          />
-          <BeliefCard
-            title="Small first, then expand"
-            text="We start with practical improvements, make them stable, then grow from there."
-          />
-        </div>
-      </Section>
-
-      <Section
-        title="What You Can Expect"
-        description="A practical engagement with clear steps and low disruption."
-      >
-        <ul className="grid gap-4 sm:grid-cols-2">
-          <ChecklistItem text="Clear scope before anything is built" />
-          <ChecklistItem text="Work inside your current tools where possible" />
-          <ChecklistItem text="Documentation your team can follow" />
-          <ChecklistItem text="Follow-up after launch to stabilize" />
-        </ul>
-      </Section>
-
-      <Section
-        title="Why This Exists"
-        className="bg-neutral-50"
-      >
-        <p className="max-w-3xl rounded-xl border border-line bg-white p-5 text-sm leading-7 text-muted">
-          We started building systems because we saw how much operational stress
-          falls on owners and teams. Our work focuses on practical automation
-          that reduces that load and helps the business run with more
-          consistency.
-        </p>
-      </Section>
-
-      <section className="pb-16 sm:pb-24">
-        <div className="mx-auto w-full max-w-6xl px-5 sm:px-6 lg:px-8">
-          <CTA
-            title="Book a 30-Minute Operations Review"
-            description="We will assess your current operating rhythm, identify weak points, and outline a disciplined implementation path."
-            primaryLabel="Book a 30-Minute Operations Review"
-            primaryHref={env.calendlyUrl}
-            secondaryLabel="Explore Services"
-            secondaryHref="/services"
-          />
-        </div>
-      </section>
-    </>
-  )
-}
-
-function BeliefCard({ title, text }: { title: string; text: string }) {
-  return (
-    <article className="rounded-xl border border-line bg-white p-5">
-      <h3 className="text-lg font-semibold text-foreground">{title}</h3>
-      <p className="mt-2 text-sm leading-7 text-muted">{text}</p>
-    </article>
-  )
-}
-
-function ChecklistItem({ text }: { text: string }) {
-  return (
-    <li className="rounded-xl border border-line bg-white p-5 text-sm font-medium leading-7 text-foreground">
-      {text}
-    </li>
+      </div>
+    </section>
   )
 }
