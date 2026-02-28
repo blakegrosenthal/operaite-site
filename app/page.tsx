@@ -8,7 +8,7 @@ import { env } from '@/lib/env'
 export const metadata: Metadata = {
   title: 'Operational Systems for Owner-Led Service Businesses',
   description:
-    'Practical operational systems and automation for owner-led service businesses that want fewer mix-ups, faster payments, and clearer execution.'
+    'Practical systems for owner-led service businesses that want fewer dropped tasks, less admin drag, and clearer execution.'
 }
 
 export default function HomePage() {
@@ -23,15 +23,14 @@ export default function HomePage() {
               Operations consulting
             </p>
             <h1 className="mt-4 text-3xl leading-tight tracking-tight text-foreground sm:text-5xl">
-              Practical systems that keep your business moving day to day.
+              Keep work moving without constant owner intervention.
             </h1>
             <p className="mt-5 text-base leading-8 text-muted sm:text-lg">
-              We build practical automation and clear handoffs so leads, jobs,
-              and admin work move forward without constant owner oversight.
+              For owner-led service businesses with 1-25 employees.
             </p>
             <p className="mt-4 text-sm font-semibold leading-7 text-foreground sm:text-base">
-              What you get: faster response, fewer dropped tasks, and clear
-              visibility into what is done and what is next.
+              You get faster response, cleaner handoffs, and fewer dropped
+              tasks.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
@@ -60,41 +59,40 @@ export default function HomePage() {
       <Section
         id="what-breaks"
         title="What Breaks in Owner-Led Service Businesses"
-        description="These are common symptoms owners notice when follow-through depends on memory."
+        description="These are the issues owners see week after week."
         className="reveal-up py-20 sm:py-28"
       >
         <ul className="grid gap-4 text-sm sm:grid-cols-2">
-          <PainPoint text="New leads sit unclaimed until someone remembers to reply." />
-          <PainPoint text="Estimates go out late or are never sent." />
-          <PainPoint text="Appointments get booked, but confirmations are inconsistent." />
-          <PainPoint text="Jobs are completed, but invoices lag behind." />
-          <PainPoint text="The same details are re-entered across tools and spreadsheets." />
-          <PainPoint text="No one can see what is done versus pending without asking around." />
+          <PainPoint text="Leads wait too long for a response." />
+          <PainPoint text="Estimates are delayed or missed." />
+          <PainPoint text="Appointments are booked, but confirmations slip." />
+          <PainPoint text="Jobs finish, then invoices wait." />
+          <PainPoint text="Information gets entered more than once." />
+          <PainPoint text="No one sees pending work without asking around." />
         </ul>
         <p className="mt-6 text-sm leading-7 text-muted">
-          We fix these with simple systems that make follow-through visible and
-          automatic.
+          We fix these with simple systems that make follow-through visible and automatic.
         </p>
       </Section>
 
       <Section
         id="what-we-fix"
         title="What We Fix"
-        description="Simple improvements that help your business run more consistently day to day."
+        description="Practical fixes that reduce admin load and missed steps."
         className="reveal-up bg-neutral-50 py-20 sm:py-28"
       >
         <div className="grid gap-4 sm:grid-cols-3">
           <ValueCard
-            title="Fast follow through"
-            text="Leads, reminders, and next steps happen consistently without someone needing to remember."
+            title="Lead Response"
+            text="New inquiries get timely follow-up without manual chasing."
           />
           <ValueCard
-            title="Less manual admin work"
-            text="We remove repetitive tasks that slow the business down and create errors."
+            title="Admin Follow-Through"
+            text="Reminders, updates, and handoffs run the same way every time."
           />
           <ValueCard
-            title="More peace of mind"
-            text="You know what is happening without checking everything or relying on one person."
+            title="Owner Visibility"
+            text="You can see what is done and what is still pending."
           />
         </div>
       </Section>
@@ -102,41 +100,37 @@ export default function HomePage() {
       <Section
         id="process"
         title="How It Works"
-        description="Low-risk rollout with clear deliverables and limited owner time."
+        description="Short, structured, and low-risk."
         className="reveal-up py-20 sm:py-28"
       >
         <div className="grid gap-4 md:grid-cols-2">
           <PracticalStepCard
             step="01"
             title="Diagnose"
-            happens="45-minute call + quick review of current tools."
-            receive='A short "Fix Plan" outlining top 2-3 revenue-critical leaks and the simplest systems to stop them.'
-            time="60 minutes."
+            lineOne="45-minute call + quick tool review. Your time: 60 minutes."
+            lineTwo='You get: Fix Plan with the top 2-3 leaks and first system.'
           />
           <PracticalStepCard
             step="02"
             title="Build"
-            happens="Implement the smallest reliable system that stops the leak."
-            receive="Working automations + a simple operating checklist."
-            time="30 minutes for review."
+            lineOne="We build the smallest system that stops one leak. Your time: 30 minutes."
+            lineTwo="You get: working flow and simple checklist."
           />
           <PracticalStepCard
             step="03"
             title="Train"
-            happens="Teach the admin and owner the new flow."
-            receive="A 1-page SOP + recorded walkthrough."
-            time="45 minutes."
+            lineOne="Owner and admin walkthrough. Your time: 45 minutes."
+            lineTwo="You get: 1-page SOP and recorded walkthrough."
           />
           <PracticalStepCard
             step="04"
             title="Stabilize"
-            happens="Tighten edge cases, add monitoring, ensure handoffs are clean."
-            receive='"Done means silence" definition and basic monitoring.'
-            time="15 minutes weekly for 2 weeks."
+            lineOne="We tighten edge cases for two weeks. Your time: 15 minutes weekly."
+            lineTwo='You get: basic monitoring and a clear "done" definition.'
           />
         </div>
         <p className="mt-6 text-sm leading-7 text-muted">
-          Clear scope. Small first step. Structured follow-through.
+          Clear scope. Small first step. Stable rollout.
         </p>
       </Section>
 
@@ -147,29 +141,13 @@ export default function HomePage() {
       >
         <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-start">
           <div className="max-w-3xl space-y-3 text-sm leading-7 text-muted">
-            <p>
-              Operaite was built on a business management background from San
-              Diego State University.
-            </p>
-            <p>
-              In our family chiropractic practice, we built systems to stabilize
-              operations during my dad&apos;s AML diagnosis.
-            </p>
-            <p>
-              That period made clear how quickly manual processes create daily
-              strain for owners and teams.
-            </p>
-            <p>
-              We then conducted structured interviews with small business owners
-              to identify where workflows break and why implementations fail.
-            </p>
-            <p>
-              Our philosophy is simple: systems should reduce stress, not create
-              more.
-            </p>
+            <p>Business management background from San Diego State University.</p>
+            <p>First systems were built inside our family chiropractic practice.</p>
+            <p>That work stabilized operations during my dad&apos;s AML diagnosis.</p>
+            <p>We also ran structured interviews with small business owners.</p>
+            <p>The pattern was clear: good teams still lose follow-through.</p>
             <p className="font-medium text-foreground">
-              The approach is low-risk and practical: start small, stabilize,
-              then expand only when it clearly helps.
+              Systems should reduce stress, not create more. Start small, prove it, then expand.
             </p>
           </div>
           <div className="rounded-xl border border-line bg-white p-5">
@@ -203,8 +181,8 @@ export default function HomePage() {
         <div className="mx-auto w-full max-w-6xl px-5 sm:px-6 lg:px-8">
           <div className="rounded-3xl bg-neutral-100 p-8 shadow-soft sm:p-10 lg:p-14">
             <CTA
-              title="Start with a practical 30-minute call."
-              description="We&apos;ll identify the top 2–3 operational leaks. You&apos;ll leave with a short plan and clear next steps. No prep required."
+              title="Book a 30-minute call."
+              description="We&apos;ll identify the top 2-3 operational leaks. You&apos;ll leave with a short plan and next step. No prep required. Low pressure."
               primaryLabel="Book a Call"
               primaryHref={env.calendlyUrl}
               secondaryLabel="Contact"
@@ -280,15 +258,13 @@ function ValueCard({ title, text }: { title: string; text: string }) {
 function PracticalStepCard({
   step,
   title,
-  happens,
-  receive,
-  time
+  lineOne,
+  lineTwo
 }: {
   step: string
   title: string
-  happens: string
-  receive: string
-  time: string
+  lineOne: string
+  lineTwo: string
 }) {
   return (
     <article className="rounded-xl border border-line bg-white p-5 shadow-soft">
@@ -296,20 +272,8 @@ function PracticalStepCard({
         {step}
       </p>
       <h3 className="mt-2 text-lg font-semibold text-foreground">{title}</h3>
-      <dl className="mt-3 space-y-3 text-sm leading-7">
-        <div>
-          <dt className="font-semibold text-foreground">What happens</dt>
-          <dd className="text-muted">{happens}</dd>
-        </div>
-        <div>
-          <dt className="font-semibold text-foreground">You receive</dt>
-          <dd className="text-muted">{receive}</dd>
-        </div>
-        <div>
-          <dt className="font-semibold text-foreground">Your time</dt>
-          <dd className="text-muted">{time}</dd>
-        </div>
-      </dl>
+      <p className="mt-3 text-sm leading-7 text-muted">{lineOne}</p>
+      <p className="mt-2 text-sm leading-7 text-muted">{lineTwo}</p>
     </article>
   )
 }
