@@ -3,13 +3,13 @@
 @tailwind utilities;
 
 :root {
-  --background: #f7f7f3;
-  --foreground: #0f172a;
-  --muted: #475569;
-  --line: #d7d9de;
+  --background: #f7f7f7;
+  --foreground: #1f2a44;
+  --muted: #6d7a8d;
+  --line: #d6dde7;
   --surface: #ffffff;
-  --accent: #0f766e;
-  --accent-strong: #115e59;
+  --accent: #1f2a44;
+  --accent-strong: #162036;
 }
 
 * {
@@ -23,14 +23,7 @@ body {
 }
 
 body {
-  background:
-    radial-gradient(
-      circle at 10% 10%,
-      rgba(13, 148, 136, 0.12),
-      transparent 35%
-    ),
-    radial-gradient(circle at 90% 0%, rgba(15, 23, 42, 0.08), transparent 25%),
-    var(--background);
+  background: var(--background);
   color: var(--foreground);
   font-family: 'Trebuchet MS', 'Gill Sans', 'Noto Sans', sans-serif;
   line-height: 1.5;
