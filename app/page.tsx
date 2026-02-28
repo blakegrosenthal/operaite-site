@@ -89,6 +89,24 @@ export default function HomePage() {
       </section>
 
       <Section
+        id="owner-interviews"
+        title="What We Heard From Owners"
+        description="Across interviews, we heard the same pattern: too much work is still manual, tools are fragmented, follow-through depends on memory, and implementation is the blocker."
+        className="reveal-up bg-neutral-50"
+      >
+        <div className="grid gap-4 sm:grid-cols-2">
+          <QuoteCard quote="“Purchasing… That’s all pretty much done by hand.”" />
+          <QuoteCard quote="“We’re just not set up… where it just does it on its own yet.”" />
+          <QuoteCard quote="“Cash flow is the name of the game with small business, and that’s the most difficult part.”" />
+          <QuoteCard quote="“There’s no manual to really implement it.”" />
+        </div>
+        <p className="mt-5 text-xs leading-6 text-muted">
+          Quotes from owner interviews across construction, healthcare, and
+          service businesses. These are not paid endorsements.
+        </p>
+      </Section>
+
+      <Section
         id="where-work-gets-stuck"
         title="Where Work Gets Stuck"
         description="Owner led businesses usually do not have growth problems first. They have follow through problems."
@@ -361,6 +379,17 @@ function SystemSnapshot() {
         ))}
       </div>
     </div>
+  )
+}
+
+function QuoteCard({ quote }: { quote: string }) {
+  return (
+    <article className="rounded-xl bg-white p-5 shadow-soft">
+      <div className="mb-3 inline-flex h-7 w-7 items-center justify-center rounded-full bg-stone-100 text-sm font-semibold text-accent">
+        “
+      </div>
+      <p className="text-sm leading-7 text-foreground">{quote}</p>
+    </article>
   )
 }
 
