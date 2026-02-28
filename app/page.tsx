@@ -42,7 +42,7 @@ export default function HomePage() {
                 Book a Call
               </Link>
               <Link
-                href="#what-breaks"
+                href="#where-work-quietly-breaks-down"
                 className="rounded-md border border-line px-5 py-3 text-sm font-semibold text-foreground transition hover:bg-white"
               >
                 See What Gets Fixed
@@ -59,40 +59,35 @@ export default function HomePage() {
       </section>
 
       <Section
-        id="what-breaks"
-        title="What Breaks in Owner-Led Service Businesses"
-        description="These are the issues owners see week after week."
+        id="where-work-quietly-breaks-down"
+        title="Where Work Quietly Breaks Down"
         className="reveal-up border-t border-line py-24 sm:py-32"
         titleClassName="text-3xl sm:text-[2.3rem]"
-        descriptionClassName="max-w-2xl"
       >
-        <ul className="grid gap-4 text-sm sm:grid-cols-2">
-          <PainPoint text="Leads wait too long for a response." />
-          <PainPoint text="Estimates are delayed or missed." />
-          <PainPoint text="Appointments are booked, but confirmations slip." />
-          <PainPoint text="Jobs finish, then invoices wait." />
-          <PainPoint text="Information gets entered more than once." />
-          <PainPoint text="No one sees pending work without asking around." />
-        </ul>
-        <p className="mt-6 text-sm leading-7 text-muted">
-          We fix these with simple systems that make follow-through visible and automatic.
-        </p>
-      </Section>
-
-      <Section
-        id="what-we-fix"
-        title="Where Work Quietly Breaks Down"
-        className="reveal-up border-t border-line bg-neutral-50 py-24 sm:py-32"
-        titleClassName="text-3xl sm:text-[2.3rem]"
-      >
-        <ul className="grid gap-x-10 gap-y-4 pl-5 text-sm leading-7 text-foreground sm:grid-cols-2">
-          <li className="list-disc">Leads come in, but no one responds quickly</li>
-          <li className="list-disc">Estimates are sent but never followed up</li>
-          <li className="list-disc">Jobs are completed, but invoices wait</li>
-          <li className="list-disc">Team members ask, “Who’s handling this?”</li>
-          <li className="list-disc">Information lives in inboxes instead of systems</li>
-          <li className="list-disc">
-            The owner becomes the safety net for everything
+        <ul className="max-w-3xl list-disc space-y-5 pl-5 text-sm leading-7 text-muted">
+          <li>
+            <span className="font-semibold text-foreground">Leads go unanswered</span>
+            <br />
+            Responding to new inquiries quickly significantly increases
+            engagement and conversion, yet many businesses take hours to reply
+            or never reach leads at all.
+          </li>
+          <li>
+            <span className="font-semibold text-foreground">
+              Follow-ups depend on memory
+            </span>
+            <br />
+            When follow-up tasks rely on recollection rather than systems,
+            opportunities often slip through the cracks before action is taken.
+          </li>
+          <li>
+            <span className="font-semibold text-foreground">
+              Invoices linger unpaid
+            </span>
+            <br />
+            More than half of small businesses report being owed money from
+            unpaid invoices, and many invoices are overdue by more than 30
+            days, slowing cash flow and straining operations.
           </li>
         </ul>
       </Section>
@@ -251,15 +246,6 @@ function PainPoint({ text }: { text: string }) {
       </span>
       <span>{text}</span>
     </li>
-  )
-}
-
-function ValueCard({ title, text }: { title: string; text: string }) {
-  return (
-    <article className="rounded-xl border border-line bg-white p-5 shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-soft">
-      <h3 className="text-base font-semibold text-foreground">{title}</h3>
-      <p className="mt-2 text-sm leading-7 text-muted">{text}</p>
-    </article>
   )
 }
 
