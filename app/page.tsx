@@ -103,6 +103,25 @@ export default function HomePage() {
         </div>
       </Section>
 
+      <div className="reveal-up py-16 sm:py-20">
+        <div className="mx-auto w-full max-w-6xl px-5 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-[72ch] space-y-4 text-center sm:space-y-5">
+            <p className="text-lg leading-8 text-foreground sm:text-xl">
+              Built from real conversations with owner-led service businesses
+            </p>
+            <p className="text-lg leading-8 text-foreground sm:text-xl">
+              Focused on the workflows that protect revenue and keep work moving
+            </p>
+            <p className="text-lg leading-8 text-foreground sm:text-xl">
+              Designed to reduce stress, not introduce more tools
+            </p>
+            <p className="text-lg leading-8 text-foreground sm:text-xl">
+              Implemented, tested, and supported — not just recommended
+            </p>
+          </div>
+        </div>
+      </div>
+
       <Section
         id="process"
         title="How It Works"
