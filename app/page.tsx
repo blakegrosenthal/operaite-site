@@ -17,12 +17,12 @@ export default function HomePage() {
       <ScrollReveal />
 
       <section className="reveal-up bg-white py-28 sm:py-36">
-        <div className="mx-auto grid w-full max-w-6xl gap-10 px-5 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:px-8">
-          <div className="max-w-2xl">
+        <div className="mx-auto grid w-full max-w-6xl gap-12 px-5 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:px-8">
+          <div className="max-w-[72ch]">
             <p className="text-xs font-semibold uppercase tracking-[0.16em] text-accent">
               Operations consulting
             </p>
-            <h1 className="mt-4 text-[2.35rem] font-bold leading-tight tracking-tight text-foreground sm:text-[3.35rem]">
+            <h1 className="mt-4 text-[2.45rem] font-bold leading-tight tracking-tight text-foreground sm:text-[3.45rem]">
               Dependable operations for owner-led service businesses
             </h1>
             <p className="mt-5 text-base leading-8 text-muted sm:text-lg">
@@ -34,7 +34,7 @@ export default function HomePage() {
               You get faster response, cleaner handoffs, and fewer dropped
               tasks.
             </p>
-            <div className="mt-10 flex flex-wrap gap-4">
+            <div className="mt-12 flex flex-wrap gap-4">
               <Link
                 href="#where-work-quietly-breaks-down"
                 className="rounded-md bg-accent px-5 py-3 text-sm font-semibold text-white transition hover:bg-accent-strong"
@@ -48,7 +48,7 @@ export default function HomePage() {
                 Book a Clarity Call
               </Link>
             </div>
-            <p className="mt-4 text-xs leading-6 text-muted">
+            <p className="mt-6 text-xs leading-6 text-muted">
               Built from real owner interviews + real operational constraints
             </p>
           </div>
@@ -62,9 +62,10 @@ export default function HomePage() {
         id="where-work-quietly-breaks-down"
         title="Where Work Quietly Breaks Down"
         className="reveal-up border-t border-line bg-neutral-50 py-28 sm:py-36"
+        headerClassName="max-w-[72ch] border-b border-line pb-6 sm:pb-8"
         titleClassName="text-3xl font-bold sm:text-[2.4rem]"
       >
-        <ul className="grid gap-5 md:grid-cols-2">
+        <ul className="grid gap-6 md:grid-cols-2">
           <ProblemBlock
             title="Leads go unanswered"
             text="Industry research consistently shows that responding within minutes — not hours — dramatically increases booking likelihood. Yet many businesses take hours to reply or never reach leads at all."
@@ -92,7 +93,7 @@ export default function HomePage() {
             className="md:col-span-2"
           />
         </ul>
-        <div className="mt-12">
+        <div className="mt-14">
           <Link
             href="#process"
             className="inline-flex rounded-md bg-accent px-5 py-3 text-sm font-semibold text-white transition hover:bg-accent-strong"
@@ -107,10 +108,11 @@ export default function HomePage() {
         title="How It Works"
         description="Practical delivery with clear steps."
         className="reveal-up border-t border-line bg-white py-28 sm:py-36"
+        headerClassName="max-w-[72ch] border-b border-line pb-6 sm:pb-8"
         titleClassName="text-3xl font-bold sm:text-[2.4rem]"
-        descriptionClassName="max-w-2xl"
+        descriptionClassName="max-w-[72ch]"
       >
-        <div className="space-y-4">
+        <div className="max-w-[72ch] space-y-5">
           <PracticalStepCard
             step="01"
             title="Discovery"
@@ -137,7 +139,7 @@ export default function HomePage() {
             lineOne="Monthly check-ins to monitor results and refine as needed."
           />
         </div>
-        <div className="mt-12">
+        <div className="mt-14">
           <Link
             href={env.calendlyUrl}
             className="inline-flex rounded-md bg-accent px-5 py-3 text-sm font-semibold text-white transition hover:bg-accent-strong"
@@ -151,9 +153,10 @@ export default function HomePage() {
         id="why-operaite"
         title="Why Operaite"
         className="reveal-up border-t border-line bg-neutral-50 py-28 sm:py-36"
+        headerClassName="max-w-[72ch] border-b border-line pb-6 sm:pb-8"
         titleClassName="text-3xl font-bold sm:text-[2.4rem]"
       >
-        <div className="max-w-3xl space-y-6 text-sm leading-7 text-muted sm:text-base sm:leading-8">
+        <div className="max-w-[72ch] space-y-6 text-sm leading-7 text-muted sm:text-base sm:leading-8">
           <p>Service businesses do not need more software.</p>
           <p className="text-lg font-semibold leading-8 text-foreground sm:text-xl">
             They need reliability.
@@ -177,9 +180,9 @@ export default function HomePage() {
         </div>
       </Section>
 
-      <section className="reveal-up border-t border-line bg-white py-28 sm:py-36">
+      <section className="reveal-up border-t border-line bg-white py-32 sm:py-40">
         <div className="mx-auto w-full max-w-6xl px-5 sm:px-6 lg:px-8">
-          <div className="rounded-3xl bg-neutral-100 p-10 shadow-soft sm:p-12 lg:p-16">
+          <div className="mx-auto max-w-5xl rounded-3xl bg-neutral-100 p-10 shadow-soft sm:p-14 lg:p-16">
             <CTA
               title="Book a 30-minute call."
               description="We&apos;ll identify the top 2-3 operational leaks. You&apos;ll leave with a short plan and next step. No prep required. Low pressure."
@@ -278,7 +281,7 @@ function ProblemBlock({
         {icon}
       </div>
       <h3 className="text-base font-semibold text-foreground">{title}</h3>
-      <p className="mt-2 text-sm leading-7 text-muted">{text}</p>
+      <p className="mt-2 max-w-[72ch] text-sm leading-7 text-muted">{text}</p>
     </li>
   )
 }
@@ -400,7 +403,7 @@ function PracticalStepCard({
   bullets?: string[]
 }) {
   return (
-    <article className="rounded-xl border border-line bg-white p-5 shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-soft">
+    <article className="rounded-xl border border-line bg-white p-6 shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-soft sm:p-7">
       <p className="text-xs font-semibold uppercase tracking-[0.16em] text-accent">
         {step}
       </p>
