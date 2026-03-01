@@ -106,7 +106,7 @@ export default function HomePage() {
       <Section
         id="process"
         title="How It Works"
-        description="Practical delivery with clear steps."
+        description="We follow a simple, structured process to make your operations more predictable without disrupting how you already run your business."
         className="reveal-up border-t border-line bg-white py-28 sm:py-36"
         headerClassName="max-w-[72ch] border-b border-line pb-6 sm:pb-8"
         titleClassName="text-3xl font-bold sm:text-[2.4rem]"
@@ -115,28 +115,28 @@ export default function HomePage() {
         <div className="max-w-[72ch] space-y-5">
           <PracticalStepCard
             step="01"
-            title="Discovery"
-            lineOne="30-minute call to understand your operations and priorities."
+            title="Understand Where Work Breaks"
+            lineOne="We start with a focused call to understand how work currently flows, where tasks stall, and where revenue slips through."
           />
           <PracticalStepCard
             step="02"
-            title="System Plan"
-            lineOne="I analyze your workflows and deliver a short plan outlining:"
-            bullets={[
-              'What we will fix',
-              'How it works',
-              'Expected time and revenue impact'
-            ]}
+            title="Identify What Matters Most"
+            lineOne="Not everything needs fixing. We prioritize the workflows that protect revenue and reduce daily friction."
           />
           <PracticalStepCard
             step="03"
-            title="Build & Train"
-            lineOne="I implement the systems and train your team so everything runs predictably."
+            title="Build Simple Systems"
+            lineOne="We design and implement practical systems around those gaps so follow-ups, scheduling, billing, and internal handoffs happen automatically."
           />
           <PracticalStepCard
             step="04"
-            title="Ongoing Support"
-            lineOne="Monthly check-ins to monitor results and refine as needed."
+            title="Train and Verify"
+            lineOne="Your team is trained on the new workflow, and we verify that everything works in real conditions."
+          />
+          <PracticalStepCard
+            step="05"
+            title="Monitor and Refine"
+            lineOne="After launch, we check in regularly, review performance, and adjust as needed to keep operations steady."
           />
         </div>
         <div className="mt-14">
