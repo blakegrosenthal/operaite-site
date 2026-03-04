@@ -23,12 +23,13 @@ export default function HomePage() {
               Operations consulting
             </p>
             <h1 className="mt-4 text-[2.45rem] font-bold leading-tight tracking-tight text-foreground sm:text-[3.45rem]">
-              Dependable operations for owner-led service businesses
+              Stop Losing Revenue to Missed Follow-Ups, No-Shows, and Delayed
+              Invoices
             </h1>
             <p className="mt-5 text-base leading-8 text-muted sm:text-lg">
-              We fix the key operational bottlenecks — from follow-ups and
-              scheduling to billing and internal handoffs — so your business
-              runs predictably without you chasing every detail.
+              We install simple systems so leads get answered fast,
+              appointments are confirmed, invoices go out on time, and your
+              team doesn’t have to rely on memory.
             </p>
             <p className="mt-4 text-sm font-semibold leading-7 text-foreground sm:text-base">
               You get faster response, cleaner handoffs, and fewer dropped
