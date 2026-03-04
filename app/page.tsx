@@ -17,8 +17,8 @@ export default function HomePage() {
       <ScrollReveal />
 
       <section className="reveal-up bg-white py-28 sm:py-36">
-        <div className="mx-auto grid w-full max-w-6xl gap-12 px-5 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:px-8">
-          <div className="max-w-[72ch]">
+        <div className="mx-auto w-full max-w-6xl px-5 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-[68rem] text-center">
             <p className="text-xs font-semibold uppercase tracking-[0.16em] text-accent">
               Operations consulting
             </p>
@@ -26,16 +26,12 @@ export default function HomePage() {
               Stop Losing Revenue to Missed Follow-Ups, No-Shows, and Delayed
               Invoices
             </h1>
-            <p className="mt-5 text-base leading-8 text-muted sm:text-lg">
+            <p className="mx-auto mt-6 max-w-4xl text-base font-medium leading-8 text-foreground/80 sm:text-lg">
               We install simple systems so leads get answered fast,
               appointments are confirmed, invoices go out on time, and your
               team doesn’t have to rely on memory.
             </p>
-            <p className="mt-4 text-sm font-semibold leading-7 text-foreground sm:text-base">
-              You get faster response, cleaner handoffs, and fewer dropped
-              tasks.
-            </p>
-            <div className="mt-12 flex flex-wrap gap-4">
+            <div className="mt-12 flex flex-wrap justify-center gap-4">
               <Link
                 href="#where-work-quietly-breaks-down"
                 className="rounded-md bg-accent px-5 py-3 text-sm font-semibold text-white transition hover:bg-accent-strong"
@@ -49,11 +45,11 @@ export default function HomePage() {
                 Book a Clarity Call
               </Link>
             </div>
-            <p className="mt-6 text-xs leading-6 text-muted">
+            <p className="mt-6 text-center text-xs leading-6 text-muted">
               Built from real owner interviews + real operational constraints
             </p>
           </div>
-          <div>
+          <div className="mx-auto mt-14 w-full max-w-[74rem]">
             <BeforeAfterPanel />
           </div>
         </div>
@@ -220,57 +216,57 @@ export default function HomePage() {
 
 function BeforeAfterPanel() {
   return (
-    <div className="rounded-2xl border border-line bg-neutral-50 p-5 shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow sm:p-6">
+    <div className="rounded-2xl border border-line bg-white p-5 shadow-soft transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow sm:p-6">
       <div className="grid gap-4 sm:grid-cols-2">
-        <div className="rounded-xl border border-line bg-white p-4">
-          <p className="text-xs font-semibold uppercase tracking-[0.14em] text-muted">
+        <div className="rounded-xl border border-line bg-neutral-50 p-4">
+          <p className="text-xs font-semibold uppercase tracking-[0.14em] text-foreground/80">
             Before
           </p>
           <ul className="mt-3 space-y-2 text-sm leading-7 text-foreground">
             <li className="flex items-start gap-2">
-              <span className="mt-2 block h-1.5 w-1.5 rounded-full bg-stone-400" />
+              <span className="mt-2 block h-1.5 w-1.5 rounded-full bg-stone-500" />
               <span>Leads sit in inboxes</span>
             </li>
             <li className="flex items-start gap-2">
-              <span className="mt-2 block h-1.5 w-1.5 rounded-full bg-stone-400" />
+              <span className="mt-2 block h-1.5 w-1.5 rounded-full bg-stone-500" />
               <span>Follow-ups depend on memory</span>
             </li>
             <li className="flex items-start gap-2">
-              <span className="mt-2 block h-1.5 w-1.5 rounded-full bg-stone-400" />
+              <span className="mt-2 block h-1.5 w-1.5 rounded-full bg-stone-500" />
               <span>Invoices get delayed</span>
             </li>
             <li className="flex items-start gap-2">
-              <span className="mt-2 block h-1.5 w-1.5 rounded-full bg-stone-400" />
+              <span className="mt-2 block h-1.5 w-1.5 rounded-full bg-stone-500" />
               <span>The owner checks everything</span>
             </li>
           </ul>
         </div>
 
-        <div className="rounded-xl border border-line bg-white p-4">
+        <div className="rounded-xl border border-line bg-neutral-50 p-4">
           <p className="text-xs font-semibold uppercase tracking-[0.14em] text-accent">
             After
           </p>
           <ul className="mt-3 space-y-2 text-sm leading-7 text-foreground">
             <li className="flex items-start gap-2">
-              <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-stone-200 text-[11px] text-stone-700">
+              <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-accent/10 text-[11px] text-accent">
                 ✓
               </span>
               <span>Leads are logged and tracked</span>
             </li>
             <li className="flex items-start gap-2">
-              <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-stone-200 text-[11px] text-stone-700">
+              <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-accent/10 text-[11px] text-accent">
                 ✓
               </span>
-              <span>Follow-ups trigger automatically</span>
+              <span>Follow-ups happen without reminders</span>
             </li>
             <li className="flex items-start gap-2">
-              <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-stone-200 text-[11px] text-stone-700">
+              <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-accent/10 text-[11px] text-accent">
                 ✓
               </span>
               <span>Invoices send on completion</span>
             </li>
             <li className="flex items-start gap-2">
-              <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-stone-200 text-[11px] text-stone-700">
+              <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-accent/10 text-[11px] text-accent">
                 ✓
               </span>
               <span>Clear status across all jobs</span>
