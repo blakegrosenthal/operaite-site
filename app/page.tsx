@@ -18,11 +18,11 @@ export default function HomePage() {
 
       <section className="reveal-up bg-white py-28 sm:py-36">
         <div className="mx-auto w-full max-w-6xl px-5 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-[68rem] text-center">
+          <div className="mx-auto max-w-[70rem] text-center">
             <p className="text-xs font-semibold uppercase tracking-[0.16em] text-accent">
               Operations consulting
             </p>
-            <h1 className="mt-4 text-[2.45rem] font-bold leading-tight tracking-tight text-foreground sm:text-[3.45rem]">
+            <h1 className="mt-4 text-[2.45rem] font-bold leading-tight tracking-[-0.02em] text-foreground sm:text-[3.45rem]">
               Stop Losing Revenue to Missed Follow-Ups, No-Shows, and Delayed
               Invoices
             </h1>
@@ -49,8 +49,11 @@ export default function HomePage() {
               Built from real owner interviews + real operational constraints
             </p>
           </div>
-          <div className="mx-auto mt-14 w-full max-w-[74rem]">
-            <BeforeAfterPanel />
+          <div className="relative mx-auto mt-14 w-full max-w-[74rem] sm:mt-16">
+            <div className="pointer-events-none absolute inset-x-6 -top-10 -bottom-6 rounded-[2rem] bg-[radial-gradient(ellipse_at_top,rgba(31,42,68,0.08),rgba(31,42,68,0.03)_35%,rgba(31,42,68,0)_72%)]" />
+            <div className="relative">
+              <BeforeAfterPanel />
+            </div>
           </div>
         </div>
       </section>
@@ -226,65 +229,93 @@ export default function HomePage() {
 
 function BeforeAfterPanel() {
   return (
-    <div className="rounded-2xl border border-line bg-white p-5 shadow-soft transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow sm:p-6">
-      <div className="grid gap-4 sm:grid-cols-2">
-        <div className="rounded-xl border border-line bg-neutral-50 p-4">
-          <p className="text-xs font-semibold uppercase tracking-[0.14em] text-foreground/80">
+    <div className="rounded-2xl border border-foreground/10 bg-white/95 p-5 shadow-[0_18px_48px_rgba(15,23,42,0.12)] transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_24px_64px_rgba(15,23,42,0.16)] sm:p-7">
+      <div className="grid gap-4 sm:grid-cols-2 sm:gap-5">
+        <div className="rounded-xl border border-line/90 bg-neutral-100/60 p-4 sm:p-5">
+          <p className="text-xs font-semibold uppercase tracking-[0.14em] text-foreground/70">
             Before
           </p>
-          <ul className="mt-3 space-y-2 text-sm leading-7 text-foreground">
+          <ul className="mt-3 space-y-2 text-sm leading-7 text-muted">
             <li className="flex items-start gap-2">
-              <span className="mt-2 block h-1.5 w-1.5 rounded-full bg-stone-500" />
+              <span className="mt-2 block h-1.5 w-1.5 rounded-full bg-stone-400" />
               <span>Leads sit in inboxes</span>
             </li>
             <li className="flex items-start gap-2">
-              <span className="mt-2 block h-1.5 w-1.5 rounded-full bg-stone-500" />
+              <span className="mt-2 block h-1.5 w-1.5 rounded-full bg-stone-400" />
               <span>Follow-ups depend on memory</span>
             </li>
             <li className="flex items-start gap-2">
-              <span className="mt-2 block h-1.5 w-1.5 rounded-full bg-stone-500" />
+              <span className="mt-2 block h-1.5 w-1.5 rounded-full bg-stone-400" />
               <span>Invoices get delayed</span>
             </li>
             <li className="flex items-start gap-2">
-              <span className="mt-2 block h-1.5 w-1.5 rounded-full bg-stone-500" />
+              <span className="mt-2 block h-1.5 w-1.5 rounded-full bg-stone-400" />
               <span>The owner checks everything</span>
             </li>
           </ul>
         </div>
 
-        <div className="rounded-xl border border-line bg-neutral-50 p-4">
+        <div className="rounded-xl border border-line bg-white p-4 sm:p-5">
           <p className="text-xs font-semibold uppercase tracking-[0.14em] text-accent">
             After
           </p>
-          <ul className="mt-3 space-y-2 text-sm leading-7 text-foreground">
-            <li className="flex items-start gap-2">
-              <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-accent/10 text-[11px] text-accent">
-                ✓
-              </span>
-              <span>Leads are logged and tracked</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-accent/10 text-[11px] text-accent">
-                ✓
-              </span>
-              <span>Follow-ups happen without reminders</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-accent/10 text-[11px] text-accent">
-                ✓
-              </span>
-              <span>Invoices send on completion</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-accent/10 text-[11px] text-accent">
-                ✓
-              </span>
-              <span>Clear status across all jobs</span>
-            </li>
-          </ul>
+          <div className="mt-3 space-y-2.5">
+            <SystemMiniCard
+              event="New inquiry arrives"
+              actions={['Response sent immediately', 'Lead logged automatically']}
+              delay="40ms"
+            />
+            <SystemMiniCard
+              event="Quote is sent"
+              actions={['Follow-up scheduled']}
+              delay="90ms"
+            />
+            <SystemMiniCard
+              event="Appointment booked"
+              actions={['Confirmation sent', 'Reminder scheduled']}
+              delay="140ms"
+            />
+            <SystemMiniCard
+              event="Job marked complete"
+              actions={['Invoice sent', 'Payment link included']}
+              delay="190ms"
+            />
+          </div>
         </div>
       </div>
     </div>
+  )
+}
+
+function SystemMiniCard({
+  event,
+  actions,
+  delay
+}: {
+  event: string
+  actions: string[]
+  delay: string
+}) {
+  return (
+    <article
+      className="reveal-up rounded-lg border border-line bg-neutral-50/80 p-3.5 shadow-sm transition-all duration-300 ease-out hover:bg-white"
+      style={{ transitionDelay: delay }}
+    >
+      <p className="text-sm font-semibold leading-6 text-foreground">{event}</p>
+      <ul className="mt-2 space-y-1.5">
+        {actions.map((action) => (
+          <li
+            key={action}
+            className="flex items-start gap-2 text-xs font-medium leading-5 text-foreground/90"
+          >
+            <span className="inline-flex h-4 w-4 items-center justify-center rounded-full bg-accent/10 text-[10px] text-accent">
+              ✓
+            </span>
+            <span>{action}</span>
+          </li>
+        ))}
+      </ul>
+    </article>
   )
 }
 
