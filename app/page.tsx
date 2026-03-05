@@ -58,6 +58,7 @@ export default function HomePage() {
       <Section
         id="where-work-quietly-breaks-down"
         title="Where Work Quietly Breaks Down"
+        description="Most operational issues don’t look dramatic. They show up as small gaps in everyday workflows that slowly leak revenue."
         className="reveal-up border-t border-line bg-neutral-50 py-28 sm:py-36"
         headerClassName="max-w-[72ch] border-b border-line pb-6 sm:pb-8"
         titleClassName="text-3xl font-bold sm:text-[2.4rem]"
@@ -65,27 +66,27 @@ export default function HomePage() {
         <ul className="grid gap-6 md:grid-cols-2">
           <ProblemBlock
             title="Leads go unanswered"
-            text="Industry research consistently shows that responding within minutes — not hours — dramatically increases booking likelihood. Yet many businesses take hours to reply or never reach leads at all."
+            text="A new inquiry comes in, but the team is busy on jobs. By the time someone replies, the customer has already booked with the company that responded first."
             icon={<IconMessage />}
           />
           <ProblemBlock
             title="Next steps aren’t systemized"
-            text="After the first conversation, there's no automatic follow-through. Without defined triggers and reminders, potential jobs depend on memory instead of process."
+            text="After the first call or quote, the next step depends on someone remembering to follow up. When the day gets busy, those follow-ups quietly fall through."
             icon={<IconChecklist />}
           />
           <ProblemBlock
             title="Appointments get missed or rescheduled late"
-            text="When confirmations and reminders aren't built into the workflow, no-shows and last-minute changes reduce billable time and create unnecessary friction."
+            text="Without confirmations and reminders built into the workflow, customers forget, schedules shift, and billable time disappears."
             icon={<IconCalendarAlert />}
           />
           <ProblemBlock
             title="Invoices go out late or sit unpaid"
-            text="More than half of small businesses report being owed money from unpaid invoices, many overdue by more than 30 days, slowing cash flow and limiting growth."
+            text="After the work is finished, invoicing often gets pushed to the end of the day or the end of the week. Payments slow down, and cash flow becomes unpredictable."
             icon={<IconInvoice />}
           />
           <ProblemBlock
             title="The owner becomes the safety net"
-            text="Without clear visibility into what's pending, completed, or overdue, daily operations depend on the owner catching breakdowns before they escalate."
+            text="When systems aren’t clear, the owner ends up checking everything. Messages, schedules, invoices, job status. Over time the business depends on constant oversight just to stay organized."
             icon={<IconOwnerRisk />}
             className="md:col-span-2"
           />
