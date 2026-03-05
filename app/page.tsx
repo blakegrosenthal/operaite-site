@@ -168,32 +168,41 @@ export default function HomePage() {
 
       <Section
         id="why-operaite"
-        title="Why Operaite"
+        title={
+          <>
+            Why Oper<span className="brand-ai">AI</span>te
+          </>
+        }
         className="reveal-up border-t border-line bg-neutral-50 py-28 sm:py-36"
         headerClassName="max-w-[72ch] border-b border-line pb-6 sm:pb-8"
         titleClassName="text-3xl font-bold sm:text-[2.4rem]"
       >
         <div className="max-w-[72ch] space-y-6 text-sm leading-7 text-muted sm:text-base sm:leading-8">
-          <p>Service businesses do not need more software.</p>
-          <p className="text-lg font-semibold leading-8 text-foreground sm:text-xl">
-            They need reliability.
+          <p>
+            Most service businesses don’t lose money because they aren’t working
+            hard. The problem is usually simpler. Important steps in everyday
+            work depend on someone remembering to do them.
           </p>
           <p>
-            Most revenue leakage happens quietly inside daily workflows. Slow
-            lead response. Missed follow-ups. No-shows. Delayed invoicing. Tasks
-            that depend on memory instead of systems.
+            A lead comes in but no one replies until later that day. A quote is
+            sent but no one follows up. A job is finished but the invoice
+            doesn’t go out until the end of the week. Small gaps like these
+            quietly affect bookings, cash flow, and how stressful the business
+            feels to run.
           </p>
           <p>
-            I&apos;ve seen these patterns across owner-led service businesses under
-            real pressure. The issue is rarely effort. It is structure.
+            Oper<span className="brand-ai">AI</span>te focuses on fixing those
+            operational gaps. We look at how work actually moves through your
+            business, identify where things stall or get missed, and then put
+            simple systems in place so those steps happen consistently.
           </p>
-          <p>Operaite exists to install that structure.</p>
           <p>
-            We stabilize the workflows that protect revenue and reduce
-            operational fragility. Calm systems. Clear ownership. Built-in
-            verification.
+            Most engagements focus on one or two workflows where the business is
+            currently losing time or revenue. The goal isn’t to introduce
+            complicated technology. It’s to make everyday operations more
+            reliable so the business runs without constant checking from the
+            owner.
           </p>
-          <p>Because predictable execution is what actually protects growth.</p>
         </div>
       </Section>
 

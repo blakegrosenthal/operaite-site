@@ -1,8 +1,8 @@
 export const siteConfig = {
-  name: 'Operaite Consulting',
+  name: 'OperAIte Consulting',
   domain: 'https://operaiteconsulting.com',
   description:
-    'Operaite Consulting helps owner-led service businesses run smoother with practical operational systems and automation.',
+    'OperAIte Consulting helps owner-led service businesses run smoother with practical operational systems and automation.',
   navigation: [
     { href: '/', label: 'Home' },
     { href: '/services', label: 'Services' },

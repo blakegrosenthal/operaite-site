@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { BrandName } from '@/components/BrandName'
 import { siteConfig } from '@/lib/site'
 
 export function Footer() {
@@ -7,7 +8,7 @@ export function Footer() {
       <div className="mx-auto flex w-full max-w-6xl flex-col gap-6 px-5 py-10 sm:px-6 lg:px-8">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-sm font-medium text-foreground">
-            {siteConfig.name}
+            <BrandName />
           </p>
           <nav className="flex flex-wrap gap-4 text-sm text-muted">
             {siteConfig.navigation.map((item) => (
@@ -22,7 +23,7 @@ export function Footer() {
           </nav>
         </div>
         <p className="text-xs text-muted">
-          © {new Date().getFullYear()} {siteConfig.name}. Built for clarity,
+          © {new Date().getFullYear()} <BrandName />. Built for clarity,
           consistency, and practical operations.
         </p>
       </div>

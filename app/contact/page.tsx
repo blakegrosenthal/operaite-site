@@ -7,7 +7,7 @@ import { env } from '@/lib/env'
 export const metadata: Metadata = {
   title: 'Contact',
   description:
-    'Contact Operaite Consulting to discuss operational systems, automation, and workflow stabilization.'
+    'Contact OperAIte Consulting to discuss operational systems, automation, and workflow stabilization.'
 }
 
 export default function ContactPage() {

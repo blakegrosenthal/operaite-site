@@ -1,10 +1,11 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
+import { BrandName } from '@/components/BrandName'
 
 export const metadata: Metadata = {
   title: 'About',
   description:
-    'About Blake Rosenthal and Operaite Consulting: practical systems that help owner-led service businesses run with more reliability and less operational strain.'
+    'About Blake Rosenthal and OperAIte Consulting: practical systems that help owner-led service businesses run with more reliability and less operational strain.'
 }
 
 export default function AboutPage() {
@@ -35,7 +36,9 @@ export default function AboutPage() {
           </div>
 
           <div className="space-y-5 text-sm leading-7 text-muted sm:text-base sm:leading-8">
-            <p>Hi, I’m Blake Rosenthal, founder of Operaite Consulting.</p>
+            <p>
+              Hi, I’m Blake Rosenthal, founder of <BrandName />.
+            </p>
 
             <p>
               I work with owner-led service businesses that are tired of chasing

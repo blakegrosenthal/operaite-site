@@ -41,6 +41,10 @@ h4 {
   font-family: 'Iowan Old Style', 'Palatino Linotype', 'Book Antiqua', serif;
 }
 
+.brand-ai {
+  font-family: 'Iowan Old Style', 'Palatino Linotype', 'Book Antiqua', serif;
+}
+
 .reveal-up {
   opacity: 1;
   transition: opacity 500ms ease-out;

@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { BrandName } from '@/components/BrandName'
 import { env } from '@/lib/env'
 import { siteConfig } from '@/lib/site'
 
@@ -10,7 +11,7 @@ export function Navbar() {
           href="/"
           className="text-lg font-semibold tracking-tight text-foreground"
         >
-          Operaite Consulting
+          <BrandName />
         </Link>
         <nav className="hidden items-center gap-6 md:flex">
           {siteConfig.navigation.map((item) => (

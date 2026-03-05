@@ -10,15 +10,15 @@ import { siteConfig } from '@/lib/site'
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.domain),
   title: {
-    default: 'Operaite Consulting | Practical Operational Systems',
-    template: '%s | Operaite Consulting'
+    default: 'OperAIte Consulting | Practical Operational Systems',
+    template: '%s | OperAIte Consulting'
   },
   description: siteConfig.description,
   alternates: {
     canonical: '/'
   },
   openGraph: {
-    title: 'Operaite Consulting | Practical Operational Systems',
+    title: 'OperAIte Consulting | Practical Operational Systems',
     description: siteConfig.description,
     siteName: siteConfig.name,
     type: 'website',
@@ -28,13 +28,13 @@ export const metadata: Metadata = {
         url: '/og-image.svg',
         width: 1200,
         height: 630,
-        alt: 'Operaite Consulting'
+        alt: 'OperAIte Consulting'
       }
     ]
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Operaite Consulting | Practical Operational Systems',
+    title: 'OperAIte Consulting | Practical Operational Systems',
     description: siteConfig.description,
     images: ['/og-image.svg']
   }
