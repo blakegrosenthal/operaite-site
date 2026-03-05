@@ -28,7 +28,7 @@ export function Navbar() {
           href={env.calendlyUrl}
           className="hidden rounded-md bg-accent px-4 py-2 text-sm font-semibold text-white transition hover:bg-accent-strong sm:inline-flex"
         >
-          Book Review
+          Book a 30-Minute Operations Review
         </Link>
       </div>
       <div className="border-t border-line px-5 py-2 md:hidden">

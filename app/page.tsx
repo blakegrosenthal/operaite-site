@@ -36,13 +36,13 @@ export default function HomePage() {
                 href="#where-work-quietly-breaks-down"
                 className="rounded-md bg-accent px-5 py-3 text-sm font-semibold text-white transition hover:bg-accent-strong"
               >
-                See Where Revenue Is Leaking
+                Book a 30-Minute Operations Review
               </Link>
               <Link
                 href={env.calendlyUrl}
                 className="rounded-md border border-line px-5 py-3 text-sm font-semibold text-foreground transition hover:bg-white"
               >
-                Book a Clarity Call
+                See Where Revenue Is Leaking
               </Link>
             </div>
             <p className="mt-6 text-center text-xs leading-6 text-muted">
@@ -161,7 +161,7 @@ export default function HomePage() {
             href={env.calendlyUrl}
             className="inline-flex rounded-md bg-accent px-5 py-3 text-sm font-semibold text-white transition hover:bg-accent-strong"
           >
-            Get Your Revenue Reliability Scan
+            Book a 30-Minute Operations Review
           </Link>
         </div>
       </Section>
@@ -210,9 +210,9 @@ export default function HomePage() {
         <div className="mx-auto w-full max-w-6xl px-5 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-5xl rounded-3xl bg-neutral-100 p-10 shadow-soft sm:p-14 lg:p-16">
             <CTA
-              title="Book a 30-minute call."
+              title="Book a 30-Minute Operations Review"
               description="We&apos;ll identify the top 2-3 operational leaks. You&apos;ll leave with a short plan and next step. No prep required. Low pressure."
-              primaryLabel="Book a Call"
+              primaryLabel="Book a 30-Minute Operations Review"
               primaryHref={env.calendlyUrl}
               secondaryLabel="Contact"
               secondaryHref="/contact"
