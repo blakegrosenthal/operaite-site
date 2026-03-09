@@ -18,7 +18,7 @@ export default function HomePage() {
 
       <section className="reveal-up bg-white pt-28 pb-36 sm:pt-36 sm:pb-44">
         <div className="mx-auto w-full max-w-6xl px-5 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-[50rem] text-center">
+          <div className="mx-auto max-w-[50rem] rounded-[1.25rem] border border-line/70 bg-neutral-50/60 px-6 py-10 text-center sm:px-10 sm:py-12">
             <p className="text-xs font-semibold uppercase tracking-[0.16em] text-accent">
               Operations consulting
             </p>
@@ -261,32 +261,36 @@ export default function HomePage() {
 function BeforeAfterPanel() {
   return (
     <div className="rounded-2xl border border-foreground/10 bg-white/95 p-5 shadow-[0_18px_48px_rgba(15,23,42,0.12)] transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_24px_64px_rgba(15,23,42,0.16)] sm:p-7">
-      <div className="grid gap-4 sm:grid-cols-2 sm:gap-5">
-        <div className="rounded-xl border border-line/90 bg-rose-50/40 p-4 sm:p-5">
-          <p className="text-xs font-semibold uppercase tracking-[0.14em] text-foreground/70">
+      <div className="relative grid gap-4 sm:grid-cols-2 sm:gap-5">
+        <div className="pointer-events-none absolute inset-y-3 left-1/2 hidden -translate-x-1/2 sm:block">
+          <span className="block h-full w-px bg-line/70" />
+        </div>
+
+        <div className="relative rounded-xl border border-line/90 bg-stone-100/75 p-4 sm:p-5">
+          <p className="text-xs font-semibold uppercase tracking-[0.14em] text-foreground/65">
             Before
           </p>
           <ul className="mt-3 space-y-2 text-sm leading-7 text-muted">
             <li className="flex items-start gap-2">
-              <span className="mt-2 block h-1.5 w-1.5 rounded-full bg-stone-400" />
+              <span className="mt-2 block h-1.5 w-1.5 rounded-full bg-stone-500" />
               <span>Leads sit in inboxes</span>
             </li>
             <li className="flex items-start gap-2">
-              <span className="mt-2 block h-1.5 w-1.5 rounded-full bg-stone-400" />
+              <span className="mt-2 block h-1.5 w-1.5 rounded-full bg-stone-500" />
               <span>Follow-ups depend on memory</span>
             </li>
             <li className="flex items-start gap-2">
-              <span className="mt-2 block h-1.5 w-1.5 rounded-full bg-stone-400" />
+              <span className="mt-2 block h-1.5 w-1.5 rounded-full bg-stone-500" />
               <span>Invoices get delayed</span>
             </li>
             <li className="flex items-start gap-2">
-              <span className="mt-2 block h-1.5 w-1.5 rounded-full bg-stone-400" />
+              <span className="mt-2 block h-1.5 w-1.5 rounded-full bg-stone-500" />
               <span>The owner checks everything</span>
             </li>
           </ul>
         </div>
 
-        <div className="rounded-xl border border-line/90 bg-emerald-50/45 p-4 sm:p-5">
+        <div className="relative rounded-xl border border-line bg-emerald-50/60 p-4 sm:p-5">
           <p className="text-xs font-semibold uppercase tracking-[0.14em] text-accent">
             After
           </p>
@@ -342,7 +346,7 @@ function SystemMiniCard({
             key={action}
             className="flex items-start gap-2 text-xs font-medium leading-5 text-foreground/90"
           >
-            <span className="inline-flex h-4 w-4 items-center justify-center rounded-full bg-accent/10 text-[10px] text-accent">
+            <span className="inline-flex h-4 w-4 items-center justify-center rounded-full border border-accent/20 bg-accent/15 text-[10px] text-accent-strong">
               ✓
             </span>
             <span>{action}</span>
