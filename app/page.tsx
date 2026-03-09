@@ -107,27 +107,27 @@ export default function HomePage() {
       <div className="reveal-up py-20 sm:py-24">
         <div className="mx-auto w-full max-w-6xl px-5 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-4xl space-y-3 sm:space-y-4">
-            <p className="flex items-center gap-3 rounded-[999px] border border-line bg-neutral-50 px-5 py-3 text-sm font-medium leading-7 text-foreground shadow-sm sm:px-6 sm:py-3.5 sm:text-base">
-              <span className="inline-flex h-6 w-6 flex-none items-center justify-center rounded-full border border-line bg-white text-[11px] font-semibold text-accent">
-                ✓
+            <p className="flex items-center gap-3 rounded-xl border border-line bg-neutral-50 px-5 py-3 text-sm font-medium leading-7 text-foreground sm:px-6 sm:py-3.5 sm:text-base">
+              <span className="inline-flex h-6 w-6 flex-none items-center justify-center rounded-md border border-line bg-white text-accent">
+                <IconCheckLine />
               </span>
               <span>Built from real conversations with owner-led service businesses</span>
             </p>
-            <p className="flex items-center gap-3 rounded-[999px] border border-line bg-neutral-50 px-5 py-3 text-sm font-medium leading-7 text-foreground shadow-sm sm:px-6 sm:py-3.5 sm:text-base">
-              <span className="inline-flex h-6 w-6 flex-none items-center justify-center rounded-full border border-line bg-white text-[11px] font-semibold text-accent">
-                ✓
+            <p className="flex items-center gap-3 rounded-xl border border-line bg-neutral-50 px-5 py-3 text-sm font-medium leading-7 text-foreground sm:px-6 sm:py-3.5 sm:text-base">
+              <span className="inline-flex h-6 w-6 flex-none items-center justify-center rounded-md border border-line bg-white text-accent">
+                <IconCheckLine />
               </span>
               <span>Focused on the workflows that protect revenue and keep work moving</span>
             </p>
-            <p className="flex items-center gap-3 rounded-[999px] border border-line bg-neutral-50 px-5 py-3 text-sm font-medium leading-7 text-foreground shadow-sm sm:px-6 sm:py-3.5 sm:text-base">
-              <span className="inline-flex h-6 w-6 flex-none items-center justify-center rounded-full border border-line bg-white text-[11px] font-semibold text-accent">
-                ✓
+            <p className="flex items-center gap-3 rounded-xl border border-line bg-neutral-50 px-5 py-3 text-sm font-medium leading-7 text-foreground sm:px-6 sm:py-3.5 sm:text-base">
+              <span className="inline-flex h-6 w-6 flex-none items-center justify-center rounded-md border border-line bg-white text-accent">
+                <IconCheckLine />
               </span>
               <span>Designed to reduce stress, not introduce more tools</span>
             </p>
-            <p className="flex items-center gap-3 rounded-[999px] border border-line bg-neutral-50 px-5 py-3 text-sm font-medium leading-7 text-foreground shadow-sm sm:px-6 sm:py-3.5 sm:text-base">
-              <span className="inline-flex h-6 w-6 flex-none items-center justify-center rounded-full border border-line bg-white text-[11px] font-semibold text-accent">
-                ✓
+            <p className="flex items-center gap-3 rounded-xl border border-line bg-neutral-50 px-5 py-3 text-sm font-medium leading-7 text-foreground sm:px-6 sm:py-3.5 sm:text-base">
+              <span className="inline-flex h-6 w-6 flex-none items-center justify-center rounded-md border border-line bg-white text-accent">
+                <IconCheckLine />
               </span>
               <span>Implemented, tested, and supported — not just recommended</span>
             </p>
@@ -464,6 +464,23 @@ function IconOwnerRisk() {
     >
       <path d="M12 21s7-3 7-9V5l-7-2-7 2v7c0 6 7 9 7 9z" />
       <path d="M12 8v4M12 16h.01" />
+    </svg>
+  )
+}
+
+function IconCheckLine() {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      className="h-3.5 w-3.5"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <path d="m6 12 4 4 8-8" />
     </svg>
   )
 }
