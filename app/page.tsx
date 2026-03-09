@@ -194,7 +194,7 @@ export default function HomePage() {
             />
           </div>
         </div>
-        <div className="mt-14">
+        <div className="mt-16 flex justify-center sm:mt-20">
           <Link
             href={env.calendlyUrl}
             className="inline-flex rounded-md bg-accent px-5 py-3 text-sm font-semibold text-white transition hover:bg-accent-strong"
