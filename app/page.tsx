@@ -231,7 +231,7 @@ function BeforeAfterPanel() {
   return (
     <div className="rounded-2xl border border-foreground/10 bg-white/95 p-5 shadow-[0_18px_48px_rgba(15,23,42,0.12)] transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_24px_64px_rgba(15,23,42,0.16)] sm:p-7">
       <div className="grid gap-4 sm:grid-cols-2 sm:gap-5">
-        <div className="rounded-xl border border-line/90 bg-neutral-100/60 p-4 sm:p-5">
+        <div className="rounded-xl border border-line/90 bg-rose-50/40 p-4 sm:p-5">
           <p className="text-xs font-semibold uppercase tracking-[0.14em] text-foreground/70">
             Before
           </p>
@@ -255,26 +255,47 @@ function BeforeAfterPanel() {
           </ul>
         </div>
 
-        <div className="rounded-xl border border-line bg-white p-4 sm:p-5">
+        <div className="rounded-xl border border-line/90 bg-emerald-50/45 p-4 sm:p-5">
           <p className="text-xs font-semibold uppercase tracking-[0.14em] text-accent">
             After
           </p>
-          <div className="mt-3 space-y-2.5">
+          <div className="mt-3 space-y-3">
             <SystemMiniCard
               event="New inquiry arrives"
               actions={['Response sent immediately', 'Lead logged automatically']}
               delay="40ms"
             />
+            <div className="flex justify-center py-0.5">
+              <div className="flex flex-col items-center text-muted/70">
+                <span className="h-3 w-px bg-line" />
+                <span className="text-[10px] leading-none">↓</span>
+                <span className="h-3 w-px bg-line" />
+              </div>
+            </div>
             <SystemMiniCard
               event="Quote is sent"
               actions={['Follow-up scheduled']}
               delay="90ms"
             />
+            <div className="flex justify-center py-0.5">
+              <div className="flex flex-col items-center text-muted/70">
+                <span className="h-3 w-px bg-line" />
+                <span className="text-[10px] leading-none">↓</span>
+                <span className="h-3 w-px bg-line" />
+              </div>
+            </div>
             <SystemMiniCard
               event="Appointment booked"
               actions={['Confirmation sent', 'Reminder scheduled']}
               delay="140ms"
             />
+            <div className="flex justify-center py-0.5">
+              <div className="flex flex-col items-center text-muted/70">
+                <span className="h-3 w-px bg-line" />
+                <span className="text-[10px] leading-none">↓</span>
+                <span className="h-3 w-px bg-line" />
+              </div>
+            </div>
             <SystemMiniCard
               event="Job marked complete"
               actions={['Invoice sent', 'Payment link included']}
@@ -298,7 +319,7 @@ function SystemMiniCard({
 }) {
   return (
     <article
-      className="reveal-up rounded-lg border border-line bg-neutral-50/80 p-3.5 shadow-sm transition-all duration-300 ease-out hover:bg-white"
+      className="reveal-up rounded-lg border border-foreground/15 bg-white/90 p-3.5 shadow-[0_4px_12px_rgba(15,23,42,0.06)] transition-all duration-300 ease-out hover:bg-white"
       style={{ transitionDelay: delay }}
     >
       <p className="text-sm font-semibold leading-6 text-foreground">{event}</p>
