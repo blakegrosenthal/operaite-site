@@ -106,18 +106,30 @@ export default function HomePage() {
 
       <div className="reveal-up py-20 sm:py-24">
         <div className="mx-auto w-full max-w-6xl px-5 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-[72ch] space-y-4 text-center sm:space-y-5">
-            <p className="text-lg leading-8 text-foreground sm:text-xl">
-              Built from real conversations with owner-led service businesses
+          <div className="mx-auto max-w-4xl space-y-3 sm:space-y-4">
+            <p className="flex items-center gap-3 rounded-[999px] border border-line bg-neutral-50 px-5 py-3 text-sm font-medium leading-7 text-foreground shadow-sm sm:px-6 sm:py-3.5 sm:text-base">
+              <span className="inline-flex h-6 w-6 flex-none items-center justify-center rounded-full border border-line bg-white text-[11px] font-semibold text-accent">
+                ✓
+              </span>
+              <span>Built from real conversations with owner-led service businesses</span>
             </p>
-            <p className="text-lg leading-8 text-foreground sm:text-xl">
-              Focused on the workflows that protect revenue and keep work moving
+            <p className="flex items-center gap-3 rounded-[999px] border border-line bg-neutral-50 px-5 py-3 text-sm font-medium leading-7 text-foreground shadow-sm sm:px-6 sm:py-3.5 sm:text-base">
+              <span className="inline-flex h-6 w-6 flex-none items-center justify-center rounded-full border border-line bg-white text-[11px] font-semibold text-accent">
+                ✓
+              </span>
+              <span>Focused on the workflows that protect revenue and keep work moving</span>
             </p>
-            <p className="text-lg leading-8 text-foreground sm:text-xl">
-              Designed to reduce stress, not introduce more tools
+            <p className="flex items-center gap-3 rounded-[999px] border border-line bg-neutral-50 px-5 py-3 text-sm font-medium leading-7 text-foreground shadow-sm sm:px-6 sm:py-3.5 sm:text-base">
+              <span className="inline-flex h-6 w-6 flex-none items-center justify-center rounded-full border border-line bg-white text-[11px] font-semibold text-accent">
+                ✓
+              </span>
+              <span>Designed to reduce stress, not introduce more tools</span>
             </p>
-            <p className="text-lg leading-8 text-foreground sm:text-xl">
-              Implemented, tested, and supported — not just recommended
+            <p className="flex items-center gap-3 rounded-[999px] border border-line bg-neutral-50 px-5 py-3 text-sm font-medium leading-7 text-foreground shadow-sm sm:px-6 sm:py-3.5 sm:text-base">
+              <span className="inline-flex h-6 w-6 flex-none items-center justify-center rounded-full border border-line bg-white text-[11px] font-semibold text-accent">
+                ✓
+              </span>
+              <span>Implemented, tested, and supported — not just recommended</span>
             </p>
           </div>
         </div>
