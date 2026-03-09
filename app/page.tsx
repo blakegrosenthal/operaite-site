@@ -18,8 +18,18 @@ export default function HomePage() {
 
       <section className="reveal-up bg-white pt-20 pb-36 sm:pt-24 sm:pb-44">
         <div className="relative mx-auto w-full max-w-6xl px-5 sm:px-6 lg:px-8">
-          <div className="pointer-events-none absolute inset-x-6 top-2 -z-10 h-80 rounded-[3.25rem] bg-neutral-50/75 blur-2xl sm:inset-x-12 sm:top-4 sm:h-96" />
-          <div className="pointer-events-none absolute left-1/2 top-1 -z-10 h-72 w-[82%] -translate-x-1/2 bg-[radial-gradient(ellipse_at_center,rgba(31,42,68,0.11),rgba(31,42,68,0.045)_42%,rgba(31,42,68,0)_74%)] sm:h-88" />
+          <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+            <div className="absolute inset-x-6 top-2 h-80 rounded-[3.25rem] bg-neutral-50/75 blur-2xl sm:inset-x-12 sm:top-4 sm:h-96" />
+            <div className="absolute left-1/2 top-1 h-72 w-[82%] -translate-x-1/2 bg-[radial-gradient(ellipse_at_center,rgba(31,42,68,0.11),rgba(31,42,68,0.045)_42%,rgba(31,42,68,0)_74%)] sm:h-88" />
+            <div className="absolute inset-x-8 top-8 h-56 opacity-60 [mask-image:radial-gradient(ellipse_at_center,black_46%,transparent_84%)] [background-image:linear-gradient(to_right,rgba(31,42,68,0.07)_1px,transparent_1px),linear-gradient(to_bottom,rgba(31,42,68,0.05)_1px,transparent_1px)] [background-size:44px_44px] sm:inset-x-16 sm:top-12 sm:h-64" />
+            <div className="absolute left-1/2 top-[5.6rem] h-24 w-[74%] -translate-x-1/2 sm:top-[6.4rem] sm:w-[68%]">
+              <span className="absolute inset-x-0 top-1/2 h-px -translate-y-1/2 bg-accent/12" />
+              <span className="hero-node-pulse absolute left-[14%] top-1/2 h-2 w-2 -translate-y-1/2 rounded-full border border-accent/25 bg-white/85" />
+              <span className="absolute left-[46%] top-1/2 h-2 w-2 -translate-y-1/2 rounded-full border border-accent/20 bg-white/80" />
+              <span className="absolute left-[78%] top-1/2 h-2 w-2 -translate-y-1/2 rounded-full border border-accent/20 bg-white/80" />
+              <span className="hero-flow-dot absolute top-1/2 h-1.5 w-1.5 -translate-y-1/2 rounded-full bg-accent/40" />
+            </div>
+          </div>
 
           <div className="relative mx-auto max-w-[60rem] px-6 py-8 text-center sm:px-10 sm:py-10">
             <p className="text-xs font-semibold uppercase tracking-[0.16em] text-accent">
@@ -34,7 +44,8 @@ export default function HomePage() {
               appointments are confirmed, invoices go out on time, and your
               team doesn’t have to rely on memory.
             </p>
-            <div className="mt-9 flex flex-wrap justify-center gap-4 sm:mt-10">
+            <div className="relative mt-8 flex flex-wrap justify-center gap-4 sm:mt-9">
+              <div className="pointer-events-none absolute inset-x-14 -inset-y-4 -z-10 rounded-full bg-accent/[0.045] blur-xl" />
               <Link
                 href="#where-work-quietly-breaks-down"
                 className="rounded-md bg-accent px-5 py-3 text-sm font-semibold text-white transition hover:bg-accent-strong"
