@@ -22,7 +22,7 @@ export default function HomePage() {
             <p className="text-xs font-semibold uppercase tracking-[0.16em] text-accent">
               Operations consulting
             </p>
-            <h1 className="mt-4 text-[2.45rem] font-bold leading-tight tracking-[-0.02em] text-foreground sm:text-[3.45rem]">
+            <h1 className="mt-4 text-[2.45rem] font-[680] leading-tight tracking-[-0.01em] text-foreground sm:text-[3.45rem]">
               Stop Losing Revenue to Missed Follow-Ups, No-Shows, and Delayed
               Invoices
             </h1>
@@ -64,7 +64,7 @@ export default function HomePage() {
         description="Most operational issues don’t look dramatic. They show up as small gaps in everyday workflows that slowly leak revenue."
         className="reveal-up border-t border-line bg-neutral-50 py-32 sm:py-40"
         headerClassName="max-w-[72ch] border-b border-line pb-6 sm:pb-8"
-        titleClassName="text-3xl font-bold sm:text-[2.4rem]"
+        titleClassName="text-3xl font-[650] tracking-[-0.01em] sm:text-[2.4rem]"
       >
         <ul className="grid gap-6 md:grid-cols-2">
           <ProblemBlock
@@ -141,7 +141,7 @@ export default function HomePage() {
         description="We follow a simple, structured process to make your operations more predictable without disrupting how you already run your business."
         className="reveal-up border-t border-line bg-white py-32 sm:py-40"
         headerClassName="max-w-[72ch] border-b border-line pb-6 sm:pb-8"
-        titleClassName="text-3xl font-bold sm:text-[2.4rem]"
+        titleClassName="text-3xl font-[650] tracking-[-0.01em] sm:text-[2.4rem]"
         descriptionClassName="max-w-[72ch]"
       >
         <div className="max-w-[72ch] space-y-5">
@@ -190,11 +190,11 @@ export default function HomePage() {
         }
         className="reveal-up border-t border-line bg-neutral-50 py-32 sm:py-40"
         headerClassName="max-w-[72ch] border-b border-line pb-6 sm:pb-8"
-        titleClassName="text-3xl font-bold sm:text-[2.4rem]"
+        titleClassName="text-3xl font-[650] tracking-[-0.01em] sm:text-[2.4rem]"
       >
         <div className="max-w-[72ch] space-y-8 text-sm leading-7 text-muted sm:space-y-10 sm:text-base sm:leading-8">
           <article className="space-y-2.5">
-            <h3 className="text-sm font-semibold tracking-[0.06em] text-foreground sm:text-base">
+            <h3 className="text-sm font-[650] tracking-[-0.01em] text-foreground sm:text-base">
               Why businesses lose revenue
             </h3>
             <p>
@@ -206,7 +206,7 @@ export default function HomePage() {
           </article>
 
           <article className="space-y-2.5">
-            <h3 className="text-sm font-semibold tracking-[0.06em] text-foreground sm:text-base">
+            <h3 className="text-sm font-[650] tracking-[-0.01em] text-foreground sm:text-base">
               Why systems break down
             </h3>
             <p>
@@ -218,7 +218,7 @@ export default function HomePage() {
           </article>
 
           <article className="space-y-2.5">
-            <h3 className="text-sm font-semibold tracking-[0.06em] text-foreground sm:text-base">
+            <h3 className="text-sm font-[650] tracking-[-0.01em] text-foreground sm:text-base">
               What Oper<span className="brand-ai">AI</span>te changes
             </h3>
             <p>
