@@ -16,16 +16,16 @@ export default function HomePage() {
     <>
       <ScrollReveal />
 
-      <section className="reveal-up bg-white pt-28 pb-36 sm:pt-36 sm:pb-44">
+      <section className="reveal-up bg-white pt-20 pb-36 sm:pt-24 sm:pb-44">
         <div className="relative mx-auto w-full max-w-6xl px-5 sm:px-6 lg:px-8">
-          <div className="pointer-events-none absolute inset-x-8 top-8 -z-10 h-80 rounded-[3rem] bg-neutral-50/70 blur-2xl sm:inset-x-16 sm:top-12 sm:h-96" />
-          <div className="pointer-events-none absolute left-1/2 top-6 -z-10 h-64 w-[76%] -translate-x-1/2 bg-[radial-gradient(ellipse_at_center,rgba(31,42,68,0.1),rgba(31,42,68,0.04)_42%,rgba(31,42,68,0)_72%)] sm:h-80" />
+          <div className="pointer-events-none absolute inset-x-6 top-2 -z-10 h-80 rounded-[3.25rem] bg-neutral-50/75 blur-2xl sm:inset-x-12 sm:top-4 sm:h-96" />
+          <div className="pointer-events-none absolute left-1/2 top-1 -z-10 h-72 w-[82%] -translate-x-1/2 bg-[radial-gradient(ellipse_at_center,rgba(31,42,68,0.11),rgba(31,42,68,0.045)_42%,rgba(31,42,68,0)_74%)] sm:h-88" />
 
-          <div className="relative mx-auto max-w-[50rem] px-6 py-10 text-center sm:px-10 sm:py-12">
+          <div className="relative mx-auto max-w-[60rem] px-6 py-8 text-center sm:px-10 sm:py-10">
             <p className="text-xs font-semibold uppercase tracking-[0.16em] text-accent">
               Operations consulting
             </p>
-            <h1 className="mt-4 text-[2.45rem] font-[680] leading-tight tracking-[-0.01em] text-foreground sm:text-[3.45rem]">
+            <h1 className="mt-4 text-[2.45rem] font-[680] leading-[1.12] tracking-[-0.01em] text-foreground sm:text-[3.45rem]">
               Stop Losing Revenue to Missed Follow-Ups, No-Shows, and Delayed
               Invoices
             </h1>
@@ -34,7 +34,7 @@ export default function HomePage() {
               appointments are confirmed, invoices go out on time, and your
               team doesn’t have to rely on memory.
             </p>
-            <div className="mt-12 flex flex-wrap justify-center gap-4">
+            <div className="mt-9 flex flex-wrap justify-center gap-4 sm:mt-10">
               <Link
                 href="#where-work-quietly-breaks-down"
                 className="rounded-md bg-accent px-5 py-3 text-sm font-semibold text-white transition hover:bg-accent-strong"
