@@ -17,8 +17,11 @@ export default function HomePage() {
       <ScrollReveal />
 
       <section className="reveal-up bg-white pt-28 pb-36 sm:pt-36 sm:pb-44">
-        <div className="mx-auto w-full max-w-6xl px-5 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-[50rem] rounded-[1.25rem] border border-line/70 bg-neutral-50/60 px-6 py-10 text-center sm:px-10 sm:py-12">
+        <div className="relative mx-auto w-full max-w-6xl px-5 sm:px-6 lg:px-8">
+          <div className="pointer-events-none absolute inset-x-8 top-8 -z-10 h-80 rounded-[3rem] bg-neutral-50/70 blur-2xl sm:inset-x-16 sm:top-12 sm:h-96" />
+          <div className="pointer-events-none absolute left-1/2 top-6 -z-10 h-64 w-[76%] -translate-x-1/2 bg-[radial-gradient(ellipse_at_center,rgba(31,42,68,0.1),rgba(31,42,68,0.04)_42%,rgba(31,42,68,0)_72%)] sm:h-80" />
+
+          <div className="relative mx-auto max-w-[50rem] px-6 py-10 text-center sm:px-10 sm:py-12">
             <p className="text-xs font-semibold uppercase tracking-[0.16em] text-accent">
               Operations consulting
             </p>
