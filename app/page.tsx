@@ -147,36 +147,41 @@ export default function HomePage() {
         titleClassName="text-3xl font-[650] tracking-[-0.01em] sm:text-[2.4rem]"
         descriptionClassName="max-w-[72ch]"
       >
-        <div className="max-w-[72ch] space-y-5">
-          <PracticalStepCard
-            step="01"
-            title="Understand Where Work Breaks"
-            lineOne="We start with a focused call to understand how work currently flows, where tasks stall, and where revenue slips through."
-          />
-          <FlowConnector />
-          <PracticalStepCard
-            step="02"
-            title="Identify What Matters Most"
-            lineOne="Not everything needs fixing. We prioritize the workflows that protect revenue and reduce daily friction."
-          />
-          <FlowConnector />
-          <PracticalStepCard
-            step="03"
-            title="Build Simple Systems"
-            lineOne="We design and implement practical systems around those gaps so follow-ups, scheduling, billing, and internal handoffs happen automatically."
-          />
-          <FlowConnector />
-          <PracticalStepCard
-            step="04"
-            title="Train and Verify"
-            lineOne="Your team is trained on the new workflow, and we verify that everything works in real conditions."
-          />
-          <FlowConnector />
-          <PracticalStepCard
-            step="05"
-            title="Monitor and Refine"
-            lineOne="After launch, we check in regularly, review performance, and adjust as needed to keep operations steady."
-          />
+        <div className="max-w-[72ch] md:max-w-5xl">
+          <div className="grid gap-4 sm:gap-5 md:grid-cols-2">
+            <PracticalStepCard
+              step="01"
+              title="Understand Where Work Breaks"
+              lineOne="We start with a focused call to understand how work currently flows, where tasks stall, and where revenue slips through."
+            />
+            <PracticalStepCard
+              step="02"
+              title="Identify What Matters Most"
+              lineOne="Not everything needs fixing. We prioritize the workflows that protect revenue and reduce daily friction."
+            />
+
+            <div className="md:col-span-2 md:flex md:justify-center">
+              <div className="md:w-[min(100%,46rem)]">
+                <PracticalStepCard
+                  step="03"
+                  title="Build Simple Systems"
+                  lineOne="We design and implement practical systems around those gaps so follow-ups, scheduling, billing, and internal handoffs happen automatically."
+                  className="border-foreground/15 shadow-soft"
+                />
+              </div>
+            </div>
+
+            <PracticalStepCard
+              step="04"
+              title="Train and Verify"
+              lineOne="Your team is trained on the new workflow, and we verify that everything works in real conditions."
+            />
+            <PracticalStepCard
+              step="05"
+              title="Monitor and Refine"
+              lineOne="After launch, we check in regularly, review performance, and adjust as needed to keep operations steady."
+            />
+          </div>
         </div>
         <div className="mt-14">
           <Link
@@ -527,16 +532,20 @@ function PracticalStepCard({
   title,
   lineOne,
   lineTwo,
-  bullets
+  bullets,
+  className
 }: {
   step: string
   title: string
   lineOne: string
   lineTwo?: string
   bullets?: string[]
+  className?: string
 }) {
   return (
-    <article className="rounded-xl border border-line bg-white p-6 shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-soft sm:p-7">
+    <article
+      className={`rounded-xl border border-line bg-white p-5 shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-soft sm:p-6 ${className ?? ''}`}
+    >
       <p className="text-xs font-semibold uppercase tracking-[0.16em] text-accent">
         {step}
       </p>
