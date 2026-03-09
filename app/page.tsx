@@ -16,9 +16,9 @@ export default function HomePage() {
     <>
       <ScrollReveal />
 
-      <section className="reveal-up bg-white py-28 sm:py-36">
+      <section className="reveal-up bg-white pt-28 pb-36 sm:pt-36 sm:pb-44">
         <div className="mx-auto w-full max-w-6xl px-5 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-[70rem] text-center">
+          <div className="mx-auto max-w-[50rem] text-center">
             <p className="text-xs font-semibold uppercase tracking-[0.16em] text-accent">
               Operations consulting
             </p>
@@ -49,7 +49,7 @@ export default function HomePage() {
               Built from real owner interviews + real operational constraints
             </p>
           </div>
-          <div className="relative mx-auto mt-14 w-full max-w-[74rem] sm:mt-16">
+          <div className="relative mx-auto mt-20 w-full max-w-[74rem] sm:mt-24">
             <div className="pointer-events-none absolute inset-x-6 -top-10 -bottom-6 rounded-[2rem] bg-[radial-gradient(ellipse_at_top,rgba(31,42,68,0.08),rgba(31,42,68,0.03)_35%,rgba(31,42,68,0)_72%)]" />
             <div className="relative">
               <BeforeAfterPanel />
@@ -62,7 +62,7 @@ export default function HomePage() {
         id="where-work-quietly-breaks-down"
         title="Where Work Quietly Breaks Down"
         description="Most operational issues don’t look dramatic. They show up as small gaps in everyday workflows that slowly leak revenue."
-        className="reveal-up border-t border-line bg-neutral-50 py-28 sm:py-36"
+        className="reveal-up border-t border-line bg-neutral-50 py-32 sm:py-40"
         headerClassName="max-w-[72ch] border-b border-line pb-6 sm:pb-8"
         titleClassName="text-3xl font-bold sm:text-[2.4rem]"
       >
@@ -104,7 +104,7 @@ export default function HomePage() {
         </div>
       </Section>
 
-      <div className="reveal-up py-16 sm:py-20">
+      <div className="reveal-up py-20 sm:py-24">
         <div className="mx-auto w-full max-w-6xl px-5 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-[72ch] space-y-4 text-center sm:space-y-5">
             <p className="text-lg leading-8 text-foreground sm:text-xl">
@@ -127,7 +127,7 @@ export default function HomePage() {
         id="process"
         title="How It Works"
         description="We follow a simple, structured process to make your operations more predictable without disrupting how you already run your business."
-        className="reveal-up border-t border-line bg-white py-28 sm:py-36"
+        className="reveal-up border-t border-line bg-white py-32 sm:py-40"
         headerClassName="max-w-[72ch] border-b border-line pb-6 sm:pb-8"
         titleClassName="text-3xl font-bold sm:text-[2.4rem]"
         descriptionClassName="max-w-[72ch]"
@@ -176,7 +176,7 @@ export default function HomePage() {
             Why Oper<span className="brand-ai">AI</span>te
           </>
         }
-        className="reveal-up border-t border-line bg-neutral-50 py-28 sm:py-36"
+        className="reveal-up border-t border-line bg-neutral-50 py-32 sm:py-40"
         headerClassName="max-w-[72ch] border-b border-line pb-6 sm:pb-8"
         titleClassName="text-3xl font-bold sm:text-[2.4rem]"
       >
