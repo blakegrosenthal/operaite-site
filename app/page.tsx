@@ -192,32 +192,47 @@ export default function HomePage() {
         headerClassName="max-w-[72ch] border-b border-line pb-6 sm:pb-8"
         titleClassName="text-3xl font-bold sm:text-[2.4rem]"
       >
-        <div className="max-w-[72ch] space-y-6 text-sm leading-7 text-muted sm:text-base sm:leading-8">
-          <p>
-            Most service businesses don’t lose money because they aren’t working
-            hard. The problem is usually simpler. Important steps in everyday
-            work depend on someone remembering to do them.
-          </p>
-          <p>
-            A lead comes in but no one replies until later that day. A quote is
-            sent but no one follows up. A job is finished but the invoice
-            doesn’t go out until the end of the week. Small gaps like these
-            quietly affect bookings, cash flow, and how stressful the business
-            feels to run.
-          </p>
-          <p>
-            Oper<span className="brand-ai">AI</span>te focuses on fixing those
-            operational gaps. We look at how work actually moves through your
-            business, identify where things stall or get missed, and then put
-            simple systems in place so those steps happen consistently.
-          </p>
-          <p>
-            Most engagements focus on one or two workflows where the business is
-            currently losing time or revenue. The goal isn’t to introduce
-            complicated technology. It’s to make everyday operations more
-            reliable so the business runs without constant checking from the
-            owner.
-          </p>
+        <div className="max-w-[72ch] space-y-8 text-sm leading-7 text-muted sm:space-y-10 sm:text-base sm:leading-8">
+          <article className="space-y-2.5">
+            <h3 className="text-sm font-semibold tracking-[0.06em] text-foreground sm:text-base">
+              Why businesses lose revenue
+            </h3>
+            <p>
+              Most service businesses don’t lose money because they aren’t
+              working hard. A lead comes in but no one replies until later that
+              day. A quote is sent but no one follows up. A job is finished but
+              the invoice doesn’t go out until the end of the week.
+            </p>
+          </article>
+
+          <article className="space-y-2.5">
+            <h3 className="text-sm font-semibold tracking-[0.06em] text-foreground sm:text-base">
+              Why systems break down
+            </h3>
+            <p>
+              The problem is usually simpler. Important steps in everyday work
+              depend on someone remembering to do them. Small gaps like these
+              quietly affect bookings, cash flow, and how stressful the business
+              feels to run.
+            </p>
+          </article>
+
+          <article className="space-y-2.5">
+            <h3 className="text-sm font-semibold tracking-[0.06em] text-foreground sm:text-base">
+              What Oper<span className="brand-ai">AI</span>te changes
+            </h3>
+            <p>
+              Oper<span className="brand-ai">AI</span>te focuses on fixing those
+              operational gaps. We look at how work actually moves through your
+              business, identify where things stall or get missed, and then put
+              simple systems in place so those steps happen consistently. Most
+              engagements focus on one or two workflows where the business is
+              currently losing time or revenue. The goal isn’t to introduce
+              complicated technology. It’s to make everyday operations more
+              reliable so the business runs without constant checking from the
+              owner.
+            </p>
+          </article>
         </div>
       </Section>
 
