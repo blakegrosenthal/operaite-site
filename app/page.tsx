@@ -150,21 +150,25 @@ export default function HomePage() {
             title="Understand Where Work Breaks"
             lineOne="We start with a focused call to understand how work currently flows, where tasks stall, and where revenue slips through."
           />
+          <FlowConnector />
           <PracticalStepCard
             step="02"
             title="Identify What Matters Most"
             lineOne="Not everything needs fixing. We prioritize the workflows that protect revenue and reduce daily friction."
           />
+          <FlowConnector />
           <PracticalStepCard
             step="03"
             title="Build Simple Systems"
             lineOne="We design and implement practical systems around those gaps so follow-ups, scheduling, billing, and internal handoffs happen automatically."
           />
+          <FlowConnector />
           <PracticalStepCard
             step="04"
             title="Train and Verify"
             lineOne="Your team is trained on the new workflow, and we verify that everything works in real conditions."
           />
+          <FlowConnector />
           <PracticalStepCard
             step="05"
             title="Monitor and Refine"
@@ -292,37 +296,19 @@ function BeforeAfterPanel() {
               actions={['Response sent immediately', 'Lead logged automatically']}
               delay="40ms"
             />
-            <div className="flex justify-center py-0.5">
-              <div className="flex flex-col items-center text-muted/70">
-                <span className="h-3 w-px bg-line" />
-                <span className="text-[10px] leading-none">↓</span>
-                <span className="h-3 w-px bg-line" />
-              </div>
-            </div>
+            <FlowConnector compact />
             <SystemMiniCard
               event="Quote is sent"
               actions={['Follow-up scheduled']}
               delay="90ms"
             />
-            <div className="flex justify-center py-0.5">
-              <div className="flex flex-col items-center text-muted/70">
-                <span className="h-3 w-px bg-line" />
-                <span className="text-[10px] leading-none">↓</span>
-                <span className="h-3 w-px bg-line" />
-              </div>
-            </div>
+            <FlowConnector compact />
             <SystemMiniCard
               event="Appointment booked"
               actions={['Confirmation sent', 'Reminder scheduled']}
               delay="140ms"
             />
-            <div className="flex justify-center py-0.5">
-              <div className="flex flex-col items-center text-muted/70">
-                <span className="h-3 w-px bg-line" />
-                <span className="text-[10px] leading-none">↓</span>
-                <span className="h-3 w-px bg-line" />
-              </div>
-            </div>
+            <FlowConnector compact />
             <SystemMiniCard
               event="Job marked complete"
               actions={['Invoice sent', 'Payment link included']}
@@ -364,6 +350,24 @@ function SystemMiniCard({
         ))}
       </ul>
     </article>
+  )
+}
+
+function FlowConnector({
+  compact = false
+}: {
+  compact?: boolean
+}) {
+  return (
+    <div className={`flex justify-center ${compact ? 'py-0.5' : 'py-1.5'}`}>
+      <div className="flex flex-col items-center text-muted/65">
+        <span className={`${compact ? 'h-3' : 'h-4'} w-px bg-line`} />
+        <span className={`${compact ? 'text-[10px]' : 'text-[11px]'} leading-none`}>
+          ↓
+        </span>
+        <span className={`${compact ? 'h-3' : 'h-4'} w-px bg-line`} />
+      </div>
+    </div>
   )
 }
 
