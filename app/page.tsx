@@ -282,16 +282,13 @@ function HeroWorkflow() {
         <div className="relative px-7">
           <div className="absolute left-7 right-7 top-[5px] h-px">
             <div className="relative h-px bg-[rgba(58,95,138,0.26)]">
-              <span className="workflow-pulse-horizontal absolute -top-[4px] h-[10px] w-[10px] rounded-full bg-[rgba(58,95,138,0.72)]" />
+              <span className="workflow-pulse-horizontal absolute -top-[4px] left-0 h-[10px] w-[10px] rounded-full bg-[rgba(58,95,138,0.72)]" />
             </div>
           </div>
           <ol className="relative grid grid-cols-5 gap-2">
-            {steps.map((step, index) => (
+            {steps.map((step) => (
               <li key={step} className="flex flex-col items-center text-center">
-                <span
-                  className="workflow-node h-[11px] w-[11px] rounded-full border border-[rgba(58,95,138,0.38)] bg-[rgba(58,95,138,0.26)]"
-                  style={{ animationDelay: `${index}s` }}
-                />
+                <span className="h-[11px] w-[11px] rounded-full border border-[rgba(58,95,138,0.38)] bg-[rgba(58,95,138,0.26)]" />
                 <span className="mt-3 text-[11px] font-medium tracking-[0.01em] text-foreground/80">
                   {step}
                 </span>
@@ -305,16 +302,13 @@ function HeroWorkflow() {
         <div className="relative mx-auto w-full max-w-[15rem] pt-1">
           <div className="absolute bottom-3 left-1/2 top-2 w-px -translate-x-1/2">
             <div className="relative h-full w-px bg-[rgba(58,95,138,0.26)]">
-              <span className="workflow-pulse-vertical absolute -left-[4.5px] h-[10px] w-[10px] rounded-full bg-[rgba(58,95,138,0.72)]" />
+              <span className="workflow-pulse-vertical absolute -left-[4.5px] top-0 h-[10px] w-[10px] rounded-full bg-[rgba(58,95,138,0.72)]" />
             </div>
           </div>
           <ol className="relative space-y-2">
             {steps.map((step, index) => (
               <li key={step} className="flex flex-col items-center text-center">
-                <span
-                  className="workflow-node h-[11px] w-[11px] rounded-full border border-[rgba(58,95,138,0.38)] bg-[rgba(58,95,138,0.26)]"
-                  style={{ animationDelay: `${index}s` }}
-                />
+                <span className="h-[11px] w-[11px] rounded-full border border-[rgba(58,95,138,0.38)] bg-[rgba(58,95,138,0.26)]" />
                 <span className="mt-2 text-[11px] font-medium tracking-[0.01em] text-foreground/80">
                   {step}
                 </span>
