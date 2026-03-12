@@ -5,7 +5,7 @@ import { siteConfig } from '@/lib/site'
 
 export function Navbar() {
   return (
-    <header className="sticky top-0 z-40 border-b border-line bg-white/90 backdrop-blur">
+    <header className="sticky top-0 z-40 border-b border-[rgba(214,221,231,0.9)] bg-[rgba(247,247,247,0.88)] backdrop-blur">
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-4 px-5 py-4 sm:px-6 lg:px-8">
         <Link
           href="/"
