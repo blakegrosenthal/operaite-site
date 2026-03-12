@@ -40,13 +40,13 @@ export default function HomePage() {
               <div className="pointer-events-none absolute inset-x-8 -inset-y-6 -z-10 rounded-full bg-[rgba(91,114,139,0.08)] blur-2xl" />
               <Link
                 href="#where-work-quietly-breaks-down"
-                className="rounded-md bg-accent px-6 py-3.5 text-sm font-semibold text-white shadow-[0_10px_24px_-14px_rgba(31,42,68,0.62),0_0_0_1px_rgba(255,255,255,0.16)_inset] transition duration-200 hover:-translate-y-0.5 hover:bg-accent-strong hover:shadow-[0_16px_32px_-16px_rgba(91,114,139,0.72),0_0_0_1px_rgba(255,255,255,0.2)_inset]"
+                className="rounded-md bg-accent px-6 py-3.5 text-sm font-semibold text-white shadow-[0_10px_24px_-14px_rgba(31,42,68,0.62),0_0_0_1px_rgba(255,255,255,0.16)_inset] transition-all duration-150 ease-out hover:-translate-y-0.5 hover:bg-accent-strong hover:shadow-[0_16px_32px_-16px_rgba(91,114,139,0.72),0_0_0_1px_rgba(255,255,255,0.2)_inset]"
               >
                 Book a 30-Minute Operations Review
               </Link>
               <Link
                 href={env.calendlyUrl}
-                className="rounded-md border border-line px-5 py-3 text-sm font-semibold text-foreground transition hover:border-[rgba(91,114,139,0.34)] hover:bg-white"
+                className="rounded-md border border-line px-5 py-3 text-sm font-semibold text-foreground transition-all duration-150 ease-out hover:-translate-y-0.5 hover:border-[rgba(91,114,139,0.44)] hover:bg-[rgba(91,114,139,0.06)] hover:shadow-[0_12px_24px_-20px_rgba(31,42,68,0.48)]"
               >
                 See Where Revenue Is Leaking
               </Link>
