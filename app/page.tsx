@@ -18,11 +18,6 @@ export default function HomePage() {
 
       <section className="reveal-up bg-white pt-20 pb-36 sm:pt-24 sm:pb-44">
         <div className="relative mx-auto w-full max-w-6xl px-5 sm:px-6 lg:px-8">
-          <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-            <div className="absolute -right-32 top-[-9rem] h-[30rem] w-[34rem] bg-[radial-gradient(ellipse_at_center,rgba(79,111,163,0.08),rgba(79,111,163,0.028)_44%,rgba(79,111,163,0)_82%)] blur-[92px] sm:-right-24 sm:top-[-10.5rem] sm:h-[34rem] sm:w-[40rem]" />
-            <div className="absolute -left-36 bottom-[-10rem] h-[28rem] w-[36rem] bg-[radial-gradient(ellipse_at_center,rgba(79,111,163,0.07),rgba(79,111,163,0.024)_46%,rgba(79,111,163,0)_84%)] blur-[96px] sm:-left-28 sm:bottom-[-11rem] sm:h-[32rem] sm:w-[42rem]" />
-          </div>
-
           <div className="relative mx-auto max-w-[56rem] px-6 py-8 text-center sm:px-10 sm:py-10">
             <p className="hero-seq hero-seq-1 text-xs font-semibold uppercase tracking-[0.16em] text-accent">
               Operations consulting
@@ -37,7 +32,6 @@ export default function HomePage() {
               team doesn’t have to rely on memory.
             </p>
             <div className="hero-seq hero-seq-4 relative mt-10 flex flex-wrap justify-center gap-4 sm:mt-11 sm:gap-5">
-              <div className="pointer-events-none absolute inset-x-8 -inset-y-6 -z-10 rounded-full bg-[rgba(91,114,139,0.08)] blur-2xl" />
               <Link
                 href="#where-work-quietly-breaks-down"
                 className="rounded-md bg-accent px-6 py-3.5 text-sm font-semibold text-white shadow-[0_10px_24px_-14px_rgba(31,42,68,0.62),0_0_0_1px_rgba(255,255,255,0.16)_inset] transition-all duration-150 ease-out hover:-translate-y-0.5 hover:bg-accent-strong hover:shadow-[0_16px_32px_-16px_rgba(91,114,139,0.72),0_0_0_1px_rgba(255,255,255,0.2)_inset]"
@@ -57,7 +51,6 @@ export default function HomePage() {
             </p>
           </div>
           <div className="relative mx-auto mt-20 w-full max-w-[74rem] sm:mt-24">
-            <div className="pointer-events-none absolute inset-x-6 -top-10 -bottom-6 rounded-[2rem] bg-[radial-gradient(ellipse_at_top,rgba(31,42,68,0.08),rgba(31,42,68,0.03)_35%,rgba(31,42,68,0)_72%)]" />
             <div className="relative">
               <BeforeAfterPanel />
             </div>
@@ -281,14 +274,15 @@ function HeroWorkflow() {
       <div className="hidden sm:block">
         <div className="relative px-7">
           <div className="absolute left-7 right-7 top-[5px] h-px">
-            <div className="relative h-px bg-[rgba(58,95,138,0.18)]">
-              <span className="workflow-pulse-horizontal absolute -top-[4px] left-0 h-[10px] w-[10px] rounded-full bg-[rgba(58,95,138,0.72)]" />
-            </div>
+            <div className="relative h-px bg-[rgba(58,95,138,0.18)]" />
           </div>
           <ol className="relative grid grid-cols-5 gap-2">
-            {steps.map((step) => (
+            {steps.map((step, index) => (
               <li key={step} className="flex flex-col items-center text-center">
-                <span className="h-[10px] w-[10px] rounded-full border border-[rgba(58,95,138,0.32)] bg-[rgba(58,95,138,0.2)]" />
+                <span
+                  className="workflow-node-step h-[10px] w-[10px] rounded-full border border-[rgba(58,95,138,0.32)] bg-[rgba(58,95,138,0.2)]"
+                  style={{ animationDelay: `${index * 0.9}s` }}
+                />
                 <span className="mt-3 text-[10px] font-medium tracking-[0.01em] text-foreground/65">
                   {step}
                 </span>
@@ -301,14 +295,15 @@ function HeroWorkflow() {
       <div className="sm:hidden">
         <div className="relative mx-auto w-full max-w-[15rem] pt-1">
           <div className="absolute bottom-3 left-1/2 top-2 w-px -translate-x-1/2">
-            <div className="relative h-full w-px bg-[rgba(58,95,138,0.18)]">
-              <span className="workflow-pulse-vertical absolute -left-[4.5px] top-0 h-[10px] w-[10px] rounded-full bg-[rgba(58,95,138,0.72)]" />
-            </div>
+            <div className="relative h-full w-px bg-[rgba(58,95,138,0.18)]" />
           </div>
           <ol className="relative space-y-2">
             {steps.map((step, index) => (
               <li key={step} className="flex flex-col items-center text-center">
-                <span className="h-[10px] w-[10px] rounded-full border border-[rgba(58,95,138,0.32)] bg-[rgba(58,95,138,0.2)]" />
+                <span
+                  className="workflow-node-step h-[10px] w-[10px] rounded-full border border-[rgba(58,95,138,0.32)] bg-[rgba(58,95,138,0.2)]"
+                  style={{ animationDelay: `${index * 0.9}s` }}
+                />
                 <span className="mt-2 text-[10px] font-medium tracking-[0.01em] text-foreground/65">
                   {step}
                 </span>
