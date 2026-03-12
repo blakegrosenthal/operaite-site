@@ -19,25 +19,43 @@ export default function HomePage() {
       <section className="reveal-up bg-white pt-20 pb-36 sm:pt-24 sm:pb-44">
         <div className="relative mx-auto w-full max-w-6xl px-5 sm:px-6 lg:px-8">
           <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-            <div className="absolute inset-x-6 top-0 h-80 rounded-[3.5rem] bg-[linear-gradient(180deg,rgba(31,42,68,0.06)_0%,rgba(31,42,68,0.02)_42%,rgba(31,42,68,0)_82%)] sm:inset-x-12 sm:h-96" />
-            <div className="absolute inset-x-6 top-2 h-80 rounded-[3.25rem] bg-neutral-50/75 blur-2xl sm:inset-x-12 sm:top-4 sm:h-96" />
-            <div className="absolute left-1/2 top-1 h-72 w-[82%] -translate-x-1/2 bg-[radial-gradient(ellipse_at_center,rgba(31,42,68,0.12),rgba(31,42,68,0.05)_42%,rgba(31,42,68,0)_74%)] sm:h-88" />
-            <div className="absolute inset-x-8 top-8 h-56 opacity-60 [mask-image:radial-gradient(ellipse_at_center,black_46%,transparent_84%)] [background-image:linear-gradient(to_right,rgba(31,42,68,0.07)_1px,transparent_1px),linear-gradient(to_bottom,rgba(31,42,68,0.05)_1px,transparent_1px)] [background-size:44px_44px] sm:inset-x-16 sm:top-12 sm:h-64" />
+            <div className="absolute inset-x-4 top-0 h-84 rounded-[3.8rem] bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.98)_8%,rgba(226,234,244,0.58)_48%,rgba(247,247,247,0)_84%)] sm:inset-x-10 sm:h-[24.5rem]" />
+            <div className="absolute inset-x-6 top-0 h-80 rounded-[3.5rem] bg-[linear-gradient(180deg,rgba(31,42,68,0.055)_0%,rgba(90,112,138,0.03)_44%,rgba(31,42,68,0)_82%)] sm:inset-x-12 sm:h-96" />
+            <div className="absolute inset-x-6 top-2 h-80 rounded-[3.25rem] bg-neutral-50/80 blur-2xl sm:inset-x-12 sm:top-4 sm:h-96" />
+            <div className="absolute left-1/2 top-1 h-72 w-[82%] -translate-x-1/2 bg-[radial-gradient(ellipse_at_center,rgba(109,122,141,0.12),rgba(109,122,141,0.045)_42%,rgba(31,42,68,0)_74%)] sm:h-88" />
+            <div className="absolute inset-x-8 top-8 h-56 opacity-60 [mask-image:radial-gradient(ellipse_at_center,black_46%,transparent_84%)] [background-image:linear-gradient(to_right,rgba(80,104,132,0.08)_1px,transparent_1px),linear-gradient(to_bottom,rgba(80,104,132,0.06)_1px,transparent_1px)] [background-size:44px_44px] sm:inset-x-16 sm:top-12 sm:h-64" />
             <div className="absolute left-1/2 top-[5.6rem] h-24 w-[74%] -translate-x-1/2 sm:top-[6.4rem] sm:w-[68%]">
-              <span className="absolute inset-x-0 top-1/2 h-px -translate-y-1/2 bg-accent/12" />
-              <span className="hero-node-pulse absolute left-[14%] top-1/2 h-2 w-2 -translate-y-1/2 rounded-full border border-accent/25 bg-white/85" />
+              <span className="absolute inset-x-0 top-1/2 h-px -translate-y-1/2 bg-[rgba(91,114,139,0.24)]" />
+              <span className="hero-node-pulse absolute left-[14%] top-1/2 h-2 w-2 -translate-y-1/2 rounded-full border border-[rgba(91,114,139,0.4)] bg-white/90" />
               <span
-                className="hero-node-pulse absolute left-[46%] top-1/2 h-2 w-2 -translate-y-1/2 rounded-full border border-accent/22 bg-white/85"
+                className="hero-node-pulse absolute left-[46%] top-1/2 h-2 w-2 -translate-y-1/2 rounded-full border border-[rgba(91,114,139,0.34)] bg-white/88"
                 style={{ animationDelay: '1.6s' }}
               />
               <span
-                className="hero-node-pulse absolute left-[78%] top-1/2 h-2 w-2 -translate-y-1/2 rounded-full border border-accent/22 bg-white/85"
+                className="hero-node-pulse absolute left-[78%] top-1/2 h-2 w-2 -translate-y-1/2 rounded-full border border-[rgba(91,114,139,0.34)] bg-white/88"
                 style={{ animationDelay: '3.1s' }}
               />
-              <span className="hero-flow-dot absolute top-1/2 h-1.5 w-1.5 -translate-y-1/2 rounded-full bg-accent/40" />
+              <span className="hero-flow-dot absolute top-1/2 h-1.5 w-1.5 -translate-y-1/2 rounded-full bg-[rgba(91,114,139,0.52)]" />
               <span
-                className="hero-flow-dot absolute top-1/2 h-1.5 w-1.5 -translate-y-1/2 rounded-full bg-accent/30"
+                className="hero-flow-dot absolute top-1/2 h-1.5 w-1.5 -translate-y-1/2 rounded-full bg-[rgba(91,114,139,0.36)]"
                 style={{ animationDelay: '3.4s', animationDuration: '9.5s' }}
+              />
+            </div>
+            <div className="absolute left-1/2 top-[9.6rem] h-20 w-[64%] -translate-x-1/2 sm:top-[10.8rem] sm:w-[58%]">
+              <span className="absolute inset-x-0 top-1/2 h-px -translate-y-1/2 bg-[rgba(91,114,139,0.18)]" />
+              <span className="absolute left-[32%] top-1/2 h-6 w-px -translate-y-full bg-[rgba(91,114,139,0.14)]" />
+              <span className="absolute left-[68%] top-1/2 h-6 w-px -translate-y-full bg-[rgba(91,114,139,0.14)]" />
+              <span
+                className="hero-node-pulse absolute left-[32%] top-1/2 h-1.5 w-1.5 -translate-y-1/2 rounded-full bg-[rgba(91,114,139,0.36)]"
+                style={{ animationDelay: '0.9s', animationDuration: '8.4s' }}
+              />
+              <span
+                className="hero-node-pulse absolute left-[68%] top-1/2 h-1.5 w-1.5 -translate-y-1/2 rounded-full bg-[rgba(91,114,139,0.34)]"
+                style={{ animationDelay: '2.5s', animationDuration: '9.2s' }}
+              />
+              <span
+                className="hero-flow-dot absolute top-1/2 h-1.5 w-1.5 -translate-y-1/2 rounded-full bg-[rgba(91,114,139,0.32)]"
+                style={{ animationDelay: '1.8s', animationDuration: '10.2s' }}
               />
             </div>
           </div>
@@ -55,17 +73,17 @@ export default function HomePage() {
               appointments are confirmed, invoices go out on time, and your
               team doesn’t have to rely on memory.
             </p>
-            <div className="relative mt-9 flex flex-wrap justify-center gap-4 sm:mt-10">
-              <div className="pointer-events-none absolute inset-x-10 -inset-y-5 -z-10 rounded-full bg-accent/[0.05] blur-xl" />
+            <div className="relative mt-10 flex flex-wrap justify-center gap-4 sm:mt-11 sm:gap-5">
+              <div className="pointer-events-none absolute inset-x-8 -inset-y-6 -z-10 rounded-full bg-[rgba(91,114,139,0.08)] blur-2xl" />
               <Link
                 href="#where-work-quietly-breaks-down"
-                className="rounded-md bg-accent px-6 py-3.5 text-sm font-semibold text-white shadow-[0_10px_24px_-16px_rgba(31,42,68,0.65)] transition duration-200 hover:-translate-y-0.5 hover:bg-accent-strong hover:shadow-[0_14px_28px_-16px_rgba(31,42,68,0.75)]"
+                className="rounded-md bg-accent px-6 py-3.5 text-sm font-semibold text-white shadow-[0_10px_24px_-14px_rgba(31,42,68,0.62),0_0_0_1px_rgba(255,255,255,0.16)_inset] transition duration-200 hover:-translate-y-0.5 hover:bg-accent-strong hover:shadow-[0_16px_32px_-16px_rgba(91,114,139,0.72),0_0_0_1px_rgba(255,255,255,0.2)_inset]"
               >
                 Book a 30-Minute Operations Review
               </Link>
               <Link
                 href={env.calendlyUrl}
-                className="rounded-md border border-line px-5 py-3 text-sm font-semibold text-foreground transition hover:bg-white"
+                className="rounded-md border border-line px-5 py-3 text-sm font-semibold text-foreground transition hover:border-[rgba(91,114,139,0.34)] hover:bg-white"
               >
                 See Where Revenue Is Leaking
               </Link>
