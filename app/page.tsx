@@ -19,23 +19,34 @@ export default function HomePage() {
       <section className="reveal-up bg-white pt-20 pb-36 sm:pt-24 sm:pb-44">
         <div className="relative mx-auto w-full max-w-6xl px-5 sm:px-6 lg:px-8">
           <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+            <div className="absolute inset-x-6 top-0 h-80 rounded-[3.5rem] bg-[linear-gradient(180deg,rgba(31,42,68,0.06)_0%,rgba(31,42,68,0.02)_42%,rgba(31,42,68,0)_82%)] sm:inset-x-12 sm:h-96" />
             <div className="absolute inset-x-6 top-2 h-80 rounded-[3.25rem] bg-neutral-50/75 blur-2xl sm:inset-x-12 sm:top-4 sm:h-96" />
-            <div className="absolute left-1/2 top-1 h-72 w-[82%] -translate-x-1/2 bg-[radial-gradient(ellipse_at_center,rgba(31,42,68,0.11),rgba(31,42,68,0.045)_42%,rgba(31,42,68,0)_74%)] sm:h-88" />
+            <div className="absolute left-1/2 top-1 h-72 w-[82%] -translate-x-1/2 bg-[radial-gradient(ellipse_at_center,rgba(31,42,68,0.12),rgba(31,42,68,0.05)_42%,rgba(31,42,68,0)_74%)] sm:h-88" />
             <div className="absolute inset-x-8 top-8 h-56 opacity-60 [mask-image:radial-gradient(ellipse_at_center,black_46%,transparent_84%)] [background-image:linear-gradient(to_right,rgba(31,42,68,0.07)_1px,transparent_1px),linear-gradient(to_bottom,rgba(31,42,68,0.05)_1px,transparent_1px)] [background-size:44px_44px] sm:inset-x-16 sm:top-12 sm:h-64" />
             <div className="absolute left-1/2 top-[5.6rem] h-24 w-[74%] -translate-x-1/2 sm:top-[6.4rem] sm:w-[68%]">
               <span className="absolute inset-x-0 top-1/2 h-px -translate-y-1/2 bg-accent/12" />
               <span className="hero-node-pulse absolute left-[14%] top-1/2 h-2 w-2 -translate-y-1/2 rounded-full border border-accent/25 bg-white/85" />
-              <span className="absolute left-[46%] top-1/2 h-2 w-2 -translate-y-1/2 rounded-full border border-accent/20 bg-white/80" />
-              <span className="absolute left-[78%] top-1/2 h-2 w-2 -translate-y-1/2 rounded-full border border-accent/20 bg-white/80" />
+              <span
+                className="hero-node-pulse absolute left-[46%] top-1/2 h-2 w-2 -translate-y-1/2 rounded-full border border-accent/22 bg-white/85"
+                style={{ animationDelay: '1.6s' }}
+              />
+              <span
+                className="hero-node-pulse absolute left-[78%] top-1/2 h-2 w-2 -translate-y-1/2 rounded-full border border-accent/22 bg-white/85"
+                style={{ animationDelay: '3.1s' }}
+              />
               <span className="hero-flow-dot absolute top-1/2 h-1.5 w-1.5 -translate-y-1/2 rounded-full bg-accent/40" />
+              <span
+                className="hero-flow-dot absolute top-1/2 h-1.5 w-1.5 -translate-y-1/2 rounded-full bg-accent/30"
+                style={{ animationDelay: '3.4s', animationDuration: '9.5s' }}
+              />
             </div>
           </div>
 
-          <div className="relative mx-auto max-w-[60rem] px-6 py-8 text-center sm:px-10 sm:py-10">
+          <div className="relative mx-auto max-w-[56rem] px-6 py-8 text-center sm:px-10 sm:py-10">
             <p className="text-xs font-semibold uppercase tracking-[0.16em] text-accent">
               Operations consulting
             </p>
-            <h1 className="mt-4 text-[2.45rem] font-[680] leading-[1.12] tracking-[-0.01em] text-foreground sm:text-[3.45rem]">
+            <h1 className="mx-auto mt-4 max-w-[54rem] text-[2.6rem] font-[680] leading-[1.16] tracking-[-0.01em] text-foreground sm:text-[3.7rem]">
               Stop Losing Revenue to Missed Follow-Ups, No-Shows, and Delayed
               Invoices
             </h1>
@@ -44,11 +55,11 @@ export default function HomePage() {
               appointments are confirmed, invoices go out on time, and your
               team doesn’t have to rely on memory.
             </p>
-            <div className="relative mt-8 flex flex-wrap justify-center gap-4 sm:mt-9">
-              <div className="pointer-events-none absolute inset-x-14 -inset-y-4 -z-10 rounded-full bg-accent/[0.045] blur-xl" />
+            <div className="relative mt-9 flex flex-wrap justify-center gap-4 sm:mt-10">
+              <div className="pointer-events-none absolute inset-x-10 -inset-y-5 -z-10 rounded-full bg-accent/[0.05] blur-xl" />
               <Link
                 href="#where-work-quietly-breaks-down"
-                className="rounded-md bg-accent px-5 py-3 text-sm font-semibold text-white transition hover:bg-accent-strong"
+                className="rounded-md bg-accent px-6 py-3.5 text-sm font-semibold text-white shadow-[0_10px_24px_-16px_rgba(31,42,68,0.65)] transition duration-200 hover:-translate-y-0.5 hover:bg-accent-strong hover:shadow-[0_14px_28px_-16px_rgba(31,42,68,0.75)]"
               >
                 Book a 30-Minute Operations Review
               </Link>
