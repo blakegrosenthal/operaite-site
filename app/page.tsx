@@ -275,7 +275,7 @@ function HeroWorkflow() {
 
   return (
     <div
-      className="hero-seq hero-seq-6 mx-auto mt-10 w-full max-w-[42rem]"
+      className="hero-seq hero-seq-6 mx-auto mt-11 w-full max-w-[42rem]"
       aria-label="Lead to payment workflow"
     >
       <div className="hidden sm:block">
