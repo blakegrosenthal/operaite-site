@@ -19,8 +19,8 @@ export default function HomePage() {
       <section className="reveal-up bg-white pt-20 pb-36 sm:pt-24 sm:pb-44">
         <div className="relative mx-auto w-full max-w-6xl px-5 sm:px-6 lg:px-8">
           <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-            <div className="absolute left-1/2 top-[-8.5rem] h-[24rem] w-[48rem] -translate-x-1/2 bg-[radial-gradient(ellipse_at_center,rgba(79,111,163,0.14),rgba(79,111,163,0.06)_42%,rgba(79,111,163,0)_78%)] blur-[56px] sm:top-[-9.5rem] sm:h-[26rem] sm:w-[54rem]" />
-            <div className="absolute -right-24 top-[9.5rem] h-[20rem] w-[27rem] bg-[radial-gradient(ellipse_at_center,rgba(79,111,163,0.09),rgba(79,111,163,0.035)_46%,rgba(79,111,163,0)_80%)] blur-[70px] sm:right-[-5.5rem] sm:top-[11rem] sm:h-[22rem] sm:w-[30rem]" />
+            <div className="absolute -right-32 top-[-9rem] h-[30rem] w-[34rem] bg-[radial-gradient(ellipse_at_center,rgba(79,111,163,0.08),rgba(79,111,163,0.028)_44%,rgba(79,111,163,0)_82%)] blur-[92px] sm:-right-24 sm:top-[-10.5rem] sm:h-[34rem] sm:w-[40rem]" />
+            <div className="absolute -left-36 bottom-[-10rem] h-[28rem] w-[36rem] bg-[radial-gradient(ellipse_at_center,rgba(79,111,163,0.07),rgba(79,111,163,0.024)_46%,rgba(79,111,163,0)_84%)] blur-[96px] sm:-left-28 sm:bottom-[-11rem] sm:h-[32rem] sm:w-[42rem]" />
           </div>
 
           <div className="relative mx-auto max-w-[56rem] px-6 py-8 text-center sm:px-10 sm:py-10">
