@@ -24,19 +24,19 @@ export default function HomePage() {
           </div>
 
           <div className="relative mx-auto max-w-[56rem] px-6 py-8 text-center sm:px-10 sm:py-10">
-            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-accent">
+            <p className="hero-seq hero-seq-1 text-xs font-semibold uppercase tracking-[0.16em] text-accent">
               Operations consulting
             </p>
-            <h1 className="mx-auto mt-4 max-w-[54rem] text-[2.6rem] font-[680] leading-[1.16] tracking-[-0.01em] text-foreground sm:text-[3.7rem]">
+            <h1 className="hero-seq hero-seq-2 mx-auto mt-4 max-w-[54rem] text-[2.6rem] font-[680] leading-[1.16] tracking-[-0.01em] text-foreground sm:text-[3.7rem]">
               Stop Losing Revenue to Missed Follow-Ups, No-Shows, and Delayed
               Invoices
             </h1>
-            <p className="mx-auto mt-6 max-w-4xl text-base font-medium leading-8 text-foreground/80 sm:text-lg">
+            <p className="hero-seq hero-seq-3 mx-auto mt-6 max-w-4xl text-base font-medium leading-8 text-foreground/80 sm:text-lg">
               We install simple systems so leads get answered fast,
               appointments are confirmed, invoices go out on time, and your
               team doesn’t have to rely on memory.
             </p>
-            <div className="relative mt-10 flex flex-wrap justify-center gap-4 sm:mt-11 sm:gap-5">
+            <div className="hero-seq hero-seq-4 relative mt-10 flex flex-wrap justify-center gap-4 sm:mt-11 sm:gap-5">
               <div className="pointer-events-none absolute inset-x-8 -inset-y-6 -z-10 rounded-full bg-[rgba(91,114,139,0.08)] blur-2xl" />
               <Link
                 href="#where-work-quietly-breaks-down"
@@ -52,7 +52,7 @@ export default function HomePage() {
               </Link>
             </div>
             <HeroWorkflow />
-            <p className="mt-8 text-center text-xs leading-6 text-muted">
+            <p className="hero-seq hero-seq-5 mt-8 text-center text-xs leading-6 text-muted">
               Built from real owner interviews + real operational constraints
             </p>
           </div>
@@ -275,7 +275,7 @@ function HeroWorkflow() {
 
   return (
     <div
-      className="mx-auto mt-10 w-full max-w-[42rem]"
+      className="hero-seq hero-seq-6 mx-auto mt-10 w-full max-w-[42rem]"
       aria-label="Lead to payment workflow"
     >
       <div className="hidden sm:block">
