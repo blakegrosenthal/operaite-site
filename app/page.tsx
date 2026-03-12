@@ -61,35 +61,35 @@ export default function HomePage() {
       <Section
         id="where-work-quietly-breaks-down"
         title="Where Work Quietly Breaks Down"
-        description="Most operational issues don’t look dramatic. They show up as small gaps in everyday workflows that slowly leak revenue."
+        description="Most revenue loss in service businesses doesn’t come from big mistakes. It comes from small gaps in everyday workflows."
         className="reveal-up border-t border-line bg-neutral-50 py-32 sm:py-40"
         headerClassName="max-w-[72ch] border-b border-line pb-6 sm:pb-8"
         titleClassName="text-3xl font-[650] tracking-[-0.01em] sm:text-[2.4rem]"
       >
         <ul className="grid gap-6 md:grid-cols-2">
           <ProblemBlock
-            title="Leads go unanswered"
-            text="A new inquiry comes in, but the team is busy on jobs. By the time someone replies, the customer has already booked with the company that responded first."
+            title="The first company to respond usually wins the job"
+            text="When replies take hours, customers book with the business that responded first. Revenue is lost before your team even sees the opportunity."
             icon={<IconMessage />}
           />
           <ProblemBlock
-            title="Next steps aren’t systemized"
-            text="After the first call or quote, the next step depends on someone remembering to follow up. When the day gets busy, those follow-ups quietly fall through."
+            title="Quotes rarely close without follow-ups"
+            text="When follow-ups depend on memory, they happen late or not at all. Interested customers quietly disappear."
             icon={<IconChecklist />}
           />
           <ProblemBlock
-            title="Appointments get missed or rescheduled late"
-            text="Without confirmations and reminders built into the workflow, customers forget, schedules shift, and billable time disappears."
+            title="Missed appointments erase billable time"
+            text="Without confirmations and reminders built into the workflow, customers forget, schedules shift, and revenue disappears from the calendar."
             icon={<IconCalendarAlert />}
           />
           <ProblemBlock
-            title="Invoices go out late or sit unpaid"
-            text="After the work is finished, invoicing often gets pushed to the end of the day or the end of the week. Payments slow down, and cash flow becomes unpredictable."
+            title="Cash flow slows when invoices wait"
+            text="When billing happens at the end of the day or week instead of when work finishes, payments slow down and revenue sits in limbo."
             icon={<IconInvoice />}
           />
           <ProblemBlock
-            title="The owner becomes the safety net"
-            text="When systems aren’t clear, the owner ends up checking everything. Messages, schedules, invoices, job status. Over time the business depends on constant oversight just to stay organized."
+            title="The business runs on the owner’s memory"
+            text="When systems aren’t clear, the owner becomes the backstop for every workflow. Growth stalls because the business depends on constant checking."
             icon={<IconOwnerRisk />}
             className="md:col-span-2"
           />
