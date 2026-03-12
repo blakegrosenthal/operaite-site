@@ -86,6 +86,65 @@ h4 {
   animation: heroFlow 8s ease-in-out infinite;
 }
 
+@keyframes workflowPulseHorizontal {
+  0% {
+    transform: translateX(0);
+    opacity: 0.2;
+  }
+  12%,
+  88% {
+    opacity: 0.85;
+  }
+  100% {
+    transform: translateX(calc(100% - 10px));
+    opacity: 0.2;
+  }
+}
+
+@keyframes workflowPulseVertical {
+  0% {
+    transform: translateY(0);
+    opacity: 0.2;
+  }
+  12%,
+  88% {
+    opacity: 0.85;
+  }
+  100% {
+    transform: translateY(calc(100% - 10px));
+    opacity: 0.2;
+  }
+}
+
+@keyframes workflowNodeGlow {
+  0%,
+  100% {
+    background-color: rgba(58, 95, 138, 0.26);
+    box-shadow: 0 0 0 0 rgba(58, 95, 138, 0);
+  }
+  4%,
+  10% {
+    background-color: rgba(58, 95, 138, 0.78);
+    box-shadow: 0 0 0 4px rgba(58, 95, 138, 0.15);
+  }
+  18% {
+    background-color: rgba(58, 95, 138, 0.26);
+    box-shadow: 0 0 0 0 rgba(58, 95, 138, 0);
+  }
+}
+
+.workflow-pulse-horizontal {
+  animation: workflowPulseHorizontal 5s ease-in-out infinite;
+}
+
+.workflow-pulse-vertical {
+  animation: workflowPulseVertical 5s ease-in-out infinite;
+}
+
+.workflow-node {
+  animation: workflowNodeGlow 5s ease-in-out infinite;
+}
+
 .reveal-up {
   opacity: 1;
   transition: opacity 500ms ease-out;
@@ -98,7 +157,10 @@ h4 {
 
 @media (prefers-reduced-motion: reduce) {
   .hero-node-pulse,
-  .hero-flow-dot {
+  .hero-flow-dot,
+  .workflow-pulse-horizontal,
+  .workflow-pulse-vertical,
+  .workflow-node {
     animation: none;
   }
 

@@ -46,7 +46,8 @@ export default function HomePage() {
                 See Where Revenue Is Leaking
               </Link>
             </div>
-            <p className="mt-6 text-center text-xs leading-6 text-muted">
+            <HeroWorkflow />
+            <p className="mt-8 text-center text-xs leading-6 text-muted">
               Built from real owner interviews + real operational constraints
             </p>
           </div>
@@ -261,6 +262,68 @@ export default function HomePage() {
         </div>
       </section>
     </>
+  )
+}
+
+function HeroWorkflow() {
+  const steps = ['Lead', 'Follow Up', 'Appointment', 'Invoice', 'Paid']
+
+  return (
+    <div
+      className="mx-auto mt-10 w-full max-w-[42rem]"
+      aria-label="Lead to payment workflow"
+    >
+      <div className="hidden sm:block">
+        <div className="relative px-7">
+          <div className="absolute left-7 right-7 top-[5px] h-px">
+            <div className="relative h-px bg-[rgba(58,95,138,0.26)]">
+              <span className="workflow-pulse-horizontal absolute -top-[4px] h-[10px] w-[10px] rounded-full bg-[rgba(58,95,138,0.72)]" />
+            </div>
+          </div>
+          <ol className="relative grid grid-cols-5 gap-2">
+            {steps.map((step, index) => (
+              <li key={step} className="flex flex-col items-center text-center">
+                <span
+                  className="workflow-node h-[11px] w-[11px] rounded-full border border-[rgba(58,95,138,0.38)] bg-[rgba(58,95,138,0.26)]"
+                  style={{ animationDelay: `${index}s` }}
+                />
+                <span className="mt-3 text-[11px] font-medium tracking-[0.01em] text-foreground/80">
+                  {step}
+                </span>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </div>
+
+      <div className="sm:hidden">
+        <div className="relative mx-auto w-full max-w-[15rem] pt-1">
+          <div className="absolute bottom-3 left-1/2 top-2 w-px -translate-x-1/2">
+            <div className="relative h-full w-px bg-[rgba(58,95,138,0.26)]">
+              <span className="workflow-pulse-vertical absolute -left-[4.5px] h-[10px] w-[10px] rounded-full bg-[rgba(58,95,138,0.72)]" />
+            </div>
+          </div>
+          <ol className="relative space-y-2">
+            {steps.map((step, index) => (
+              <li key={step} className="flex flex-col items-center text-center">
+                <span
+                  className="workflow-node h-[11px] w-[11px] rounded-full border border-[rgba(58,95,138,0.38)] bg-[rgba(58,95,138,0.26)]"
+                  style={{ animationDelay: `${index}s` }}
+                />
+                <span className="mt-2 text-[11px] font-medium tracking-[0.01em] text-foreground/80">
+                  {step}
+                </span>
+                {index < steps.length - 1 ? (
+                  <span className="mt-2 text-[11px] leading-none text-[rgba(58,95,138,0.58)]">
+                    ↓
+                  </span>
+                ) : null}
+              </li>
+            ))}
+          </ol>
+        </div>
+      </div>
+    </div>
   )
 }
 
