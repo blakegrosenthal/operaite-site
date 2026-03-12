@@ -281,15 +281,15 @@ function HeroWorkflow() {
       <div className="hidden sm:block">
         <div className="relative px-7">
           <div className="absolute left-7 right-7 top-[5px] h-px">
-            <div className="relative h-px bg-[rgba(58,95,138,0.26)]">
+            <div className="relative h-px bg-[rgba(58,95,138,0.18)]">
               <span className="workflow-pulse-horizontal absolute -top-[4px] left-0 h-[10px] w-[10px] rounded-full bg-[rgba(58,95,138,0.72)]" />
             </div>
           </div>
           <ol className="relative grid grid-cols-5 gap-2">
             {steps.map((step) => (
               <li key={step} className="flex flex-col items-center text-center">
-                <span className="h-[11px] w-[11px] rounded-full border border-[rgba(58,95,138,0.38)] bg-[rgba(58,95,138,0.26)]" />
-                <span className="mt-3 text-[11px] font-medium tracking-[0.01em] text-foreground/80">
+                <span className="h-[10px] w-[10px] rounded-full border border-[rgba(58,95,138,0.32)] bg-[rgba(58,95,138,0.2)]" />
+                <span className="mt-3 text-[10px] font-medium tracking-[0.01em] text-foreground/65">
                   {step}
                 </span>
               </li>
@@ -301,19 +301,19 @@ function HeroWorkflow() {
       <div className="sm:hidden">
         <div className="relative mx-auto w-full max-w-[15rem] pt-1">
           <div className="absolute bottom-3 left-1/2 top-2 w-px -translate-x-1/2">
-            <div className="relative h-full w-px bg-[rgba(58,95,138,0.26)]">
+            <div className="relative h-full w-px bg-[rgba(58,95,138,0.18)]">
               <span className="workflow-pulse-vertical absolute -left-[4.5px] top-0 h-[10px] w-[10px] rounded-full bg-[rgba(58,95,138,0.72)]" />
             </div>
           </div>
           <ol className="relative space-y-2">
             {steps.map((step, index) => (
               <li key={step} className="flex flex-col items-center text-center">
-                <span className="h-[11px] w-[11px] rounded-full border border-[rgba(58,95,138,0.38)] bg-[rgba(58,95,138,0.26)]" />
-                <span className="mt-2 text-[11px] font-medium tracking-[0.01em] text-foreground/80">
+                <span className="h-[10px] w-[10px] rounded-full border border-[rgba(58,95,138,0.32)] bg-[rgba(58,95,138,0.2)]" />
+                <span className="mt-2 text-[10px] font-medium tracking-[0.01em] text-foreground/65">
                   {step}
                 </span>
                 {index < steps.length - 1 ? (
-                  <span className="mt-2 text-[11px] leading-none text-[rgba(58,95,138,0.58)]">
+                  <span className="mt-2 text-[10px] leading-none text-[rgba(58,95,138,0.46)]">
                     ↓
                   </span>
                 ) : null}
