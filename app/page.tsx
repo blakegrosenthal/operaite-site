@@ -193,6 +193,19 @@ export default function HomePage() {
       </Section>
 
       <Section
+        id="proof"
+        title="Proof"
+        description="A grounded example of how a revenue-critical workflow was stabilized with a simple system."
+        className="reveal-up border-t border-line bg-white py-32 sm:py-40"
+        headerClassName="max-w-[72ch] border-b border-line pb-6 sm:pb-8"
+        titleClassName="text-3xl font-[650] tracking-[-0.01em] sm:text-[2.4rem]"
+      >
+        <div className="max-w-4xl">
+          <CaseStudyCard caseStudy={caseStudies[0]} />
+        </div>
+      </Section>
+
+      <Section
         id="why-operaite"
         title={
           <>
@@ -244,19 +257,6 @@ export default function HomePage() {
               owner.
             </p>
           </article>
-        </div>
-      </Section>
-
-      <Section
-        id="proof"
-        title="Proof"
-        description="A grounded example of how a revenue-critical workflow was stabilized with a simple system."
-        className="reveal-up border-t border-line bg-white py-32 sm:py-40"
-        headerClassName="max-w-[72ch] border-b border-line pb-6 sm:pb-8"
-        titleClassName="text-3xl font-[650] tracking-[-0.01em] sm:text-[2.4rem]"
-      >
-        <div className="max-w-4xl">
-          <CaseStudyCard caseStudy={caseStudies[0]} />
         </div>
       </Section>
 

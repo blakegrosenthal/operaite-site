@@ -6,6 +6,7 @@ export const siteConfig = {
   navigation: [
     { href: '/', label: 'Home' },
     { href: '/services', label: 'Services' },
+    { href: '/case-studies', label: 'Case Studies' },
     { href: '/about', label: 'About' },
     { href: '/roi-calculator', label: 'ROI Calculator' },
     { href: '/contact', label: 'Contact' }
