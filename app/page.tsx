@@ -108,7 +108,12 @@ export default function HomePage() {
 
       <div className="reveal-up py-20 sm:py-24">
         <div className="mx-auto w-full max-w-6xl px-5 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-4xl space-y-3 sm:space-y-4">
+          <div className="mx-auto max-w-4xl border-b border-line pb-6 sm:pb-8">
+            <h2 className="text-3xl font-[650] tracking-[-0.01em] text-foreground sm:text-[2.4rem]">
+              What Makes Oper<span className="brand-ai">AI</span>te Different
+            </h2>
+          </div>
+          <div className="mx-auto mt-8 max-w-4xl space-y-3 sm:space-y-4">
             <p className="flex items-center gap-3 rounded-xl border border-line bg-neutral-50 px-5 py-3 text-sm font-medium leading-7 text-foreground sm:px-6 sm:py-3.5 sm:text-base">
               <span className="inline-flex h-6 w-6 flex-none items-center justify-center rounded-md border border-line bg-white text-accent">
                 <IconCheckLine />
@@ -131,11 +136,24 @@ export default function HomePage() {
               <span className="inline-flex h-6 w-6 flex-none items-center justify-center rounded-md border border-line bg-white text-accent">
                 <IconCheckLine />
               </span>
-              <span>Implemented, tested, and supported — not just recommended</span>
+              <span>Implemented, tested, and supported, not just recommended</span>
             </p>
           </div>
         </div>
       </div>
+
+      <Section
+        id="proof"
+        title="Proof"
+        description="A grounded example of how a revenue-critical workflow was stabilized with a simple system."
+        className="reveal-up border-t border-line bg-white py-32 sm:py-40"
+        headerClassName="max-w-[72ch] border-b border-line pb-6 sm:pb-8"
+        titleClassName="text-3xl font-[650] tracking-[-0.01em] sm:text-[2.4rem]"
+      >
+        <div className="max-w-4xl">
+          <CaseStudyCard caseStudy={caseStudies[0]} />
+        </div>
+      </Section>
 
       <Section
         id="process"
@@ -189,19 +207,6 @@ export default function HomePage() {
           >
             Book a 30-Minute Operations Review
           </Link>
-        </div>
-      </Section>
-
-      <Section
-        id="proof"
-        title="Proof"
-        description="A grounded example of how a revenue-critical workflow was stabilized with a simple system."
-        className="reveal-up border-t border-line bg-white py-32 sm:py-40"
-        headerClassName="max-w-[72ch] border-b border-line pb-6 sm:pb-8"
-        titleClassName="text-3xl font-[650] tracking-[-0.01em] sm:text-[2.4rem]"
-      >
-        <div className="max-w-4xl">
-          <CaseStudyCard caseStudy={caseStudies[0]} />
         </div>
       </Section>
 
