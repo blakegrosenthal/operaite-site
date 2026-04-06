@@ -1,37 +1,35 @@
+import Link from 'next/link'
+import type { CaseStudy } from '@/lib/caseStudies'
+
 interface CaseStudyCardProps {
-  title: string
-  industry: string
-  before: string
-  after: string
-  testimonial: string
+  caseStudy: CaseStudy
 }
 
-export function CaseStudyCard({
-  title,
-  industry,
-  before,
-  after,
-  testimonial
-}: CaseStudyCardProps) {
+export function CaseStudyCard({ caseStudy }: CaseStudyCardProps) {
   return (
-    <article className="flex h-full flex-col rounded-2xl border border-line bg-white p-6 shadow-soft">
-      <span className="w-fit rounded-full border border-line px-3 py-1 text-xs font-semibold uppercase tracking-wide text-muted">
-        {industry}
-      </span>
-      <h3 className="mt-4 text-lg font-semibold text-foreground">{title}</h3>
-      <dl className="mt-4 space-y-3 text-sm">
-        <div>
-          <dt className="font-semibold text-foreground">Before</dt>
-          <dd className="text-muted">{before}</dd>
-        </div>
-        <div>
-          <dt className="font-semibold text-foreground">After</dt>
-          <dd className="text-muted">{after}</dd>
-        </div>
-      </dl>
-      <blockquote className="mt-5 border-l-2 border-accent pl-4 text-sm italic leading-6 text-muted">
-        "{testimonial}"
-      </blockquote>
+    <article className="group flex h-full flex-col rounded-2xl border border-line bg-white p-6 shadow-soft transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow sm:p-7">
+      <div className="flex-1">
+        <p className="text-xs font-semibold uppercase tracking-[0.16em] text-muted">
+          Case study
+        </p>
+        <h3 className="mt-3 text-xl font-semibold tracking-[-0.01em] text-foreground sm:text-2xl">
+          {caseStudy.title}
+        </h3>
+        <p className="mt-2 text-sm font-medium leading-6 text-foreground/80 sm:text-base">
+          {caseStudy.subtitle}
+        </p>
+        <p className="mt-4 max-w-[64ch] text-sm leading-7 text-muted sm:text-base">
+          {caseStudy.summary}
+        </p>
+      </div>
+      <div className="mt-6">
+        <Link
+          href={caseStudy.href}
+          className="inline-flex rounded-md border border-line px-4 py-2.5 text-sm font-semibold text-foreground transition-all duration-150 ease-out hover:-translate-y-0.5 hover:border-foreground/20 hover:bg-neutral-50"
+        >
+          View case study
+        </Link>
+      </div>
     </article>
   )
 }
