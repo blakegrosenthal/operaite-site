@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import type { Metadata } from 'next'
 import { BrandName } from '@/components/BrandName'
@@ -17,20 +18,15 @@ export default function AboutPage() {
         <div className="mt-10 grid gap-8 md:grid-cols-[0.85fr_1.15fr] md:items-start lg:gap-12">
           <div>
             <div className="rounded-2xl border border-line bg-white p-4 shadow-sm">
-              <div className="flex aspect-[4/5] items-center justify-center rounded-xl border border-line bg-neutral-50 text-muted">
-                <svg
-                  viewBox="0 0 24 24"
-                  className="h-14 w-14"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.7"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  aria-hidden="true"
-                >
-                  <circle cx="12" cy="8" r="3.5" />
-                  <path d="M5 20a7 7 0 0 1 14 0" />
-                </svg>
+              <div className="relative aspect-[4/5] overflow-hidden rounded-xl border border-line bg-neutral-50 shadow-[0_14px_32px_rgba(15,23,42,0.08)]">
+                <Image
+                  src="/blake-headshot.jpg"
+                  alt="Blake Rosenthal"
+                  fill
+                  sizes="(max-width: 767px) 100vw, 36vw"
+                  className="object-cover object-center"
+                  priority
+                />
               </div>
             </div>
           </div>
