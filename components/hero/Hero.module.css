@@ -1,0 +1,84 @@
+.hero { position: relative; width: 100%; height: 100vh; min-height: 680px; overflow: hidden; background: var(--ink); color: var(--bone); }
+.bg { position: absolute; inset: 0; z-index: 0; overflow: hidden; }
+.video { position: absolute; top: 50%; left: 50%; width: 100%; height: 100%; object-fit: cover; transform: translate(-50%, -50%) scale(1.08); opacity: 0; transition: opacity 1.2s ease; filter: saturate(0.9) brightness(0.9) contrast(1.03); }
+.show { opacity: 1; }
+.overlay { position: absolute; inset: 0; z-index: 1; pointer-events: none; background: linear-gradient(90deg, rgba(8,10,14,0.78) 0%, rgba(8,10,14,0.55) 45%, rgba(8,10,14,0.4) 100%); }
+.overlay2 { position: absolute; inset: 0; z-index: 1; pointer-events: none; background: rgba(8,10,14,0.26); }
+
+.blur { position: absolute; left: 0; right: 0; bottom: 0; height: 30%; z-index: 3; pointer-events: none; }
+.blurLayer { position: absolute; inset: 0; }
+.blurLayer:nth-child(1) { backdrop-filter: blur(0.6px); mask-image: linear-gradient(to bottom, transparent 0%, black 12%); }
+.blurLayer:nth-child(2) { backdrop-filter: blur(1px); mask-image: linear-gradient(to bottom, transparent 12%, black 25%); }
+.blurLayer:nth-child(3) { backdrop-filter: blur(1.5px); mask-image: linear-gradient(to bottom, transparent 25%, black 37%); }
+.blurLayer:nth-child(4) { backdrop-filter: blur(2px); mask-image: linear-gradient(to bottom, transparent 37%, black 50%); }
+.blurLayer:nth-child(5) { backdrop-filter: blur(3px); mask-image: linear-gradient(to bottom, transparent 50%, black 62%); }
+.blurLayer:nth-child(6) { backdrop-filter: blur(4px); mask-image: linear-gradient(to bottom, transparent 62%, black 75%); }
+.blurLayer:nth-child(7) { backdrop-filter: blur(6px); mask-image: linear-gradient(to bottom, transparent 75%, black 87%); }
+.blurLayer:nth-child(8) { backdrop-filter: blur(8px); mask-image: linear-gradient(to bottom, transparent 87%, black 100%); }
+.blur::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(to bottom, transparent 0%, rgba(10,13,18,0.35) 45%, rgba(10,13,18,0.6) 75%, rgba(10,13,18,0.78) 100%); }
+
+.header { position: absolute; top: 0; left: 0; right: 0; z-index: 10; display: flex; align-items: center; justify-content: space-between; padding: 20px clamp(24px, 3.4vw, 50px); }
+.logo { font-family: var(--font-fraunces), serif; font-weight: 600; font-size: clamp(20px, 1.8vw, 26px); opacity: 0; filter: blur(10px); transform: translateX(-20px); }
+.ready .logo { animation: logoReveal 1.4s var(--ease) 0.15s forwards; }
+.logo b { color: var(--cobalt-soft); font-weight: 600; }
+@keyframes logoReveal { to { opacity: 1; filter: blur(0); transform: translateX(0); } }
+.navPill { display: inline-flex; align-items: center; gap: clamp(16px, 2.3vw, 33px); padding: clamp(8px,0.76vw,11px) clamp(13px,1.39vw,20px); border-radius: 999px; border: 1px solid rgba(255,255,255,0.12); background: linear-gradient(12deg, rgba(255,255,255,0.07) -43%, rgba(255,255,255,0) 104%), rgba(255,255,255,0.01); backdrop-filter: blur(8px); box-shadow: 0 4px 24px rgba(0,0,0,0.18); transform: scaleX(0); opacity: 0; transform-origin: center; }
+.ready .navPill { animation: pillReveal 0.6s var(--ease) 0.2s forwards; }
+@keyframes pillReveal { to { transform: scaleX(1); opacity: 1; } }
+.navPill a { font-size: clamp(12px,1vw,15px); font-weight: 500; color: rgba(237,232,223,0.78); transition: color 0.2s; opacity: 0; transform: translateY(14px); }
+.navPill a:hover { color: #fff; }
+.ready .navPill a { animation: linkUp 0.65s var(--ease) forwards; }
+.ready .navPill a:nth-child(1) { animation-delay: 0.75s; } .ready .navPill a:nth-child(2) { animation-delay: 0.83s; }
+.ready .navPill a:nth-child(3) { animation-delay: 0.91s; } .ready .navPill a:nth-child(4) { animation-delay: 0.99s; }
+@keyframes linkUp { to { opacity: 1; transform: translateY(0); } }
+.btn { display: inline-flex; align-items: center; gap: clamp(7px,0.7vw,10px); padding: clamp(9px,0.8vw,12px) clamp(18px,2vw,28px); border-radius: 10px; background: #fff; color: var(--ink); font-size: clamp(13px,1.05vw,15px); font-weight: 600; }
+.btn svg { width: 8px; height: 8px; }
+.btnHeader { opacity: 0; transform: scale(0); }
+.ready .btnHeader { animation: bounceIn 0.9s var(--ease) 0.5s forwards; }
+@keyframes bounceIn { 0% { transform: scale(0); opacity: 0; } 60% { transform: scale(1.08); opacity: 1; } 100% { transform: scale(1); opacity: 1; } }
+
+.heading { position: absolute; left: clamp(24px,3.4vw,50px); top: 24%; width: min(64vw, 980px); z-index: 5; font-family: var(--font-fraunces), serif; font-weight: 500; font-size: clamp(40px,4.8vw,76px); line-height: 1.08; letter-spacing: -0.018em; text-shadow: 0 2px 36px rgba(6,10,15,0.7); opacity: 0; }
+.ready .heading { opacity: 1; }
+.line { display: block; overflow: hidden; line-height: 1.16; }
+.lineInner { display: inline-block; white-space: nowrap; }
+.heading em { font-style: italic; }
+.char { display: inline-block; transform: translateY(110%); opacity: 0; }
+.ready .char { animation: charUp 0.65s var(--ease) forwards; }
+@keyframes charUp { to { transform: translateY(0); opacity: 1; } }
+
+.serves { position: absolute; left: clamp(24px,3.4vw,50px); top: calc(24% + clamp(150px,17vw,260px)); z-index: 5; font-size: clamp(11px,1vw,13px); letter-spacing: 0.14em; text-transform: uppercase; color: rgba(237,232,223,0.55); font-weight: 600; display: flex; align-items: center; gap: 10px; text-shadow: 0 1px 12px rgba(6,10,15,0.8); opacity: 0; }
+.ready .serves { animation: linkUp 0.8s var(--ease) 1.3s forwards; }
+.servesNow { color: #fff; min-width: 9em; transition: opacity 0.5s ease; }
+.dot { width: 5px; height: 5px; border-radius: 50%; background: var(--cobalt-soft); box-shadow: 0 0 10px rgba(90,120,240,0.9); }
+
+.bottom { position: absolute; left: clamp(24px,3.4vw,50px); right: clamp(24px,3.4vw,50px); bottom: 0; z-index: 5; display: flex; flex-direction: column; gap: clamp(6px,0.7vw,10px); padding-bottom: clamp(20px,3vh,36px); }
+.label { font-size: clamp(15px,1.3vw,19px); font-weight: 600; letter-spacing: 0.01em; text-shadow: 0 1px 12px rgba(6,10,15,0.85); opacity: 0; }
+.ready .label { opacity: 1; }
+.desc { max-width: clamp(320px,40vw,560px); color: rgba(237,232,223,0.82); font-size: clamp(15px,1.2vw,18px); line-height: 1.55; font-weight: 400; text-shadow: 0 1px 14px rgba(6,10,15,0.85); opacity: 0; }
+.ready .desc { opacity: 1; }
+.actions { display: flex; align-items: center; gap: clamp(14px,1.7vw,24px); margin-top: 8px; }
+.btnFooter { opacity: 0; transform: scale(0); }
+.ready .btnFooter { animation: bounceIn 0.9s var(--ease) 0.7s forwards; }
+.scrollDown { display: inline-flex; align-items: center; gap: 8px; opacity: 0; transform: scale(0); color: #fff; background: none; border: none; cursor: pointer; font-family: inherit; }
+.ready .scrollDown { animation: bounceIn 0.9s var(--ease) 1.4s forwards; }
+.scrollTxt { font-size: clamp(13px,1.1vw,16px); font-weight: 600; color: rgba(237,232,223,0.85); }
+.circ { width: 25px; height: 25px; border-radius: 50%; border: 1px solid rgba(237,232,223,0.35); display: inline-flex; align-items: center; justify-content: center; overflow: hidden; }
+.circ svg { width: 8px; height: 9px; animation: arrowLoop 2.5s cubic-bezier(0.4,0,0.7,1) infinite; }
+@keyframes arrowLoop { 0% { transform: translateY(0); opacity: 1; } 38% { transform: translateY(9px); opacity: 0; } 39% { transform: translateY(-9px); opacity: 0; } 60% { transform: translateY(0); opacity: 1; } 100% { transform: translateY(0); opacity: 1; } }
+
+.word { display: inline-block; opacity: 0; transform: translateY(10px); margin-right: 0.25em; }
+.ready .word { animation: linkUp 0.5s var(--ease) forwards; }
+
+.blend { height: 30vh; background: linear-gradient(180deg, #101820 0%, #23262b 22%, #55554f 48%, #a9a499 72%, #dcd6c9 88%, #f5f2ec 100%); position: relative; }
+
+@media (max-width: 900px) {
+  .heading { width: 90vw; font-size: clamp(34px,7.5vw,48px); }
+  .navPill { display: none; }
+  .serves { top: auto; bottom: 42vh; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .video { transition: none; }
+  .logo, .navPill, .navPill a, .btnHeader, .btnFooter, .scrollDown, .serves, .label, .desc, .heading { opacity: 1 !important; transform: none !important; filter: none !important; }
+  .char { transform: none; opacity: 1; }
+  .word { opacity: 1; transform: none; }
+}
