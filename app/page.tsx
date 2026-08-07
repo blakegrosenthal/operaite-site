@@ -88,6 +88,75 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* SPEED TO LEAD — where most owners start */}
+      <section id="speed-to-lead" className="bg-bone-2 pb-24 sm:pb-32">
+        <div className="mx-auto w-full max-w-6xl px-5 sm:px-6 lg:px-8">
+          <Reveal>
+            <div className="overflow-hidden rounded-3xl border border-line bg-white shadow-soft">
+              <div className="grid gap-0 md:grid-cols-[1.05fr_0.95fr]">
+                <div className="p-8 sm:p-12">
+                  <Caption>Where most owners start</Caption>
+                  <h2 className="mt-4 font-display text-[2rem] leading-[1.12] text-ink sm:text-[2.4rem]">
+                    Speed to lead.
+                  </h2>
+                  <p className="mt-5 max-w-md text-[17px] leading-8 text-ash-dark">
+                    Missed calls and web leads get a text back in under 60
+                    seconds with a link to book, nights and weekends included.
+                    Your number stays the same and your team changes nothing.
+                  </p>
+                  <p className="mt-4 max-w-md text-[17px] leading-8 text-ash-dark">
+                    It’s usually the fastest leak to fix, and the first system
+                    we install.
+                  </p>
+                  <Link
+                    href={env.calendlyUrl}
+                    className="mt-8 inline-flex rounded-lg bg-cobalt px-6 py-3.5 text-[15px] font-semibold text-white transition hover:-translate-y-0.5 hover:bg-cobalt-soft"
+                  >
+                    Book a 30-Minute Operations Review
+                  </Link>
+                </div>
+                <div className="flex flex-col justify-center border-t border-line bg-bone-2/60 p-8 sm:p-10 md:border-l md:border-t-0">
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-ash">
+                    Saturday · 6:12 PM
+                  </p>
+                  <div className="mt-4 flex items-center gap-3.5 rounded-xl border border-line bg-white px-4 py-3.5">
+                    <span className="flex h-9 w-9 flex-none items-center justify-center rounded-full bg-bone-2 text-ink">
+                      <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none">
+                        <path
+                          d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8.1 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.9.5 2.9.7a2 2 0 0 1 1.7 2Z"
+                          stroke="currentColor"
+                          strokeWidth="1.7"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    </span>
+                    <div>
+                      <p className="text-[14px] font-semibold leading-5 text-ink">
+                        Missed call
+                      </p>
+                      <p className="text-[13px] leading-5 text-ash">
+                        New lead · after hours
+                      </p>
+                    </div>
+                  </div>
+                  <div className="ml-10 mt-4 rounded-2xl rounded-tr-sm bg-cobalt px-4 py-3 text-[14.5px] leading-6 text-white sm:ml-14">
+                    Sorry we missed you, we’re out on a job. What’s going on?
+                    Or grab a time that works:{' '}
+                    <span className="underline decoration-white/60 underline-offset-2">
+                      book a visit
+                    </span>
+                  </div>
+                  <p className="mt-2.5 text-right text-[12px] text-ash">
+                    Sent 41 seconds later
+                  </p>
+                </div>
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
       {/* WHAT MAKES OPERAITE DIFFERENT — light, readable */}
       <section className="border-t border-line bg-white py-24 sm:py-28">
         <div className="mx-auto w-full max-w-6xl px-5 sm:px-6 lg:px-8">

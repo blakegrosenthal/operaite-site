@@ -7,9 +7,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/services',
     '/about',
     '/contact',
-    '/roi-calculator',
+    '/self-check',
     '/case-studies',
-    '/case-studies/chiropractic-clinic'
+    '/case-studies/chiropractic-clinic',
+    '/privacy',
+    '/terms'
   ]
   const now = new Date()
 

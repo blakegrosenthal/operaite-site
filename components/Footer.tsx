@@ -35,11 +35,25 @@ export function Footer() {
             ))}
           </nav>
         </div>
-        <div className="mt-12 flex flex-col gap-2 border-t border-bone/10 pt-6 text-xs text-bone/45 sm:flex-row sm:items-center sm:justify-between">
-          <p>© {new Date().getFullYear()} operAIte. All rights reserved.</p>
-          <a href={`mailto:${env.contactEmail}`} className="hover:text-bone/70">
-            {env.contactEmail}
-          </a>
+        <div className="mt-12 flex flex-col gap-3 border-t border-bone/10 pt-6 text-xs text-bone/45 sm:flex-row sm:items-center sm:justify-between">
+          <p>
+            © {new Date().getFullYear()} BLAKERS18, INC. dba operAIte. All
+            rights reserved.
+          </p>
+          <div className="flex items-center gap-5">
+            <Link href="/privacy" className="hover:text-bone/70">
+              Privacy
+            </Link>
+            <Link href="/terms" className="hover:text-bone/70">
+              Terms
+            </Link>
+            <a
+              href={`mailto:${env.contactEmail}`}
+              className="hover:text-bone/70"
+            >
+              {env.contactEmail}
+            </a>
+          </div>
         </div>
       </div>
     </footer>
