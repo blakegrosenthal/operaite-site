@@ -7,7 +7,7 @@ import { env } from '@/lib/env'
 export const metadata: Metadata = {
   title: 'Services',
   description:
-    'Workflow stabilization, revenue protection, and reliability systems for owner-led service businesses.'
+    'What operAIte fixes: missed leads, forgotten quote follow-ups, no-shows, and late invoices for owner-led service businesses.'
 }
 
 export default function ServicesPage() {
@@ -19,58 +19,52 @@ export default function ServicesPage() {
             Services
           </p>
           <h1 className="mt-3 text-3xl tracking-tight text-foreground sm:text-5xl">
-            Operational Systems and Practical Automation
+            What I fix
           </h1>
           <p className="mt-5 max-w-3xl text-base leading-8 text-muted">
-            Built for owner-led service businesses that want fewer mix-ups,
-            faster follow-through, and calmer operations
+            Missed leads, forgotten quote follow-ups, no-shows, and late
+            invoices. Built on the phones, calendar, and invoicing you already
+            use.
           </p>
         </div>
       </section>
 
-      <Section
-        title="Core Areas We Improve"
-        description="Focused improvements that make day-to-day operations more reliable."
-        className="bg-neutral-50"
-      >
+      <Section title="Core Areas I Improve" className="bg-neutral-50">
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           <CoreAreaCard
             label="01"
             title="Lead response and intake"
-            text="New inquiries are answered quickly and details are captured clearly so opportunities are not missed."
+            text="A new lead gets an answer in seconds, and the details land where your team actually sees them."
           />
           <CoreAreaCard
             label="02"
             title="Scheduling and reminders"
-            text="Appointments and reminders are handled consistently so fewer jobs are forgotten or delayed."
+            text="Appointments confirm themselves and reminders go out on time, so fewer jobs get forgotten or pushed."
           />
           <CoreAreaCard
             label="03"
             title="Invoicing and collections follow-through"
-            text="Invoices and payment follow-up happen on time, helping cash arrive with less manual chasing."
+            text="The invoice goes out when the job ends, and the payment reminders send themselves."
           />
           <CoreAreaCard
             label="04"
             title="Internal handoffs and task ownership"
-            text="Each step has clear ownership so work keeps moving without confusion."
+            text="Every job step has an owner, so work keeps moving without anyone chasing it."
           />
           <CoreAreaCard
             label="05"
             title="Reporting and simple visibility"
-            text="You can see what is pending, what is done, and where attention is needed."
+            text="You see what's pending, what's done, and what needs attention, without asking around."
           />
           <CoreAreaCard
             label="06"
             title="Customer communication and updates"
-            text="Customers get clear updates so expectations stay aligned throughout the job."
+            text="Customers hear from you at the moments that matter, so expectations never drift."
           />
         </div>
       </Section>
 
-      <Section
-        title="Common Systems We Install"
-        description="Practical systems we commonly put in place for service businesses."
-      >
+      <Section title="Common Systems I Install">
         <ul className="grid gap-3 text-sm sm:grid-cols-2">
           <SystemItem text="Immediate response to new inquiries" />
           <SystemItem text="Automated appointment confirmations" />
@@ -87,26 +81,22 @@ export default function ServicesPage() {
         </ul>
       </Section>
 
-      <Section
-        title="How Engagements Work"
-        description="Clear and structured from the first conversation through implementation."
-        className="bg-neutral-50"
-      >
+      <Section title="From First Call to Live System" className="bg-neutral-50">
         <div className="grid gap-4 md:grid-cols-3">
           <EngagementStep
             step="01"
-            title="Free Systems Review"
-            text="We review how work runs today and identify where things are getting stuck."
+            title="Your free 30-minute review"
+            text="You talk, I ask questions, and we find where work is getting stuck."
           />
           <EngagementStep
             step="02"
-            title="Clear Plan"
-            text="You get a focused plan on what to fix first, what will change, and what it costs."
+            title="A clear plan"
+            text="You get a focused plan: what to fix first, what will change, and what it costs."
           />
           <EngagementStep
             step="03"
-            title="Build and Stabilize"
-            text="We implement the system, test it, and make sure your team can use it with confidence."
+            title="Build and stabilize"
+            text="I build the system, test it, and make sure your team can use it with confidence."
           />
         </div>
       </Section>
@@ -114,15 +104,15 @@ export default function ServicesPage() {
       <section className="py-16 sm:py-24">
         <div className="mx-auto w-full max-w-6xl px-5 sm:px-6 lg:px-8">
           <CTA
-            title="Start With a Free Systems Review"
-            description="Low pressure. We map what is happening, identify where work is getting stuck, then recommend what to fix first."
-            primaryLabel="Start With a Free Systems Review"
+            title="Book your free 30-minute review"
+            description="Low pressure. We map how work runs today, find where it's getting stuck, and you leave knowing what I'd fix first."
+            primaryLabel="Book your free 30-minute review"
             primaryHref={env.calendlyUrl}
-            secondaryLabel="Use Contact Form"
+            secondaryLabel="Or send me a note"
             secondaryHref="/contact"
           />
           <p className="mt-4 text-xs text-muted">
-            Prefer email? Reach us directly at{' '}
+            Prefer email? Reach me directly at{' '}
             <Link
               href={`mailto:${env.contactEmail}`}
               className="font-medium text-foreground"

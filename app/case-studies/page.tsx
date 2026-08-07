@@ -6,7 +6,7 @@ import { caseStudies } from '@/lib/caseStudies'
 export const metadata: Metadata = {
   title: 'Case Studies',
   description:
-    'Real examples of how OperAIte stabilizes revenue-critical workflows for service businesses.'
+    'Real examples of leaks operAIte has fixed for service businesses, starting with instant lead response for a chiropractic clinic.'
 }
 
 export default function CaseStudiesPage() {
@@ -22,9 +22,8 @@ export default function CaseStudiesPage() {
               Case Studies
             </h1>
             <p className="mt-6 max-w-[62ch] text-base leading-8 text-muted sm:text-lg">
-              A growing set of examples showing how practical systems reduce
-              manual follow-up, protect revenue, and make daily operations more
-              dependable.
+              I publish a case study when a client lets me share the details.
+              Here’s the first one, start to finish.
             </p>
           </div>
         </div>
@@ -32,7 +31,6 @@ export default function CaseStudiesPage() {
 
       <Section
         title="Recent Work"
-        description="Each example focuses on a revenue-critical workflow that was stabilized with a simple, reliable system."
         className="reveal-up border-t border-line bg-neutral-50 py-24 sm:py-32"
         headerClassName="max-w-[72ch] border-b border-line pb-6 sm:pb-8"
         titleClassName="text-3xl font-[650] tracking-[-0.01em] sm:text-[2.4rem]"

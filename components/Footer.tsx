@@ -20,7 +20,7 @@ export function Footer() {
               href={env.calendlyUrl}
               className="mt-6 inline-flex rounded-lg bg-cobalt px-5 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-cobalt-soft"
             >
-              Book a 30-Minute Operations Review
+              Book your free 30-minute review
             </Link>
           </div>
           <nav className="grid grid-cols-2 gap-x-12 gap-y-3 text-sm">

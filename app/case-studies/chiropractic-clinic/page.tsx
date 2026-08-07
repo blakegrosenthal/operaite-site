@@ -2,6 +2,7 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { getCaseStudyBySlug } from '@/lib/caseStudies'
+import { env } from '@/lib/env'
 
 const caseStudy = getCaseStudyBySlug('chiropractic-clinic')
 
@@ -80,11 +81,17 @@ export default function ChiropracticClinicCaseStudyPage() {
 
             <article className="rounded-2xl border border-line bg-white p-6 shadow-soft sm:p-8">
               <h2 className="text-2xl font-[650] tracking-[-0.01em] text-foreground">
-                Key Insight
+                Where This One Came From
               </h2>
               <p className="mt-4 max-w-[68ch] text-base leading-8 text-muted">
                 {caseStudy.keyInsight}
               </p>
+              <Link
+                href={env.calendlyUrl}
+                className="mt-6 inline-flex rounded-md bg-accent px-5 py-3 text-sm font-semibold text-white transition hover:bg-accent-strong"
+              >
+                Book your free 30-minute review
+              </Link>
             </article>
           </div>
         </div>

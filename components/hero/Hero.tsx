@@ -8,10 +8,10 @@ import styles from './Hero.module.css'
 type Clip = { label: string; src: string; start: number }
 
 const CLIPS: Clip[] = [
-  { label: 'clinics & front desks', src: 'https://videos.pexels.com/video-files/5137839/5137839-uhd_2732_1440_25fps.mp4', start: 30 },
-  { label: 'auto shops', src: 'https://videos.pexels.com/video-files/14514790/14514790-hd_1920_1080_25fps.mp4', start: 0 },
   { label: 'HVAC & trades', src: 'https://videos.pexels.com/video-files/4456112/4456112-hd_1920_1080_25fps.mp4', start: 0 },
   { label: 'home services', src: 'https://videos.pexels.com/video-files/8853516/8853516-hd_1920_1080_24fps.mp4', start: 0 },
+  { label: 'clinics & front desks', src: 'https://videos.pexels.com/video-files/5137839/5137839-uhd_2732_1440_25fps.mp4', start: 30 },
+  { label: 'auto shops', src: 'https://videos.pexels.com/video-files/14514790/14514790-hd_1920_1080_25fps.mp4', start: 0 },
   { label: 'carpentry & build', src: 'https://videos.pexels.com/video-files/6790431/6790431-hd_1920_1080_25fps.mp4', start: 0 }
 ]
 const HOLD = 4400
@@ -141,7 +141,7 @@ export function Hero() {
             <Link href="/about">About</Link>
           </nav>
           <Link className={`${styles.btn} ${styles.btnHeader}`} href={env.calendlyUrl}>
-            Book a call <Arrow />
+            Book a free review <Arrow />
           </Link>
         </header>
 
@@ -174,20 +174,20 @@ export function Hero() {
 
         <div className={styles.serves}>
           <span className={styles.dot} />
-          Built for&nbsp;<span ref={nowRef} className={styles.servesNow}>clinics &amp; front desks</span>
+          Built for&nbsp;<span ref={nowRef} className={styles.servesNow}>HVAC &amp; trades</span>
         </div>
 
         <div className={styles.bottom}>
           <div className={styles.label}>{splitWords('01 — The problem', 1.0)}</div>
           <p className={styles.desc}>
             {splitWords(
-              'Most revenue loss in service businesses doesn’t come from big mistakes. It leaks — one missed follow-up, one late invoice at a time. We install the simple systems that stop it.',
+              'Most revenue loss in service businesses doesn’t come from big mistakes. It leaks. One missed follow-up, one late invoice at a time. I install the simple systems that stop it.',
               1.2
             )}
           </p>
           <div className={styles.actions}>
             <Link className={`${styles.btn} ${styles.btnFooter}`} href={env.calendlyUrl}>
-              Book a 30-Minute Operations Review <Arrow />
+              Book your free 30-minute review <Arrow />
             </Link>
             <button className={styles.scrollDown} onClick={scrollDown} type="button">
               <span className={styles.scrollTxt}>Scroll down</span>

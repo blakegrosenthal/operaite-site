@@ -28,7 +28,7 @@ export const caseStudies: CaseStudy[] = [
     operationalImpact:
       'Instead of waiting for manual follow-up, new patients can schedule a consultation within minutes of submitting the form. New inquiries are now handled automatically, consultations are being booked directly through the first response, and the staff no longer needs to manually chase every lead that comes in.',
     keyInsight:
-      'Many service businesses lose opportunities simply because inquiries are not contacted quickly enough. By stabilizing the first response workflow, the clinic made it easier for interested patients to book while reducing administrative effort for the team.'
+      'Full disclosure: this clinic is my family’s practice, the same one from the story on my About page. It’s where this system ran first, before I offered it to anyone else. If your new inquiries wait hours for a reply, this is usually the fastest leak to fix. Book the free 30-minute review and you’ll leave knowing your top two or three leaks, whether or not we build anything.'
   }
 ]
 

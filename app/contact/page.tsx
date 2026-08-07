@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import type { ReactNode } from 'react'
-import { ContactMailtoForm } from '@/components/ContactMailtoForm'
+import { TallyForm } from '@/components/TallyForm'
 import { env } from '@/lib/env'
 
 export const metadata: Metadata = {
@@ -19,33 +19,34 @@ export default function ContactPage() {
             Contact
           </p>
           <h1 className="mt-3 text-3xl tracking-tight text-foreground sm:text-5xl">
-            Start with a direct operations conversation.
+            Tell me what&rsquo;s breaking.
           </h1>
           <p className="mt-5 max-w-3xl text-base leading-8 text-muted">
-            Share current workflow issues, where bottlenecks are showing up, and
-            what outcomes you need. We reply with practical next steps.
+            Two or three sentences is plenty: what kind of business, what keeps
+            slipping, and how you want it to work instead. You&rsquo;ll get real
+            next steps back, not a pitch.
           </p>
         </div>
       </section>
 
       <section className="py-14 sm:py-20">
         <div className="mx-auto grid w-full max-w-6xl gap-8 px-5 sm:px-6 lg:grid-cols-[1.15fr_0.85fr] lg:px-8">
-          <ContactMailtoForm contactEmail={env.contactEmail} />
+          <TallyForm />
           <aside className="space-y-4">
             <InfoCard
-              title="Book a Review"
-              text="Prefer to start live? Schedule a 30-minute operations review."
+              title="Prefer to talk?"
+              text="Book your free 30-minute review. You leave with your top two or three leaks, whether or not we work together."
             >
               <Link
                 href={env.calendlyUrl}
                 className="mt-4 inline-flex rounded-md bg-accent px-5 py-3 text-sm font-semibold text-white transition hover:bg-accent-strong"
               >
-                Book via Calendly
+                Book your free 30-minute review
               </Link>
             </InfoCard>
             <InfoCard
-              title="Direct Email"
-              text="If your email app is already open, send details directly."
+              title="Direct email"
+              text="Rather just write an email? It comes straight to me."
             >
               <Link
                 href={`mailto:${env.contactEmail}`}
@@ -55,8 +56,8 @@ export default function ContactPage() {
               </Link>
             </InfoCard>
             <InfoCard
-              title="Typical Response"
-              text="Most inquiries receive a response within one business day."
+              title="How fast I reply"
+              text="Same day, usually within a few hours."
             />
           </aside>
         </div>

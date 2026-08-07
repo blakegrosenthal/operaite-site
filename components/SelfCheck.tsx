@@ -12,7 +12,7 @@ const QUESTIONS: Q[] = [
     id: 'lead',
     q: 'Do new leads sometimes wait more than an hour for a reply?',
     leak: 'Slow lead response',
-    fix: 'An instant auto-response so every new inquiry hears back in minutes — before they call someone else.'
+    fix: 'An instant auto-response so every new inquiry hears back in minutes, before they call someone else.'
   },
   {
     id: 'quote',
@@ -69,7 +69,7 @@ export function SelfCheck() {
         </h1>
         <p className="mt-5 max-w-2xl text-[17px] leading-8 text-ash-dark">
           Six quick questions. No email required. You’ll see where revenue is
-          most likely slipping through — and the simplest fix for each.
+          most likely slipping through, and the simplest fix for each.
         </p>
 
         {/* progress */}
@@ -149,7 +149,7 @@ export function SelfCheck() {
                   </h2>
                   <p className="mt-3 text-[16px] leading-7 text-ash-dark">
                     Nothing obvious is leaking from the six most common gaps.
-                    Worth a short review to confirm — and to find the smaller
+                    Worth a short review to confirm, and to find the smaller
                     things that compound over time.
                   </p>
                 </>
@@ -163,7 +163,7 @@ export function SelfCheck() {
                     {flagged.length === 1 ? 'leak' : 'leaks'}.
                   </h2>
                   <p className="mt-3 text-[16px] leading-7 text-ash-dark">
-                    Here’s where revenue is most likely slipping — and the simple
+                    Here’s where revenue is most likely slipping, and the simple
                     fix for each.
                   </p>
                   <ul className="mt-6 flex flex-col divide-y divide-line">

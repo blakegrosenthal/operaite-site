@@ -18,18 +18,30 @@ const LEAKS = [
   { n: '05', title: 'The business runs on the owner’s memory', body: 'When the owner is the backstop for every task, growth stalls.' }
 ]
 
-const DIFF = [
-  'Built from real conversations with owner-led service businesses',
-  'Focused on the workflows that protect revenue',
-  'Designed to reduce stress, not add more tools',
-  'Implemented and supported — not just recommended'
+const FAQS = [
+  {
+    q: 'What happens on the call?',
+    a: 'You talk, I ask questions, and we map where money is slipping: leads, quotes, no-shows, invoices. You leave with your top two or three leaks and what I’d fix first, whether or not we work together.'
+  },
+  {
+    q: 'Do I need new software?',
+    a: 'Usually not. I build on the phones, calendar, and invoicing you already have. When a fix needs something you don’t have, like a textable business line, I set it up and run it for you. Nothing for your team to learn.'
+  },
+  {
+    q: 'What does it cost?',
+    a: 'You’ll know exactly what a fix costs before I build anything. The review itself is free.'
+  },
+  {
+    q: 'How long does setup take?',
+    a: 'The build itself takes days. If business texting is involved, the phone carriers add an approval wait, and I give you the exact go-live date up front.'
+  }
 ]
 
 const STEPS = [
   { n: '01', title: 'Understand where work breaks', body: 'A focused call to map how work flows today and where revenue slips through.' },
-  { n: '02', title: 'Identify what matters most', body: 'We prioritize the workflows that protect revenue and reduce daily friction.' },
+  { n: '02', title: 'Identify what matters most', body: 'I prioritize the workflows that protect revenue and reduce daily friction.' },
   { n: '03', title: 'Build simple systems', body: 'Practical systems so follow-ups, scheduling, and billing happen automatically.' },
-  { n: '04', title: 'Train and verify', body: 'Your team learns the workflow, and we verify it works in real conditions.' },
+  { n: '04', title: 'Train and verify', body: 'Your team learns the workflow, and I verify it works in real conditions.' },
   { n: '05', title: 'Monitor and refine', body: 'Regular check-ins after launch keep your operations steady.' }
 ]
 
@@ -53,11 +65,10 @@ export default function HomePage() {
             <Reveal className="lg:sticky lg:top-28 lg:self-start">
               <Caption>Where work quietly breaks down</Caption>
               <h2 className="mt-4 font-display text-[2.1rem] leading-[1.12] text-ink sm:text-[2.7rem]">
-                Most revenue loss doesn’t come from big mistakes.
+                Five places the money slips.
               </h2>
               <p className="mt-5 max-w-md text-[17px] leading-8 text-ash-dark">
-                It comes from small gaps in everyday workflows — one missed
-                follow-up, one late invoice at a time.
+                The same gaps show up in almost every shop I look at.
               </p>
             </Reveal>
 
@@ -81,7 +92,7 @@ export default function HomePage() {
           <Reveal delay={0.1} className="mt-16 border-t border-line pt-8">
             <p className="text-[17px] leading-8 text-ash-dark">
               <span className="font-semibold text-ink">No new software for your team to learn.</span>{' '}
-              We build with the tools you already use — your phones, your
+              I build with the tools you already use: your phones, your
               calendar, your invoicing.
             </p>
           </Reveal>
@@ -106,13 +117,13 @@ export default function HomePage() {
                   </p>
                   <p className="mt-4 max-w-md text-[17px] leading-8 text-ash-dark">
                     It’s usually the fastest leak to fix, and the first system
-                    we install.
+                    I install.
                   </p>
                   <Link
                     href={env.calendlyUrl}
                     className="mt-8 inline-flex rounded-lg bg-cobalt px-6 py-3.5 text-[15px] font-semibold text-white transition hover:-translate-y-0.5 hover:bg-cobalt-soft"
                   >
-                    Book a 30-Minute Operations Review
+                    Book your free 30-minute review
                   </Link>
                 </div>
                 <div className="flex flex-col justify-center border-t border-line bg-bone-2/60 p-8 sm:p-10 md:border-l md:border-t-0">
@@ -164,21 +175,19 @@ export default function HomePage() {
             <Reveal>
               <Caption tone="cobalt">What makes operAIte different</Caption>
               <h2 className="mt-4 font-display text-[2.1rem] leading-[1.14] text-ink sm:text-[2.5rem]">
-                Outcomes over technology. Always.
+                I don’t hand you a report and disappear.
               </h2>
             </Reveal>
-            <Stagger className="grid gap-4 sm:grid-cols-2">
-              {DIFF.map((d, i) => (
-                <StaggerItem key={i}>
-                  <div className="flex h-full items-start gap-3.5 rounded-xl border border-line bg-bone-2 px-5 py-5">
-                    <svg className="mt-0.5 h-5 w-5 flex-none text-cobalt" viewBox="0 0 16 16" fill="none">
-                      <path d="M3 8.5l3.2 3.2L13 4.5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                    <p className="text-[16px] font-medium leading-7 text-ink">{d}</p>
-                  </div>
-                </StaggerItem>
-              ))}
-            </Stagger>
+            <Reveal delay={0.1}>
+              <p className="text-[17px] leading-8 text-ash-dark">
+                I set the system up, train your team, and check back after
+                launch to make sure it holds. Where a tool you already pay for
+                can do the job, that’s what I use.
+              </p>
+              <p className="mt-4 text-[17px] leading-8 text-ash-dark">
+                You’ll talk to me, Blake, not a sales team.
+              </p>
+            </Reveal>
           </div>
         </div>
       </section>
@@ -192,7 +201,7 @@ export default function HomePage() {
               A structured process, not a software pitch.
             </h2>
             <p className="mx-auto mt-5 max-w-xl text-[17px] leading-8 text-ash-dark">
-              We make your operations more predictable without disrupting how you
+              I make your operations more predictable without disrupting how you
               already run the business.
             </p>
           </Reveal>
@@ -234,7 +243,7 @@ export default function HomePage() {
                   </h3>
                   <p className="mt-4 text-[16px] leading-7 text-ash-dark">
                     New inquiries now get an immediate message with a booking
-                    link — so patients schedule in minutes instead of waiting on
+                    link, so patients schedule in minutes instead of waiting on
                     a manual reply.
                   </p>
                   <Link
@@ -262,26 +271,57 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* FAQ — before you book */}
+      <section className="bg-bone-2 pb-24 sm:pb-32">
+        <div className="mx-auto w-full max-w-5xl px-5 sm:px-6 lg:px-8">
+          <Reveal>
+            <Caption>Before you book</Caption>
+            <h2 className="mt-4 font-display text-[2.1rem] leading-[1.14] text-ink sm:text-[2.5rem]">
+              The questions owners ask first.
+            </h2>
+          </Reveal>
+          <Stagger className="mt-10 grid gap-4 sm:grid-cols-2">
+            {FAQS.map((f) => (
+              <StaggerItem key={f.q}>
+                <div className="h-full rounded-xl border border-line bg-white p-6">
+                  <h3 className="font-display text-[1.2rem] leading-snug text-ink">
+                    {f.q}
+                  </h3>
+                  <p className="mt-2.5 text-[15.5px] leading-7 text-ash-dark">
+                    {f.a}
+                  </p>
+                </div>
+              </StaggerItem>
+            ))}
+          </Stagger>
+        </div>
+      </section>
+
       {/* FINAL CTA — ink band */}
       <section className="bg-ink py-24 text-bone sm:py-28">
         <div className="mx-auto w-full max-w-3xl px-5 text-center sm:px-6">
           <Reveal>
             <span className="text-[12px] font-semibold uppercase tracking-[0.2em] text-cobalt-soft">
-              30 minutes · no prep · low pressure
+              30 minutes · no prep · free either way
             </span>
             <h2 className="mx-auto mt-5 max-w-2xl font-display text-[2.2rem] leading-[1.14] text-bone sm:text-[2.9rem]">
               Find out where your business is leaking.
             </h2>
             <p className="mx-auto mt-5 max-w-xl text-[17px] leading-8 text-bone/70">
-              We’ll identify your top two or three operational leaks. You leave
-              with a short plan and a next step — whether or not we work together.
+              I’ll identify your top two or three operational leaks. You leave
+              with a short plan and a next step, whether or not we work together.
             </p>
             <Link
               href={env.calendlyUrl}
               className="mt-9 inline-flex rounded-lg bg-cobalt px-7 py-4 text-[15px] font-semibold text-white shadow-[0_12px_36px_rgba(43,79,224,0.4)] transition hover:-translate-y-0.5 hover:bg-cobalt-soft"
             >
-              Book a 30-Minute Operations Review
+              Book your free 30-minute review
             </Link>
+            <p className="mx-auto mt-10 max-w-xl border-t border-bone/10 pt-6 text-[14px] leading-6 text-bone/50">
+              Fair warning: this is for owner-led service businesses with real
+              demand and leaky follow-up. If you need more leads, rather than
+              fewer dropped ones, I’m not your guy yet.
+            </p>
           </Reveal>
         </div>
       </section>

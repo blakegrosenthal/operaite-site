@@ -10,13 +10,15 @@ export const metadata: Metadata = {
     'About Blake Rosenthal and operAIte: practical systems that help owner-led service businesses run with more reliability and less operational strain.'
 }
 
-const STORY = [
+const STORY_TOP = [
   'I work with owner-led service businesses that are tired of chasing follow-ups, checking calendars twice, and wondering what slipped through the cracks. Most owners don’t need more tools. They need their operations to run predictably without constant oversight.',
-  'I grew up around small business, and I’ve seen firsthand how easy it is for manual processes to quietly drain time, cash flow, and energy. When my dad was undergoing treatment and couldn’t carry the day-to-day weight of the business, I stepped in and rebuilt the operational systems inside our family practice. The goal wasn’t complexity. It was reliability. Fewer dropped tasks. Faster response. Clear visibility.',
-  'That experience shaped how I approach every engagement.',
+  'I grew up around small business, and I’ve seen firsthand how easy it is for manual processes to quietly drain time, cash flow, and energy. When my dad was undergoing treatment and couldn’t carry the day-to-day weight of the business, I stepped in and rebuilt the operational systems inside our family practice. The goal wasn’t complexity. It was reliability. Fewer dropped tasks, faster response, clear visibility.'
+]
+
+const STORY_REST = [
   'Since then, I’ve spoken with dozens of small and midsized business owners across industries. The patterns are consistent. Leads go unanswered. Follow-ups rely on memory. Invoices lag. Critical tasks live in inboxes instead of systems. Over time, that instability compounds.',
-  'My work focuses on stabilizing the revenue-critical workflows that protect your business. Not with buzzwords. Not with overengineered platforms. With structured systems that make execution dependable.',
-  'When the right systems are in place, the business feels different. Fewer surprises. Fewer fire drills. More clarity. More control.'
+  'I fix the leaks that cost you money: slow replies, forgotten follow-ups, late invoices. Nothing fancy, and nothing your team has to relearn.',
+  'When the right systems are in place, the business feels different. Fewer surprises and fire drills, more clarity and control.'
 ]
 
 export default function AboutPage() {
@@ -53,10 +55,21 @@ export default function AboutPage() {
 
           <Reveal delay={0.1}>
             <div className="space-y-5 text-base leading-8 text-ash-dark">
-              {STORY.map((p, i) => (
-                <p key={i} className={i === 2 ? 'font-display text-xl italic text-ink' : ''}>
-                  {p}
-                </p>
+              {STORY_TOP.map((p, i) => (
+                <p key={i}>{p}</p>
+              ))}
+              <p className="font-display text-xl italic text-ink">
+                That practice is the chiropractic clinic in my{' '}
+                <Link
+                  href="/case-studies/chiropractic-clinic"
+                  className="underline decoration-cobalt/40 underline-offset-4 transition hover:decoration-cobalt"
+                >
+                  first case study
+                </Link>
+                . The system I built for it still runs today.
+              </p>
+              {STORY_REST.map((p, i) => (
+                <p key={i}>{p}</p>
               ))}
             </div>
             <Link
