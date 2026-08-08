@@ -8,11 +8,11 @@ import styles from './Hero.module.css'
 type Clip = { label: string; src: string; start: number }
 
 const CLIPS: Clip[] = [
-  { label: 'HVAC & trades', src: 'https://videos.pexels.com/video-files/4456112/4456112-hd_1920_1080_25fps.mp4', start: 0 },
-  { label: 'home services', src: 'https://videos.pexels.com/video-files/8853516/8853516-hd_1920_1080_24fps.mp4', start: 0 },
-  { label: 'clinics & front desks', src: 'https://videos.pexels.com/video-files/5137839/5137839-uhd_2732_1440_25fps.mp4', start: 30 },
-  { label: 'auto shops', src: 'https://videos.pexels.com/video-files/14514790/14514790-hd_1920_1080_25fps.mp4', start: 0 },
-  { label: 'carpentry & build', src: 'https://videos.pexels.com/video-files/6790431/6790431-hd_1920_1080_25fps.mp4', start: 0 }
+  { label: 'HVAC & trades', src: '/videos/hvac.mp4', start: 0 },
+  { label: 'home services', src: '/videos/home-services.mp4', start: 0 },
+  { label: 'clinics & front desks', src: '/videos/clinics.mp4', start: 0 },
+  { label: 'auto shops', src: '/videos/auto-shops.mp4', start: 0 },
+  { label: 'carpentry & build', src: '/videos/carpentry.mp4', start: 0 }
 ]
 const HOLD = 4400
 const CHAR_STEP = 0.038
