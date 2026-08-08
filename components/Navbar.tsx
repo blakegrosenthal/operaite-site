@@ -30,13 +30,14 @@ export function Navbar() {
         </nav>
         <Link
           href={env.calendlyUrl}
-          className="hidden rounded-lg bg-ink px-5 py-2.5 text-sm font-semibold text-bone transition hover:bg-ink-2 sm:inline-flex"
+          className="inline-flex rounded-lg bg-cobalt px-3 py-2 text-[13px] font-semibold text-white transition hover:bg-cobalt-soft sm:px-5 sm:py-2.5 sm:text-sm"
         >
-          Book a free review
+          <span className="sm:hidden">Book</span>
+          <span className="hidden sm:inline">Book a free review</span>
         </Link>
       </div>
-      <div className="border-t border-line px-5 py-2 md:hidden">
-        <nav className="mx-auto flex max-w-6xl gap-5 overflow-x-auto whitespace-nowrap text-sm text-ash-dark">
+      <div className="border-t border-line px-4 py-2 md:hidden">
+        <nav className="mx-auto flex max-w-6xl justify-between gap-3 whitespace-nowrap text-[13px] text-ash-dark">
           {siteConfig.navigation.slice(1).map((item) => (
             <Link key={item.href} href={item.href} className="py-1 font-medium">
               {item.label}

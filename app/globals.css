@@ -52,7 +52,7 @@ h1, h2, h3, h4 {
 
 .brand-ai { color: var(--cobalt); font-weight: 600; font-style: normal; }
 
-.reveal-hidden { opacity: 0; transform: translateY(22px); }
+.reveal-hidden { opacity: 0; transform: translateY(12px); }
 .reveal-up { transition: opacity 0.8s var(--ease), transform 0.8s var(--ease); }
 
 @media (prefers-reduced-motion: reduce) {

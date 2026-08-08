@@ -8,7 +8,7 @@ const EASE = [0.16, 1, 0.3, 1] as const
 export function Reveal({
   children,
   delay = 0,
-  y = 26,
+  y = 12,
   className
 }: {
   children: ReactNode
@@ -55,7 +55,7 @@ export function Stagger({
 export function StaggerItem({
   children,
   className,
-  y = 24
+  y = 12
 }: {
   children: ReactNode
   className?: string

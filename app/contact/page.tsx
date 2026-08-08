@@ -39,7 +39,7 @@ export default function ContactPage() {
             >
               <Link
                 href={env.calendlyUrl}
-                className="mt-4 inline-flex rounded-md bg-accent px-5 py-3 text-sm font-semibold text-white transition hover:bg-accent-strong"
+                className="mt-4 inline-flex rounded-lg bg-cobalt px-6 py-3.5 text-[15px] font-semibold text-white transition hover:-translate-y-0.5 hover:bg-cobalt-soft"
               >
                 Book your free 30-minute review
               </Link>
@@ -50,7 +50,7 @@ export default function ContactPage() {
             >
               <Link
                 href={`mailto:${env.contactEmail}`}
-                className="mt-4 inline-flex rounded-md border border-line px-5 py-3 text-sm font-semibold text-foreground transition hover:bg-stone-100"
+                className="mt-4 inline-flex rounded-lg border border-line px-6 py-3.5 text-[15px] font-semibold text-ink transition hover:bg-bone-2"
               >
                 {env.contactEmail}
               </Link>

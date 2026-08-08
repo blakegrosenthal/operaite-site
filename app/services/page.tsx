@@ -29,7 +29,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <Section title="Core Areas I Improve" className="bg-neutral-50">
+      <Section title="Core Areas I Improve" className="bg-bone-2">
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           <CoreAreaCard
             label="01"
@@ -65,7 +65,7 @@ export default function ServicesPage() {
       </Section>
 
       <Section title="Common Systems I Install">
-        <ul className="grid gap-3 text-sm sm:grid-cols-2">
+        <ul className="grid gap-x-10 text-sm sm:grid-cols-2">
           <SystemItem text="Immediate response to new inquiries" />
           <SystemItem text="Automated appointment confirmations" />
           <SystemItem text="Missed-call text back" />
@@ -81,7 +81,7 @@ export default function ServicesPage() {
         </ul>
       </Section>
 
-      <Section title="From First Call to Live System" className="bg-neutral-50">
+      <Section title="From First Call to Live System" className="bg-bone-2">
         <div className="grid gap-4 md:grid-cols-3">
           <EngagementStep
             step="01"
@@ -110,17 +110,16 @@ export default function ServicesPage() {
             primaryHref={env.calendlyUrl}
             secondaryLabel="Or send me a note"
             secondaryHref="/contact"
-          />
-          <p className="mt-4 text-xs text-muted">
+          >
             Prefer email? Reach me directly at{' '}
             <Link
               href={`mailto:${env.contactEmail}`}
-              className="font-medium text-foreground"
+              className="font-medium text-ink"
             >
               {env.contactEmail}
             </Link>
             .
-          </p>
+          </CTA>
         </div>
       </section>
     </>
@@ -138,10 +137,12 @@ function CoreAreaCard({
 }) {
   return (
     <article className="rounded-xl border border-line bg-white p-5">
-      <span className="inline-flex h-7 w-7 items-center justify-center rounded-md border border-line bg-neutral-50 text-[11px] font-semibold text-muted">
+      <span className="font-display text-[1.7rem] leading-none text-cobalt/70">
         {label}
       </span>
-      <h3 className="text-base font-semibold text-foreground">{title}</h3>
+      <h3 className="mt-3 font-display text-[1.25rem] leading-snug text-ink">
+        {title}
+      </h3>
       <p className="mt-2 text-[15px] leading-7 text-ash-dark">{text}</p>
     </article>
   )
@@ -149,7 +150,10 @@ function CoreAreaCard({
 
 function SystemItem({ text }: { text: string }) {
   return (
-    <li className="rounded-xl border border-line bg-white p-4 text-[15px] leading-7 text-ink">
+    <li className="flex items-start gap-3 border-b border-line py-3 text-[15px] leading-7 text-ink">
+      <svg className="mt-1.5 h-4 w-4 flex-none text-cobalt" viewBox="0 0 16 16" fill="none">
+        <path d="M3 8.5l3.2 3.2L13 4.5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
       {text}
     </li>
   )
@@ -169,7 +173,7 @@ function EngagementStep({
       <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-cobalt">
         {step}
       </p>
-      <h3 className="mt-2 text-lg font-semibold text-foreground">{title}</h3>
+      <h3 className="mt-2 font-display text-[1.25rem] leading-snug text-ink">{title}</h3>
       <p className="mt-2 text-[15px] leading-7 text-ash-dark">{text}</p>
     </article>
   )

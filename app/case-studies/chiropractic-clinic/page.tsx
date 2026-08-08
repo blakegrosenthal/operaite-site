@@ -12,6 +12,12 @@ export const metadata: Metadata = {
     'Instant response system for new patient inquiries at a chiropractic clinic.'
 }
 
+const SNAPSHOT = [
+  ['Before', 'Inquiries waited hours for a manual reply'],
+  ['After', 'Booking link sent the moment the form is submitted'],
+  ['Result', 'Consultations booked from the first response']
+]
+
 export default function ChiropracticClinicCaseStudyPage() {
   if (!caseStudy) {
     notFound()
@@ -19,7 +25,7 @@ export default function ChiropracticClinicCaseStudyPage() {
 
   return (
     <>
-      <section className="reveal-up bg-bone-2 pt-20 pb-16 sm:pt-24 sm:pb-20">
+      <section className="reveal-up border-b border-line bg-bone-2 pt-20 pb-12 sm:pt-24 sm:pb-16">
         <div className="mx-auto w-full max-w-6xl px-5 sm:px-6 lg:px-8">
           <div className="max-w-[72ch]">
             <Link
@@ -31,31 +37,47 @@ export default function ChiropracticClinicCaseStudyPage() {
             <p className="mt-8 text-[11px] font-semibold uppercase tracking-[0.22em] text-cobalt">
               Case Study
             </p>
-            <h1 className="mt-4 text-[2.35rem] font-[680] leading-[1.12] tracking-[-0.01em] text-foreground sm:text-[3.1rem]">
+            <h1 className="mt-4 font-display text-[2.35rem] leading-[1.12] text-ink sm:text-[3.1rem]">
               {caseStudy.title}
             </h1>
-            <p className="mt-6 max-w-[62ch] text-base leading-8 text-muted sm:text-lg">
+            <p className="mt-5 max-w-[62ch] text-base leading-8 text-muted sm:text-lg">
               {caseStudy.subtitle}
             </p>
+          </div>
+
+          <div className="mt-10 overflow-hidden rounded-2xl border border-line bg-white shadow-soft">
+            <div className="grid gap-0 md:grid-cols-3">
+              {SNAPSHOT.map(([k, v], i) => (
+                <div
+                  key={k}
+                  className={`p-6 sm:p-7 ${i !== 0 ? 'border-t border-line md:border-l md:border-t-0' : ''}`}
+                >
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-ash">
+                    {k}
+                  </p>
+                  <p className="mt-2 text-[15.5px] leading-6 text-ink">{v}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="reveal-up border-t border-line bg-neutral-50 py-24 sm:py-32">
-        <div className="mx-auto w-full max-w-5xl px-5 sm:px-6 lg:px-8">
-          <div className="space-y-6 sm:space-y-8">
-            <article className="rounded-2xl border border-line bg-white p-6 shadow-soft sm:p-8">
-              <h2 className="text-2xl font-[650] tracking-[-0.01em] text-foreground">
-                The Situation
+      <section className="reveal-up py-16 sm:py-24">
+        <div className="mx-auto w-full max-w-6xl px-5 sm:px-6 lg:px-8">
+          <div className="max-w-[70ch] space-y-12">
+            <div>
+              <h2 className="font-display text-2xl leading-snug text-ink">
+                The situation
               </h2>
-              <p className="mt-4 max-w-[68ch] text-base leading-8 text-muted">
+              <p className="mt-4 text-base leading-8 text-muted">
                 {caseStudy.situation}
               </p>
-            </article>
+            </div>
 
-            <article className="rounded-2xl border border-line bg-white p-6 shadow-soft sm:p-8">
-              <h2 className="text-2xl font-[650] tracking-[-0.01em] text-foreground">
-                What Changed
+            <div className="border-t border-line pt-10">
+              <h2 className="font-display text-2xl leading-snug text-ink">
+                What changed
               </h2>
               <ul className="mt-4 space-y-3">
                 {caseStudy.changes.map((change) => (
@@ -63,36 +85,36 @@ export default function ChiropracticClinicCaseStudyPage() {
                     key={change}
                     className="flex items-start gap-3 text-base leading-8 text-muted"
                   >
-                    <span className="mt-3 block h-1.5 w-1.5 flex-none rounded-full bg-accent" />
+                    <span className="mt-3 block h-1.5 w-1.5 flex-none rounded-full bg-cobalt" />
                     <span>{change}</span>
                   </li>
                 ))}
               </ul>
-            </article>
+            </div>
 
-            <article className="rounded-2xl border border-line bg-white p-6 shadow-soft sm:p-8">
-              <h2 className="text-2xl font-[650] tracking-[-0.01em] text-foreground">
-                Operational Impact
+            <div className="border-t border-line pt-10">
+              <h2 className="font-display text-2xl leading-snug text-ink">
+                Operational impact
               </h2>
-              <p className="mt-4 max-w-[68ch] text-base leading-8 text-muted">
+              <p className="mt-4 text-base leading-8 text-muted">
                 {caseStudy.operationalImpact}
               </p>
-            </article>
+            </div>
 
-            <article className="rounded-2xl border border-line bg-white p-6 shadow-soft sm:p-8">
-              <h2 className="text-2xl font-[650] tracking-[-0.01em] text-foreground">
-                Where This One Came From
+            <div className="border-t border-line pt-10">
+              <h2 className="font-display text-2xl leading-snug text-ink">
+                Where this one came from
               </h2>
-              <p className="mt-4 max-w-[68ch] text-base leading-8 text-muted">
+              <p className="mt-4 text-base leading-8 text-muted">
                 {caseStudy.keyInsight}
               </p>
               <Link
                 href={env.calendlyUrl}
-                className="mt-6 inline-flex rounded-md bg-accent px-5 py-3 text-sm font-semibold text-white transition hover:bg-accent-strong"
+                className="mt-6 inline-flex rounded-lg bg-cobalt px-6 py-3.5 text-[15px] font-semibold text-white transition hover:-translate-y-0.5 hover:bg-cobalt-soft"
               >
                 Book your free 30-minute review
               </Link>
-            </article>
+            </div>
           </div>
         </div>
       </section>

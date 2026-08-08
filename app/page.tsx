@@ -59,7 +59,7 @@ export default function HomePage() {
       <Hero />
 
       {/* WHERE WORK QUIETLY BREAKS DOWN */}
-      <section id="where-work-breaks" className="bg-bone-2 py-24 sm:py-32">
+      <section id="where-work-breaks" className="bg-bone-2 pb-24 pt-14 sm:pb-32 sm:pt-20">
         <div className="mx-auto w-full max-w-6xl px-5 sm:px-6 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
             <Reveal className="lg:sticky lg:top-28 lg:self-start">

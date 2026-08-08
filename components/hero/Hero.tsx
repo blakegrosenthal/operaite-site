@@ -145,6 +145,13 @@ export function Hero() {
           </Link>
         </header>
 
+        <nav className={styles.mobileNav} aria-label="Primary mobile">
+          <Link href="/services">Services</Link>
+          <Link href="/self-check">Self-Check</Link>
+          <Link href="/case-studies">Case Studies</Link>
+          <Link href="/about">About</Link>
+        </nav>
+
         <h1 className={styles.heading}>
           {LINES.map((line, li) => {
             const lineDelay = 0.3 + li * 0.55

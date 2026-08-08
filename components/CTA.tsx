@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import type { ReactNode } from 'react'
 
 interface CTAProps {
   title: string
@@ -7,6 +8,7 @@ interface CTAProps {
   primaryHref: string
   secondaryLabel?: string
   secondaryHref?: string
+  children?: ReactNode
 }
 
 export function CTA({
@@ -15,11 +17,12 @@ export function CTA({
   primaryLabel,
   primaryHref,
   secondaryLabel,
-  secondaryHref
+  secondaryHref,
+  children
 }: CTAProps) {
   return (
-    <div className="rounded-2xl border border-line bg-surface p-6 shadow-soft sm:p-8">
-      <h3 className="text-xl font-semibold text-foreground sm:text-2xl">
+    <div className="max-w-3xl rounded-2xl border border-line bg-surface p-6 shadow-soft sm:p-8">
+      <h3 className="font-display text-[1.4rem] leading-snug text-ink sm:text-2xl">
         {title}
       </h3>
       <p className="mt-3 max-w-2xl text-base leading-7 text-muted">
@@ -28,19 +31,24 @@ export function CTA({
       <div className="mt-6 flex flex-wrap gap-3">
         <Link
           href={primaryHref}
-          className="rounded-md bg-accent px-5 py-3 text-sm font-semibold text-white transition hover:bg-accent-strong"
+          className="rounded-lg bg-cobalt px-6 py-3.5 text-[15px] font-semibold text-white transition hover:-translate-y-0.5 hover:bg-cobalt-soft"
         >
           {primaryLabel}
         </Link>
         {secondaryLabel && secondaryHref ? (
           <Link
             href={secondaryHref}
-            className="rounded-md border border-line px-5 py-3 text-sm font-semibold text-foreground transition hover:bg-stone-100"
+            className="rounded-lg border border-line px-6 py-3.5 text-[15px] font-semibold text-ink transition hover:bg-bone-2"
           >
             {secondaryLabel}
           </Link>
         ) : null}
       </div>
+      {children ? (
+        <div className="mt-5 border-t border-line pt-4 text-sm text-muted">
+          {children}
+        </div>
+      ) : null}
     </div>
   )
 }
