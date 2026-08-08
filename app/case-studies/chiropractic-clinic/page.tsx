@@ -65,7 +65,7 @@ export default function ChiropracticClinicCaseStudyPage() {
 
       <section className="reveal-up py-16 sm:py-24">
         <div className="mx-auto w-full max-w-6xl px-5 sm:px-6 lg:px-8">
-          <div className="max-w-[70ch] space-y-12">
+          <div className="mx-auto max-w-[70ch] space-y-12">
             <div>
               <h2 className="font-display text-2xl leading-snug text-ink">
                 The situation

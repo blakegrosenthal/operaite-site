@@ -29,7 +29,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <Section title="Core Areas I Improve" className="bg-bone-2">
+      <Section title="Core areas I improve." className="bg-bone-2">
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           <CoreAreaCard
             label="01"
@@ -64,7 +64,7 @@ export default function ServicesPage() {
         </div>
       </Section>
 
-      <Section title="Common Systems I Install">
+      <Section title="Common systems I install.">
         <ul className="grid gap-x-10 text-sm sm:grid-cols-2">
           <SystemItem text="Immediate response to new inquiries" />
           <SystemItem text="Automated appointment confirmations" />
@@ -81,7 +81,7 @@ export default function ServicesPage() {
         </ul>
       </Section>
 
-      <Section title="From First Call to Live System" className="bg-bone-2">
+      <Section title="From first call to live system." className="bg-bone-2">
         <div className="grid gap-4 md:grid-cols-3">
           <EngagementStep
             step="01"
@@ -169,11 +169,11 @@ function EngagementStep({
   text: string
 }) {
   return (
-    <article className="rounded-xl border border-line bg-white p-5">
-      <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-cobalt">
+    <article>
+      <span className="font-display text-[1.7rem] leading-none text-cobalt/70">
         {step}
-      </p>
-      <h3 className="mt-2 font-display text-[1.25rem] leading-snug text-ink">{title}</h3>
+      </span>
+      <h3 className="mt-3 font-display text-[1.25rem] leading-snug text-ink">{title}</h3>
       <p className="mt-2 text-[15px] leading-7 text-ash-dark">{text}</p>
     </article>
   )

@@ -12,19 +12,20 @@ declare global {
 }
 
 export function TallyForm() {
-  const [status, setStatus] = useState<'loading' | 'loaded' | 'failed'>(
-    'loading'
-  )
-  const loadedRef = useRef(false)
+  const [failed, setFailed] = useState(false)
+  const iframeRef = useRef<HTMLIFrameElement | null>(null)
 
   useEffect(() => {
+    // embed.js copies data-tally-src into src when it loads. If the script is
+    // blocked (ad blockers), src never becomes a tally.so URL — show fallback.
     const timer = setTimeout(() => {
-      if (!loadedRef.current) setStatus('failed')
+      const src = iframeRef.current?.src ?? ''
+      if (!src.includes('tally.so')) setFailed(true)
     }, 4500)
     return () => clearTimeout(timer)
   }, [])
 
-  if (status === 'failed') {
+  if (failed) {
     return (
       <div className="rounded-2xl border border-line bg-white p-6 shadow-soft sm:p-8">
         <h2 className="font-display text-[1.4rem] leading-snug text-ink">
@@ -54,6 +55,7 @@ export function TallyForm() {
   return (
     <div className="rounded-2xl border border-line bg-white p-4 shadow-soft sm:p-6">
       <iframe
+        ref={iframeRef}
         data-tally-src="https://tally.so/embed/RGQev9?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
         loading="lazy"
         width="100%"
@@ -62,16 +64,15 @@ export function TallyForm() {
         marginHeight={0}
         marginWidth={0}
         title="Tell me what's breaking"
-        onLoad={() => {
-          loadedRef.current = true
-          setStatus('loaded')
-        }}
       />
       <Script
         src="https://tally.so/widgets/embed.js"
         strategy="lazyOnload"
         onLoad={() => {
           window.Tally?.loadEmbeds()
+        }}
+        onError={() => {
+          setFailed(true)
         }}
       />
     </div>

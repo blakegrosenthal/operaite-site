@@ -280,10 +280,10 @@ export default function HomePage() {
               The questions owners ask first.
             </h2>
           </Reveal>
-          <Stagger className="mt-10 grid gap-4 sm:grid-cols-2">
+          <Stagger className="mt-8 grid gap-x-14 sm:grid-cols-2">
             {FAQS.map((f) => (
               <StaggerItem key={f.q}>
-                <div className="h-full rounded-xl border border-line bg-white p-6">
+                <div className="border-b border-line py-6">
                   <h3 className="font-display text-[1.2rem] leading-snug text-ink">
                     {f.q}
                   </h3>

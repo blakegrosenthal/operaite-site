@@ -40,7 +40,7 @@ export default function AboutPage() {
             <div className="rounded-2xl border border-line bg-white p-3 shadow-soft">
               <div className="relative aspect-[4/5] overflow-hidden rounded-xl bg-neutral-100">
                 <Image
-                  src="/blake-about.jpg"
+                  src="/blake-founder.jpg"
                   alt="Blake Rosenthal, founder of operAIte"
                   fill
                   sizes="(max-width: 767px) 100vw, 38vw"

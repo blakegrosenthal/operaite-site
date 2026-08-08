@@ -36,7 +36,7 @@ export function Navbar() {
           <span className="hidden sm:inline">Book a free review</span>
         </Link>
       </div>
-      <div className="border-t border-line px-4 py-2 md:hidden">
+      <div className="border-t border-line px-5 py-2 md:hidden">
         <nav className="mx-auto flex max-w-6xl justify-between gap-3 whitespace-nowrap text-[13px] text-ash-dark">
           {siteConfig.navigation.slice(1).map((item) => (
             <Link key={item.href} href={item.href} className="py-1 font-medium">
