@@ -25,7 +25,7 @@ const FAQS = [
   },
   {
     q: 'Do I need new software?',
-    a: 'Usually not. I build on the phones, calendar, and invoicing you already have. When a fix needs something you don’t have, like a textable business line, I set it up and run it for you. Nothing for your team to learn.'
+    a: 'Usually not. I build on the phones, calendar, and invoicing you already have. When a fix needs something new, I choose the simplest tool that works, set it up, and train your team on it. You’re never left to figure it out alone.'
   },
   {
     q: 'What does it cost?',
@@ -91,9 +91,10 @@ export default function HomePage() {
 
           <Reveal delay={0.1} className="mt-16 border-t border-line pt-8">
             <p className="text-[17px] leading-8 text-ash-dark">
-              <span className="font-semibold text-ink">No new software for your team to learn.</span>{' '}
-              I build with the tools you already use: your phones, your
-              calendar, your invoicing.
+              <span className="font-semibold text-ink">Built on what you already use.</span>{' '}
+              I start with your phones, your calendar, your invoicing — and
+              when a fix needs something new, I choose the simplest tool that
+              works, set it up, train your team, and stay until it sticks.
             </p>
           </Reveal>
         </div>
