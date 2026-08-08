@@ -12,7 +12,7 @@ export function CaseStudyCard({ caseStudy }: CaseStudyCardProps) {
         <p className="text-xs font-semibold uppercase tracking-[0.16em] text-muted">
           Case study
         </p>
-        <h3 className="mt-3 text-xl font-semibold tracking-[-0.01em] text-foreground sm:text-2xl">
+        <h3 className="mt-3 font-display text-display-sm text-ink sm:text-display-md">
           {caseStudy.title}
         </h3>
         <p className="mt-2 text-sm font-medium leading-6 text-foreground/80 sm:text-base">

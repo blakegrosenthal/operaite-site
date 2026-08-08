@@ -33,7 +33,7 @@ export function Section({
             </p>
           ) : null}
           <h2
-            className={`font-display text-3xl leading-[1.14] text-ink sm:text-[2.4rem] ${titleClassName ?? ''}`}
+            className={`font-display text-display-md text-ink sm:text-display-lg ${titleClassName ?? ''}`}
           >
             {title}
           </h2>

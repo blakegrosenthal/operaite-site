@@ -18,7 +18,7 @@ export default function ContactPage() {
           <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-cobalt">
             Contact
           </p>
-          <h1 className="mt-3 text-3xl tracking-tight text-foreground sm:text-5xl">
+          <h1 className="mt-3 font-display text-display-lg tracking-tight text-ink sm:text-display-xl">
             Tell me what&rsquo;s breaking.
           </h1>
           <p className="mt-5 max-w-3xl text-base leading-8 text-muted">

@@ -64,7 +64,7 @@ export default function HomePage() {
           <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
             <Reveal className="lg:sticky lg:top-28 lg:self-start">
               <Caption>Where work quietly breaks down</Caption>
-              <h2 className="mt-4 font-display text-[2.1rem] leading-[1.12] text-ink sm:text-[2.7rem]">
+              <h2 className="mt-4 font-display text-display-md text-ink sm:text-display-lg">
                 Five places the money slips.
               </h2>
               <p className="mt-5 max-w-md text-[17px] leading-8 text-ash-dark">
@@ -76,11 +76,11 @@ export default function HomePage() {
               {LEAKS.map((leak, i) => (
                 <StaggerItem key={leak.n}>
                   <div className={`group flex gap-6 py-7 ${i !== 0 ? 'border-t border-line' : ''}`}>
-                    <span className="font-display text-[1.7rem] leading-none text-cobalt/70 transition-colors group-hover:text-cobalt">
+                    <span className="font-display text-display-md leading-none text-cobalt/70 transition-colors group-hover:text-cobalt">
                       {leak.n}
                     </span>
                     <div>
-                      <h3 className="font-display text-[1.4rem] leading-snug text-ink">{leak.title}</h3>
+                      <h3 className="font-display text-display-sm text-ink">{leak.title}</h3>
                       <p className="mt-2 text-[16px] leading-7 text-ash-dark">{leak.body}</p>
                     </div>
                   </div>
@@ -107,7 +107,7 @@ export default function HomePage() {
               <div className="grid gap-0 md:grid-cols-[1.05fr_0.95fr]">
                 <div className="p-8 sm:p-12">
                   <Caption>Where most owners start</Caption>
-                  <h2 className="mt-4 font-display text-[2rem] leading-[1.12] text-ink sm:text-[2.4rem]">
+                  <h2 className="mt-4 font-display text-display-md text-ink sm:text-display-lg">
                     Speed to lead.
                   </h2>
                   <p className="mt-5 max-w-md text-[17px] leading-8 text-ash-dark">
@@ -174,7 +174,7 @@ export default function HomePage() {
           <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
             <Reveal>
               <Caption tone="cobalt">What makes operAIte different</Caption>
-              <h2 className="mt-4 font-display text-[2.1rem] leading-[1.14] text-ink sm:text-[2.5rem]">
+              <h2 className="mt-4 font-display text-display-md text-ink sm:text-display-lg">
                 I don’t hand you a report and disappear.
               </h2>
             </Reveal>
@@ -197,7 +197,7 @@ export default function HomePage() {
         <div className="mx-auto w-full max-w-4xl px-5 sm:px-6 lg:px-8">
           <Reveal className="text-center">
             <Caption>How it works</Caption>
-            <h2 className="mt-4 font-display text-[2.1rem] leading-[1.14] text-ink sm:text-[2.6rem]">
+            <h2 className="mt-4 font-display text-display-md text-ink sm:text-display-lg">
               A structured process, not a software pitch.
             </h2>
             <p className="mx-auto mt-5 max-w-xl text-[17px] leading-8 text-ash-dark">
@@ -216,7 +216,7 @@ export default function HomePage() {
                       {step.n}
                     </div>
                     <div className="pt-1.5">
-                      <h3 className="font-display text-[1.4rem] leading-snug text-ink">{step.title}</h3>
+                      <h3 className="font-display text-display-sm text-ink">{step.title}</h3>
                       <p className="mt-2 max-w-xl text-[16px] leading-7 text-ash-dark">{step.body}</p>
                     </div>
                   </div>
@@ -238,7 +238,7 @@ export default function HomePage() {
                   <p className="text-[12px] font-semibold uppercase tracking-[0.18em] text-cobalt">
                     Chiropractic clinic
                   </p>
-                  <h3 className="mt-3 font-display text-[1.6rem] leading-snug text-ink">
+                  <h3 className="mt-3 font-display text-display-md text-ink">
                     Instant response for new patient inquiries
                   </h3>
                   <p className="mt-4 text-[16px] leading-7 text-ash-dark">
@@ -276,7 +276,7 @@ export default function HomePage() {
         <div className="mx-auto w-full max-w-5xl px-5 sm:px-6 lg:px-8">
           <Reveal>
             <Caption>Before you book</Caption>
-            <h2 className="mt-4 font-display text-[2.1rem] leading-[1.14] text-ink sm:text-[2.5rem]">
+            <h2 className="mt-4 font-display text-display-md text-ink sm:text-display-lg">
               The questions owners ask first.
             </h2>
           </Reveal>
@@ -284,7 +284,7 @@ export default function HomePage() {
             {FAQS.map((f) => (
               <StaggerItem key={f.q}>
                 <div className="border-b border-line py-6">
-                  <h3 className="font-display text-[1.2rem] leading-snug text-ink">
+                  <h3 className="font-display text-display-sm text-ink">
                     {f.q}
                   </h3>
                   <p className="mt-2.5 text-[15.5px] leading-7 text-ash-dark">
@@ -304,7 +304,7 @@ export default function HomePage() {
             <span className="text-[12px] font-semibold uppercase tracking-[0.2em] text-cobalt-soft">
               30 minutes · no prep · free either way
             </span>
-            <h2 className="mx-auto mt-5 max-w-2xl font-display text-[2.2rem] leading-[1.14] text-bone sm:text-[2.9rem]">
+            <h2 className="mx-auto mt-5 max-w-2xl font-display text-display-md text-bone sm:text-display-lg">
               Find out where your business is leaking.
             </h2>
             <p className="mx-auto mt-5 max-w-xl text-[17px] leading-8 text-bone/70">

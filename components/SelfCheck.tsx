@@ -64,7 +64,7 @@ export function SelfCheck() {
         <span className="text-[12px] font-semibold uppercase tracking-[0.2em] text-amber">
           Self-check
         </span>
-        <h1 className="mt-4 font-display text-4xl leading-[1.1] text-ink sm:text-[3rem]">
+        <h1 className="mt-4 font-display text-display-lg text-ink sm:text-display-xl">
           Where is your business leaking?
         </h1>
         <p className="mt-5 max-w-2xl text-[17px] leading-8 text-ash-dark">
@@ -118,7 +118,7 @@ export function SelfCheck() {
                             active
                               ? opt.val
                                 ? 'border-cobalt bg-cobalt text-white'
-                                : 'border-ink bg-ink text-bone'
+                                : 'border-cobalt bg-cobalt text-white'
                               : 'border-line bg-bone-2 text-ash-dark hover:border-ash'
                           }`}
                         >
@@ -144,7 +144,7 @@ export function SelfCheck() {
             >
               {flagged.length === 0 ? (
                 <>
-                  <h2 className="font-display text-2xl text-ink">
+                  <h2 className="font-display text-display-md text-ink">
                     Your core workflows look solid.
                   </h2>
                   <p className="mt-3 text-[16px] leading-7 text-ash-dark">
@@ -158,7 +158,7 @@ export function SelfCheck() {
                   <span className="text-[12px] font-semibold uppercase tracking-[0.2em] text-amber">
                     Your result
                   </span>
-                  <h2 className="mt-3 font-display text-[1.9rem] leading-snug text-ink">
+                  <h2 className="mt-3 font-display text-display-md text-ink sm:text-display-lg">
                     You flagged {flagged.length} likely{' '}
                     {flagged.length === 1 ? 'leak' : 'leaks'}.
                   </h2>

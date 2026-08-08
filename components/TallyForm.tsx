@@ -28,7 +28,7 @@ export function TallyForm() {
   if (failed) {
     return (
       <div className="rounded-2xl border border-line bg-white p-6 shadow-soft sm:p-8">
-        <h2 className="font-display text-[1.4rem] leading-snug text-ink">
+        <h2 className="font-display text-display-md text-ink">
           The form didn&rsquo;t load.
         </h2>
         <p className="mt-3 text-[15.5px] leading-7 text-ash-dark">

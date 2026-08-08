@@ -31,6 +31,12 @@ const config: Config = {
         display: ['var(--font-fraunces)', 'Georgia', 'serif'],
         body: ['var(--font-geist)', 'ui-sans-serif', 'system-ui', 'sans-serif']
       },
+      fontSize: {
+        'display-xl': ['3rem', { lineHeight: '1.1' }],
+        'display-lg': ['2.5rem', { lineHeight: '1.12' }],
+        'display-md': ['1.5rem', { lineHeight: '1.3' }],
+        'display-sm': ['1.25rem', { lineHeight: '1.35' }]
+      },
       boxShadow: {
         soft: '0 1px 3px rgba(16,24,32,0.08)',
         raised: '0 18px 40px -22px rgba(16,24,32,0.35)'

@@ -22,7 +22,7 @@ export function CTA({
 }: CTAProps) {
   return (
     <div className="max-w-3xl rounded-2xl border border-line bg-surface p-6 shadow-soft sm:p-8">
-      <h3 className="font-display text-[1.4rem] leading-snug text-ink sm:text-2xl">
+      <h3 className="font-display text-display-md text-ink">
         {title}
       </h3>
       <p className="mt-3 max-w-2xl text-base leading-7 text-muted">

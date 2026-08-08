@@ -16,7 +16,7 @@ export function LegalShell({
           <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-cobalt">
             Legal
           </p>
-          <h1 className="mt-3 font-display text-3xl leading-[1.1] text-ink sm:text-[3rem]">
+          <h1 className="mt-3 font-display text-display-lg text-ink sm:text-display-xl">
             {title}
           </h1>
           <p className="mt-4 text-sm text-ash">Last updated: {updated}</p>
@@ -40,7 +40,7 @@ export function LegalSection({
 }) {
   return (
     <div>
-      <h2 className="font-display text-[1.45rem] leading-snug text-ink">
+      <h2 className="font-display text-display-md text-ink">
         {title}
       </h2>
       <div className="mt-3 space-y-4 text-[16px] leading-7 text-ash-dark">

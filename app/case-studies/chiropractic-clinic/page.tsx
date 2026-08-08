@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
+import { PatientThread } from '@/components/artifacts/PatientThread'
 import { getCaseStudyBySlug } from '@/lib/caseStudies'
 import { env } from '@/lib/env'
 
@@ -37,12 +38,48 @@ export default function ChiropracticClinicCaseStudyPage() {
             <p className="mt-8 text-[11px] font-semibold uppercase tracking-[0.22em] text-cobalt">
               Case Study
             </p>
-            <h1 className="mt-4 font-display text-[2.35rem] leading-[1.12] text-ink sm:text-[3.1rem]">
+            <h1 className="mt-4 font-display text-display-lg text-ink sm:text-display-xl">
               {caseStudy.title}
             </h1>
             <p className="mt-5 max-w-[62ch] text-base leading-8 text-muted sm:text-lg">
               {caseStudy.subtitle}
             </p>
+          </div>
+
+          {/* TODO(Blake): "41 seconds" comes from the illustrative homepage
+              mockup, not a measured clinic number. Confirm it matches what the
+              clinic's system actually logs, or swap in the real figure. */}
+          <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-4">
+            <div>
+              <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-ash">
+                Before
+              </p>
+              <p className="mt-1 font-display text-display-lg text-ash-dark">
+                Hours
+              </p>
+            </div>
+            <svg
+              className="h-5 w-5 flex-none text-ash"
+              viewBox="0 0 24 24"
+              fill="none"
+              aria-hidden
+            >
+              <path
+                d="M4 12h16m0 0-6-6m6 6-6 6"
+                stroke="currentColor"
+                strokeWidth="1.8"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+            <div>
+              <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-cobalt">
+                After
+              </p>
+              <p className="mt-1 font-display text-display-lg text-ink">
+                41 seconds
+              </p>
+            </div>
           </div>
 
           <div className="mt-10 overflow-hidden rounded-2xl border border-line bg-white shadow-soft">
@@ -60,14 +97,16 @@ export default function ChiropracticClinicCaseStudyPage() {
               ))}
             </div>
           </div>
+
+          <PatientThread />
         </div>
       </section>
 
       <section className="reveal-up py-16 sm:py-24">
         <div className="mx-auto w-full max-w-6xl px-5 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-[70ch] space-y-12">
+          <div className="mx-auto max-w-3xl space-y-12">
             <div>
-              <h2 className="font-display text-2xl leading-snug text-ink">
+              <h2 className="font-display text-display-md text-ink">
                 The situation
               </h2>
               <p className="mt-4 text-base leading-8 text-muted">
@@ -76,7 +115,7 @@ export default function ChiropracticClinicCaseStudyPage() {
             </div>
 
             <div className="border-t border-line pt-10">
-              <h2 className="font-display text-2xl leading-snug text-ink">
+              <h2 className="font-display text-display-md text-ink">
                 What changed
               </h2>
               <ul className="mt-4 space-y-3">
@@ -93,7 +132,7 @@ export default function ChiropracticClinicCaseStudyPage() {
             </div>
 
             <div className="border-t border-line pt-10">
-              <h2 className="font-display text-2xl leading-snug text-ink">
+              <h2 className="font-display text-display-md text-ink">
                 Operational impact
               </h2>
               <p className="mt-4 text-base leading-8 text-muted">
@@ -102,7 +141,7 @@ export default function ChiropracticClinicCaseStudyPage() {
             </div>
 
             <div className="border-t border-line pt-10">
-              <h2 className="font-display text-2xl leading-snug text-ink">
+              <h2 className="font-display text-display-md text-ink">
                 Where this one came from
               </h2>
               <p className="mt-4 text-base leading-8 text-muted">

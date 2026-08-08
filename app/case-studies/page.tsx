@@ -17,7 +17,7 @@ export default function CaseStudiesPage() {
             <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-cobalt">
               Proof
             </p>
-            <h1 className="mt-4 font-display text-[2.35rem] leading-[1.12] text-ink sm:text-[3.1rem]">
+            <h1 className="mt-4 font-display text-display-lg text-ink sm:text-display-xl">
               Case Studies
             </h1>
             <p className="mt-6 max-w-[62ch] text-base leading-8 text-muted sm:text-lg">
@@ -32,7 +32,7 @@ export default function CaseStudiesPage() {
                 <p className="text-[12px] font-semibold uppercase tracking-[0.18em] text-cobalt">
                   Chiropractic clinic
                 </p>
-                <h2 className="mt-3 font-display text-[1.6rem] leading-snug text-ink">
+                <h2 className="mt-3 font-display text-display-md text-ink">
                   Instant response for new patient inquiries
                 </h2>
                 <p className="mt-4 text-[16px] leading-7 text-ash-dark">
@@ -68,7 +68,7 @@ export default function CaseStudiesPage() {
 
       <section className="bg-ink py-20 text-bone sm:py-24">
         <div className="mx-auto w-full max-w-3xl px-5 text-center sm:px-6">
-          <h2 className="mx-auto max-w-2xl font-display text-[2rem] leading-[1.14] text-bone sm:text-[2.5rem]">
+          <h2 className="mx-auto max-w-2xl font-display text-display-md text-bone sm:text-display-lg">
             Want to be the second one?
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-[17px] leading-8 text-bone/70">

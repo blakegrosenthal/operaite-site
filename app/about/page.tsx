@@ -29,7 +29,7 @@ export default function AboutPage() {
           <span className="text-[11px] font-semibold uppercase tracking-[0.22em] text-amber">
             About
           </span>
-          <h1 className="mt-4 max-w-3xl font-display text-4xl leading-[1.1] text-ink sm:text-[3.2rem]">
+          <h1 className="mt-4 max-w-3xl font-display text-display-lg text-ink sm:text-display-xl">
             Hi, I’m Blake Rosenthal, founder of oper
             <span className="brand-ai">AI</span>te.
           </h1>
@@ -58,7 +58,7 @@ export default function AboutPage() {
               {STORY_TOP.map((p, i) => (
                 <p key={i}>{p}</p>
               ))}
-              <p className="font-display text-xl italic text-ink">
+              <p className="font-display text-display-sm italic text-ink">
                 That practice is the chiropractic clinic in my{' '}
                 <Link
                   href="/case-studies/chiropractic-clinic"

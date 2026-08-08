@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { CTA } from '@/components/CTA'
+import { DailySchedule } from '@/components/artifacts/DailySchedule'
+import { WeeklySnapshot } from '@/components/artifacts/WeeklySnapshot'
 import { Section } from '@/components/Section'
 import { env } from '@/lib/env'
 
@@ -18,7 +20,7 @@ export default function ServicesPage() {
           <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-cobalt">
             Services
           </p>
-          <h1 className="mt-3 text-3xl tracking-tight text-foreground sm:text-5xl">
+          <h1 className="mt-3 font-display text-display-lg tracking-tight text-ink sm:text-display-xl">
             What I fix
           </h1>
           <p className="mt-5 max-w-3xl text-base leading-8 text-muted">
@@ -81,6 +83,29 @@ export default function ServicesPage() {
         </ul>
       </Section>
 
+      <section className="py-14 sm:py-20">
+        <div className="mx-auto w-full max-w-6xl px-5 sm:px-6 lg:px-8">
+          <div className="grid gap-8 lg:grid-cols-2 lg:gap-6">
+            <div>
+              <p className="text-[12px] font-semibold uppercase tracking-[0.2em] text-amber">
+                What your morning looks like
+              </p>
+              <div className="mt-4">
+                <DailySchedule />
+              </div>
+            </div>
+            <div>
+              <p className="text-[12px] font-semibold uppercase tracking-[0.2em] text-amber">
+                What your week looks like
+              </p>
+              <div className="mt-4">
+                <WeeklySnapshot />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <Section title="From first call to live system." className="bg-bone-2">
         <div className="grid gap-4 md:grid-cols-3">
           <EngagementStep
@@ -137,10 +162,10 @@ function CoreAreaCard({
 }) {
   return (
     <article className="rounded-xl border border-line bg-white p-5">
-      <span className="font-display text-[1.7rem] leading-none text-cobalt/70">
+      <span className="font-display text-display-md leading-none text-cobalt/70">
         {label}
       </span>
-      <h3 className="mt-3 font-display text-[1.25rem] leading-snug text-ink">
+      <h3 className="mt-3 font-display text-display-sm text-ink">
         {title}
       </h3>
       <p className="mt-2 text-[15px] leading-7 text-ash-dark">{text}</p>
@@ -170,10 +195,10 @@ function EngagementStep({
 }) {
   return (
     <article>
-      <span className="font-display text-[1.7rem] leading-none text-cobalt/70">
+      <span className="font-display text-display-md leading-none text-cobalt/70">
         {step}
       </span>
-      <h3 className="mt-3 font-display text-[1.25rem] leading-snug text-ink">{title}</h3>
+      <h3 className="mt-3 font-display text-display-sm text-ink">{title}</h3>
       <p className="mt-2 text-[15px] leading-7 text-ash-dark">{text}</p>
     </article>
   )
