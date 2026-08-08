@@ -1,4 +1,4 @@
-const fallbackCalendly = 'https://calendly.com/blake-g-rosenthal/new-meeting'
+const fallbackCalendly = 'https://calendly.com/hello-operaiteconsulting/30min'
 const fallbackContactEmail = 'hello@operaiteconsulting.com'
 
 export const env = {
