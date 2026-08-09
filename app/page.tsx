@@ -318,11 +318,6 @@ export default function HomePage() {
             >
               Book your free 30-minute review
             </Link>
-            <p className="mx-auto mt-10 max-w-xl border-t border-bone/10 pt-6 text-[14px] leading-6 text-bone/50">
-              Fair warning: this is for owner-led service businesses with real
-              demand and leaky follow-up. If you need more leads, rather than
-              fewer dropped ones, I’m not your guy yet.
-            </p>
           </Reveal>
         </div>
       </section>
