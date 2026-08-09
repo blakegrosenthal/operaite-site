@@ -75,10 +75,14 @@
 .mobileNav a { font-size: 13px; font-weight: 600; color: rgba(237,232,223,0.85); text-shadow: 0 1px 10px rgba(6,10,15,0.9); }
 
 @media (max-width: 900px) {
-  .heading { width: 90vw; font-size: clamp(34px,7.5vw,48px); }
+  .heading { width: 90vw; font-size: clamp(28px, 7.5vw, 48px); }
+  .line, .lineInner { display: inline; white-space: normal; }
+  .line::after { content: " "; }
   .navPill { display: none; }
   .serves { top: auto; bottom: 42vh; }
   .mobileNav { display: flex; }
+  .overlay { background: linear-gradient(180deg, rgba(8,10,14,0.7) 0%, rgba(8,10,14,0.35) 45%, rgba(8,10,14,0.6) 100%); }
+  .video { transform: translate(-50%, -50%) scale(1.02); }
 }
 @media (prefers-reduced-motion: reduce) {
   .video { transition: none; }

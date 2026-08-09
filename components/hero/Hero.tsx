@@ -161,17 +161,25 @@ export function Hero() {
                 <span className={styles.lineInner}>
                   {line.segs.map((seg, si) => {
                     const Tag = seg.em ? 'em' : 'span'
-                    const chars = Array.from(seg.t).map((ch, k) => {
-                      if (ch === ' ') return <span key={`sp-${li}-${si}-${k}`}>{' '}</span>
-                      const delay = lineDelay + ci * CHAR_STEP
-                      ci += 1
+                    const tokens = seg.t.split(/(\s+)/).map((tok, ti) => {
+                      if (/^\s+$/.test(tok)) return <span key={`sp-${li}-${si}-${ti}`}>{' '}</span>
+                      if (tok === '') return null
+                      const chars = Array.from(tok).map((ch, k) => {
+                        const delay = lineDelay + ci * CHAR_STEP
+                        ci += 1
+                        return (
+                          <span key={`ch-${li}-${si}-${ti}-${k}`} className={styles.char} style={{ animationDelay: `${delay}s` }}>
+                            {ch}
+                          </span>
+                        )
+                      })
                       return (
-                        <span key={`ch-${li}-${si}-${k}`} className={styles.char} style={{ animationDelay: `${delay}s` }}>
-                          {ch}
+                        <span key={`wd-${li}-${si}-${ti}`} style={{ whiteSpace: 'nowrap', display: 'inline-block' }}>
+                          {chars}
                         </span>
                       )
                     })
-                    return <Tag key={si}>{chars}</Tag>
+                    return <Tag key={si}>{tokens}</Tag>
                   })}
                 </span>
               </span>
