@@ -101,9 +101,8 @@ export function Hero() {
     const begin = () => { if (!started) { started = true; setReady(true) } }
 
     vids[0].addEventListener('loadeddata', () => { vids[0].play().catch(() => {}); vids[0].classList.add(styles.show) }, { once: true })
-    if (vids[0].readyState >= 4) begin()
-    else vids[0].addEventListener('canplaythrough', begin, { once: true })
-    const fallback = setTimeout(begin, 4000)
+    // Start the text animation right away; the video fades in whenever it's ready.
+    const fallback = setTimeout(begin, 200)
 
     const interval = reduce ? 0 : window.setInterval(() => { cur = (cur + 1) % CLIPS.length; show(cur) }, HOLD)
 

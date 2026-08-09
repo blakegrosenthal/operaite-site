@@ -1,5 +1,8 @@
 import type { Metadata } from 'next'
 import type { ReactNode } from 'react'
+import '@fontsource-variable/newsreader/opsz.css'
+import '@fontsource-variable/newsreader/opsz-italic.css'
+import '@fontsource-variable/geist/wght.css'
 import './globals.css'
 import { Footer } from '@/components/Footer'
 import { GoogleAnalytics } from '@/components/GoogleAnalytics'
@@ -34,14 +37,6 @@ export default function RootLayout({
 }: Readonly<{ children: ReactNode }>) {
   return (
     <html lang="en">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,600;1,6..72,500;1,6..72,600&family=Geist:wght@300;400;500;600;700&display=swap"
-          rel="stylesheet"
-        />
-      </head>
       <body className="min-h-screen antialiased">
         <GoogleAnalytics gaId={env.gaId} />
         <div className="flex min-h-screen flex-col">
