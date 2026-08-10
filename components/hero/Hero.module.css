@@ -28,8 +28,6 @@
 .navPill a { font-size: clamp(12px,1vw,15px); font-weight: 500; color: rgba(237,232,223,0.78); transition: color 0.2s; opacity: 0; transform: translateY(14px); }
 .navPill a:hover { color: #fff; }
 .ready .navPill a { animation: linkUp 0.65s var(--ease) forwards; }
-.ready .navPill a:nth-child(1) { animation-delay: 0.75s; } .ready .navPill a:nth-child(2) { animation-delay: 0.83s; }
-.ready .navPill a:nth-child(3) { animation-delay: 0.91s; } .ready .navPill a:nth-child(4) { animation-delay: 0.99s; }
 @keyframes linkUp { to { opacity: 1; transform: translateY(0); } }
 .btn { display: inline-flex; align-items: center; gap: clamp(7px,0.7vw,10px); padding: clamp(9px,0.8vw,12px) clamp(18px,2vw,28px); border-radius: 10px; background: #fff; color: var(--ink); font-size: clamp(13px,1.05vw,15px); font-weight: 600; }
 .btn svg { width: 8px; height: 8px; }
@@ -70,9 +68,9 @@
 
 .blend { height: 15vh; background: linear-gradient(180deg, #101820 0%, #23262b 22%, #55554f 48%, #a9a499 72%, #dcd6c9 88%, #f5f2ec 100%); position: relative; }
 
-.mobileNav { display: none; position: absolute; top: 66px; left: 24px; right: 24px; z-index: 10; gap: 18px; opacity: 0; }
+.mobileNav { display: none; position: absolute; top: 66px; left: 24px; right: 24px; z-index: 10; gap: clamp(4px, 2.4vw, 18px); justify-content: space-between; opacity: 0; }
 .ready .mobileNav { animation: linkUp 0.8s var(--ease) 0.9s forwards; }
-.mobileNav a { font-size: 13px; font-weight: 600; color: rgba(237,232,223,0.85); text-shadow: 0 1px 10px rgba(6,10,15,0.9); }
+.mobileNav a { font-size: clamp(10.5px, 3.2vw, 13px); font-weight: 600; white-space: nowrap; color: rgba(237,232,223,0.85); text-shadow: 0 1px 10px rgba(6,10,15,0.9); }
 
 @media (max-width: 900px) {
   .heading { width: 90vw; font-size: clamp(28px, 7.5vw, 48px); }

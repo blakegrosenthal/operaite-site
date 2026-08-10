@@ -30,9 +30,18 @@ export default function ContactPage() {
       </section>
 
       <section className="py-14 sm:py-20">
-        <div className="mx-auto grid w-full max-w-6xl gap-8 px-5 sm:px-6 lg:grid-cols-[1.15fr_0.85fr] lg:px-8">
-          <TallyForm />
-          <aside className="space-y-4">
+        <div className="mx-auto grid w-full max-w-6xl grid-cols-[minmax(0,1fr)] gap-8 px-5 sm:px-6 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] lg:px-8">
+          <TallyForm
+            notice={
+              <p className="mb-4 text-[13px] leading-6 text-ash-dark">
+                By entering your phone number, you consent to receive text
+                messages from operAIte about your inquiry. Message frequency
+                varies. Message and data rates may apply. Reply STOP to opt out
+                or HELP for help.
+              </p>
+            }
+          />
+          <aside className="min-w-0 space-y-4">
             <InfoCard
               title="Prefer to talk?"
               text="Book your free 30-minute review. You leave with your top two or three leaks, whether or not we work together."
@@ -50,7 +59,7 @@ export default function ContactPage() {
             >
               <Link
                 href={`mailto:${env.contactEmail}`}
-                className="mt-4 inline-flex rounded-lg border border-line px-6 py-3.5 text-[15px] font-semibold text-ink transition hover:bg-bone-2"
+                className="mt-4 inline-flex max-w-full break-all rounded-lg border border-line px-6 py-3.5 text-[15px] font-semibold text-ink transition hover:bg-bone-2"
               >
                 {env.contactEmail}
               </Link>

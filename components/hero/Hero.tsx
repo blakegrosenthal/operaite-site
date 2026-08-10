@@ -3,7 +3,10 @@
 import Link from 'next/link'
 import { useEffect, useRef, useState } from 'react'
 import { env } from '@/lib/env'
+import { siteConfig } from '@/lib/site'
 import styles from './Hero.module.css'
+
+const NAV = siteConfig.navigation.slice(1)
 
 type Clip = { label: string; src: string; start: number }
 
@@ -134,10 +137,15 @@ export function Hero() {
         <header className={styles.header}>
           <Link href="/" className={styles.logo}>oper<b>AI</b>te</Link>
           <nav className={styles.navPill} aria-label="Primary">
-            <Link href="/services">Services</Link>
-            <Link href="/self-check">Self-Check</Link>
-            <Link href="/case-studies">Case Studies</Link>
-            <Link href="/about">About</Link>
+            {NAV.map((item, i) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                style={{ animationDelay: `${0.75 + i * 0.08}s` }}
+              >
+                {item.label}
+              </Link>
+            ))}
           </nav>
           <Link className={`${styles.btn} ${styles.btnHeader}`} href={env.calendlyUrl}>
             Book a free review <Arrow />
@@ -145,10 +153,11 @@ export function Hero() {
         </header>
 
         <nav className={styles.mobileNav} aria-label="Primary mobile">
-          <Link href="/services">Services</Link>
-          <Link href="/self-check">Self-Check</Link>
-          <Link href="/case-studies">Case Studies</Link>
-          <Link href="/about">About</Link>
+          {NAV.map((item) => (
+            <Link key={item.href} href={item.href}>
+              {item.label}
+            </Link>
+          ))}
         </nav>
 
         <h1 className={styles.heading}>
