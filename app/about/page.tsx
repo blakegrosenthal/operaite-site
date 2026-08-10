@@ -7,7 +7,7 @@ import { env } from '@/lib/env'
 export const metadata: Metadata = {
   title: 'About',
   description:
-    'About Blake Rosenthal and operAIte: practical systems that help owner-led service businesses run with more reliability and less operational strain.'
+    'About Blake Rosenthal and OperAIte: practical systems that help owner-led service businesses run with more reliability and less operational strain.'
 }
 
 const STORY_TOP = [
@@ -41,7 +41,7 @@ export default function AboutPage() {
               <div className="relative aspect-[4/5] overflow-hidden rounded-xl bg-neutral-100">
                 <Image
                   src="/blake-founder.jpg"
-                  alt="Blake Rosenthal, founder of operAIte"
+                  alt="Blake Rosenthal, founder of OperAIte"
                   fill
                   sizes="(max-width: 767px) 100vw, 38vw"
                   className="object-cover object-center"

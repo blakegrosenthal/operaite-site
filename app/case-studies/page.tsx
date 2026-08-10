@@ -5,7 +5,7 @@ import { env } from '@/lib/env'
 export const metadata: Metadata = {
   title: 'Case Studies',
   description:
-    'Real examples of leaks operAIte has fixed for service businesses, starting with instant lead response for a chiropractic clinic.'
+    'Real examples of leaks OperAIte has fixed for service businesses, starting with instant lead response for a chiropractic clinic.'
 }
 
 export default function CaseStudiesPage() {

@@ -7,7 +7,7 @@ import { env } from '@/lib/env'
 export const metadata: Metadata = {
   title: 'Contact',
   description:
-    'Contact operAIte to discuss operational systems, automation, and workflow stabilization.'
+    'Contact OperAIte to discuss operational systems, automation, and workflow stabilization.'
 }
 
 export default function ContactPage() {
@@ -35,7 +35,7 @@ export default function ContactPage() {
             notice={
               <p className="mb-4 text-[13px] leading-6 text-ash-dark">
                 By entering your phone number, you consent to receive text
-                messages from operAIte about your inquiry. Message frequency
+                messages from OperAIte about your inquiry. Message frequency
                 varies. Message and data rates may apply. Reply STOP to opt out
                 or HELP for help.
               </p>

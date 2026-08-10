@@ -37,16 +37,19 @@ export function Footer() {
         </div>
         <div className="mt-12 flex flex-col gap-3 border-t border-bone/10 pt-6 text-xs text-bone/45 sm:flex-row sm:items-center sm:justify-between">
           <p>
-            © {new Date().getFullYear()} BLAKERS18, INC. dba operAIte. All
+            © {new Date().getFullYear()} BLAKERS18, INC. dba OperAIte. All
             rights reserved.
           </p>
-          <div className="flex items-center gap-5">
+          <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
             <Link href="/privacy" className="hover:text-bone/70">
               Privacy
             </Link>
             <Link href="/terms" className="hover:text-bone/70">
               Terms
             </Link>
+            <a href={siteConfig.phoneHref} className="hover:text-bone/70">
+              {siteConfig.phone}
+            </a>
             <a
               href={`mailto:${env.contactEmail}`}
               className="hover:text-bone/70"

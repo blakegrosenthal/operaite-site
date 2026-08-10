@@ -1,4 +1,4 @@
-# operAIte site — v2 rebuild (handoff)
+# OperAIte site — v2 rebuild (handoff)
 
 Cinematic redesign of the homepage hero + body, built on your existing Next.js
 14 / TypeScript / Tailwind project. Same structure as your repo, so it drops
@@ -17,11 +17,11 @@ npm run dev      # http://localhost:3000
   services → auto → clinic), title-sequence choreography (char-by-char headline,
   glass nav pill, progressive-blur dissolve into the light body). Your concrete
   copy. Real Calendly link.
-- **Homepage** (`app/page.tsx`): leak list, "what makes operAIte different"
+- **Homepage** (`app/page.tsx`): leak list, "what makes OperAIte different"
   (ink band), 5-step process timeline, proof card (chiropractic), final CTA —
   all with Framer Motion scroll reveals. Copy pulled verbatim from your repo.
 - **Brand system**: Fraunces + Geist fonts, ink/bone/cobalt/amber tokens
-  (`globals.css`, `tailwind.config.ts`). Wordmark is `operAIte` (cobalt AI).
+  (`globals.css`, `tailwind.config.ts`). Wordmark is `OperAIte` (cobalt AI).
 - **About** (`app/about/page.tsx`): your full founder story + new graduation
   photo (`public/blake-about.jpg`), used once.
 - **Nav**: transparent over the hero on `/`, light brand nav on inner pages.

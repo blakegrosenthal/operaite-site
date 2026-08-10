@@ -5,7 +5,7 @@ import { env } from '@/lib/env'
 export const metadata: Metadata = {
   title: 'Privacy Policy',
   description:
-    'How operAIte (BLAKERS18, INC.) collects, uses, and protects your information, including our text messaging practices.'
+    'How OperAIte (BLAKERS18, INC.) collects, uses, and protects your information, including our text messaging practices.'
 }
 
 export default function PrivacyPage() {

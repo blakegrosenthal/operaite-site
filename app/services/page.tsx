@@ -9,7 +9,7 @@ import { env } from '@/lib/env'
 export const metadata: Metadata = {
   title: 'Services',
   description:
-    'What operAIte fixes: missed leads, forgotten quote follow-ups, no-shows, and late invoices for owner-led service businesses.'
+    'What OperAIte fixes: missed leads, forgotten quote follow-ups, no-shows, and late invoices for owner-led service businesses.'
 }
 
 export default function ServicesPage() {

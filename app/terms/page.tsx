@@ -5,7 +5,7 @@ import { env } from '@/lib/env'
 export const metadata: Metadata = {
   title: 'Terms & Conditions',
   description:
-    'The terms that cover your use of the operAIte website and our text messaging program. Operated by BLAKERS18, INC. dba OperAIte.'
+    'The terms that cover your use of the OperAIte website and our text messaging program. Operated by BLAKERS18, INC. dba OperAIte.'
 }
 
 export default function TermsPage() {

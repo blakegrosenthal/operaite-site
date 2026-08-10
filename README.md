@@ -1,6 +1,6 @@
 # operaiteconsulting-site
 
-Production-ready marketing website for Operaite Consulting, built with Next.js App Router and TypeScript.
+Production-ready marketing website for OperAIte, built with Next.js App Router and TypeScript.
 
 ## Stack
 

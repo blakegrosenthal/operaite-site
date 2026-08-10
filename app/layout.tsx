@@ -13,13 +13,13 @@ import { siteConfig } from '@/lib/site'
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.domain),
   title: {
-    default: 'operAIte | Operational systems for owner-led service businesses',
-    template: '%s | operAIte'
+    default: 'OperAIte | Operational systems for owner-led service businesses',
+    template: '%s | OperAIte'
   },
   description: siteConfig.description,
   alternates: { canonical: '/' },
   openGraph: {
-    title: 'operAIte | Operational systems for owner-led service businesses',
+    title: 'OperAIte | Operational systems for owner-led service businesses',
     description: siteConfig.description,
     siteName: siteConfig.name,
     type: 'website',
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'operAIte | Operational systems for owner-led service businesses',
+    title: 'OperAIte | Operational systems for owner-led service businesses',
     description: siteConfig.description
   }
 }

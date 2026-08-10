@@ -1,8 +1,10 @@
 export const siteConfig = {
-  name: 'operAIte',
+  name: 'OperAIte',
   domain: 'https://operaiteconsulting.com',
+  phone: '(805) 372-2528',
+  phoneHref: 'tel:+18053722528',
   description:
-    'operAIte installs simple operational systems for owner-led service businesses — so leads get answered fast, appointments hold, invoices go out on time, and nothing depends on memory.',
+    'OperAIte installs simple operational systems for owner-led service businesses — so leads get answered fast, appointments hold, invoices go out on time, and nothing depends on memory.',
   navigation: [
     { href: '/', label: 'Home' },
     { href: '/services', label: 'Services' },
