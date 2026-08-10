@@ -3,6 +3,7 @@ import { LegalSection, LegalShell } from '@/components/LegalShell'
 import { env } from '@/lib/env'
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/privacy' },
   title: 'Privacy Policy',
   description:
     'How OperAIte (BLAKERS18, INC.) collects, uses, and protects your information, including our text messaging practices.'

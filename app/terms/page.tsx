@@ -3,6 +3,7 @@ import { LegalSection, LegalShell } from '@/components/LegalShell'
 import { env } from '@/lib/env'
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/terms' },
   title: 'Terms & Conditions',
   description:
     'The terms that cover your use of the OperAIte website and our text messaging program. Operated by BLAKERS18, INC. dba OperAIte.'

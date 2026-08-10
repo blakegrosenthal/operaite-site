@@ -5,6 +5,7 @@ import { Reveal, Stagger, StaggerItem } from '@/components/motion/Reveal'
 import { env } from '@/lib/env'
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/' },
   title: 'Operational systems for owner-led service businesses',
   description:
     'Stop losing revenue to missed follow-ups, no-shows, and delayed invoices. OperAIte installs simple systems so leads get answered fast, appointments hold, and invoices go out on time.'

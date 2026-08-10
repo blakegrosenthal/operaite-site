@@ -17,18 +17,26 @@ export const metadata: Metadata = {
     template: '%s | OperAIte'
   },
   description: siteConfig.description,
-  alternates: { canonical: '/' },
   openGraph: {
     title: 'OperAIte | Operational systems for owner-led service businesses',
     description: siteConfig.description,
     siteName: siteConfig.name,
     type: 'website',
-    url: siteConfig.domain
+    url: siteConfig.domain,
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'OperAIte. Stop losing revenue to missed follow-ups, no-shows, and delayed invoices.'
+      }
+    ]
   },
   twitter: {
     card: 'summary_large_image',
     title: 'OperAIte | Operational systems for owner-led service businesses',
-    description: siteConfig.description
+    description: siteConfig.description,
+    images: ['/og-image.png']
   }
 }
 

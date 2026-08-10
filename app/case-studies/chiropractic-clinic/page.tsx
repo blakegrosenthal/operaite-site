@@ -8,6 +8,7 @@ import { env } from '@/lib/env'
 const caseStudy = getCaseStudyBySlug('chiropractic-clinic')
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/case-studies/chiropractic-clinic' },
   title: 'Chiropractic Clinic',
   description:
     'Instant response system for new patient inquiries at a chiropractic clinic.'

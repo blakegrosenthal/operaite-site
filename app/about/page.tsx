@@ -5,6 +5,7 @@ import { Reveal } from '@/components/motion/Reveal'
 import { env } from '@/lib/env'
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/about' },
   title: 'About',
   description:
     'About Blake Rosenthal and OperAIte: practical systems that help owner-led service businesses run with more reliability and less operational strain.'

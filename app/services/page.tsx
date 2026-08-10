@@ -7,6 +7,7 @@ import { Section } from '@/components/Section'
 import { env } from '@/lib/env'
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/services' },
   title: 'Services',
   description:
     'What OperAIte fixes: missed leads, forgotten quote follow-ups, no-shows, and late invoices for owner-led service businesses.'
