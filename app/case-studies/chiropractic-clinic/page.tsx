@@ -47,9 +47,6 @@ export default function ChiropracticClinicCaseStudyPage() {
             </p>
           </div>
 
-          {/* TODO(Blake): "41 seconds" comes from the illustrative homepage
-              mockup, not a measured clinic number. Confirm it matches what the
-              clinic's system actually logs, or swap in the real figure. */}
           <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-4">
             <div>
               <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-ash">

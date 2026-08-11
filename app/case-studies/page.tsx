@@ -31,9 +31,14 @@ export default function CaseStudiesPage() {
             <div className="grid gap-0 md:grid-cols-[1fr_0.9fr]">
               <div className="p-8 sm:p-10">
                 <p className="text-[12px] font-semibold uppercase tracking-[0.18em] text-cobalt">
-                  Chiropractic clinic
+                  Thousand Oaks Disc Center, Thousand Oaks, CA
                 </p>
-                <h2 className="mt-3 font-display text-display-md text-ink">
+                <p className="mt-3 text-[16px] leading-7 text-muted">
+                  Thousand Oaks Disc Center is my family’s practice. That’s how
+                  I had access to the real before-and-after numbers instead of
+                  an estimate. Measured, not reconstructed.
+                </p>
+                <h2 className="mt-5 font-display text-display-md text-ink">
                   Instant response for new patient inquiries
                 </h2>
                 <p className="mt-4 text-[16px] leading-7 text-ash-dark">
