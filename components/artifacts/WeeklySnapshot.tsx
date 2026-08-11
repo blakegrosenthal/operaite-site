@@ -1,6 +1,5 @@
-// TODO(Blake): the values below are illustrative sample numbers showing what
-// the weekly snapshot looks like. Replace with real counts from your first
-// client's tracker before pointing to this as measured proof.
+// Sample values for this mockup, matching the "What your week looks like"
+// framing on /services. Not measured client data.
 const ROWS: [string, string][] = [
   ['Leads answered under 60 seconds', '11 of 11'],
   ['Quotes followed up', '6'],
