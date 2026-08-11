@@ -13,7 +13,7 @@ export interface CaseStudy {
 export const caseStudies: CaseStudy[] = [
   {
     slug: 'chiropractic-clinic',
-    title: 'Chiropractic Clinic',
+    title: 'Thousand Oaks Disc Center',
     subtitle: 'Instant response system for new patient inquiries',
     summary:
       'New patient inquiries now receive an immediate message with a consultation booking link, allowing patients to schedule within minutes while reducing manual follow-up for the clinic staff.',

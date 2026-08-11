@@ -9,7 +9,7 @@ const caseStudy = getCaseStudyBySlug('chiropractic-clinic')
 
 export const metadata: Metadata = {
   alternates: { canonical: '/case-studies/chiropractic-clinic' },
-  title: 'Chiropractic Clinic',
+  title: 'Thousand Oaks Disc Center',
   description:
     'Instant response system for new patient inquiries at a chiropractic clinic.'
 }
@@ -37,7 +37,7 @@ export default function ChiropracticClinicCaseStudyPage() {
               Back to Case Studies
             </Link>
             <p className="mt-8 text-[11px] font-semibold uppercase tracking-[0.22em] text-cobalt">
-              Case Study
+              Case Study · Thousand Oaks, CA
             </p>
             <h1 className="mt-4 font-display text-display-lg text-ink sm:text-display-xl">
               {caseStudy.title}
