@@ -32,16 +32,7 @@ export default function ContactPage() {
 
       <section className="py-14 sm:py-20">
         <div className="mx-auto grid w-full max-w-6xl grid-cols-[minmax(0,1fr)] gap-8 px-5 sm:px-6 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] lg:px-8">
-          <TallyForm
-            notice={
-              <p className="mb-4 text-[13px] leading-6 text-ash-dark">
-                By entering your phone number, you consent to receive text
-                messages from OperAIte about your inquiry. Message frequency
-                varies. Message and data rates may apply. Reply STOP to opt out
-                or HELP for help.
-              </p>
-            }
-          />
+          <TallyForm />
           <aside className="min-w-0 space-y-4">
             <InfoCard
               title="Prefer to talk?"

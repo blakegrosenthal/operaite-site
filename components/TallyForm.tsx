@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import Script from 'next/script'
-import { useEffect, useRef, useState, type ReactNode } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { env } from '@/lib/env'
 
 declare global {
@@ -11,7 +11,7 @@ declare global {
   }
 }
 
-export function TallyForm({ notice }: { notice?: ReactNode }) {
+export function TallyForm() {
   const [failed, setFailed] = useState(false)
   const iframeRef = useRef<HTMLIFrameElement | null>(null)
 
@@ -54,7 +54,6 @@ export function TallyForm({ notice }: { notice?: ReactNode }) {
 
   return (
     <div className="rounded-2xl border border-line bg-white p-4 shadow-soft sm:p-6">
-      {notice}
       <iframe
         ref={iframeRef}
         data-tally-src="https://tally.so/embed/RGQev9?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
