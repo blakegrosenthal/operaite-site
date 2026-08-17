@@ -1,5 +1,5 @@
 export const siteConfig = {
-  name: 'OperAIte',
+  name: 'OperAite',
   domain: 'https://operaiteconsulting.com',
   phone: '(805) 372-2528',
   phoneHref: 'tel:+18053722528',
@@ -9,7 +9,7 @@ export const siteConfig = {
   // are not interchangeable. A non-conforming format can get mail returned.
   postalAddress: '3401 Grande Vista Drive #52, Newbury Park, CA 91320',
   description:
-    'OperAIte installs simple operational systems for owner-led service businesses. Leads get answered fast, appointments hold, invoices go out on time, and nothing depends on memory.',
+    'OperAite installs simple operational systems for owner-led service businesses. Leads get answered fast, appointments hold, invoices go out on time, and nothing depends on memory.',
   navigation: [
     { href: '/', label: 'Home' },
     { href: '/services', label: 'Services' },

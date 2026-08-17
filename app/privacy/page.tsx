@@ -7,14 +7,14 @@ export const metadata: Metadata = {
   alternates: { canonical: '/privacy' },
   title: 'Privacy Policy',
   description:
-    'How OperAIte (BLAKERS18, INC.) collects, uses, and protects your information, including our text messaging practices.'
+    'How OperAite (BLAKERS18, INC.) collects, uses, and protects your information, including our text messaging practices.'
 }
 
 export default function PrivacyPage() {
   return (
     <LegalShell title="Privacy Policy" updated="August 7, 2026">
       <p className="text-[16px] leading-7 text-ash-dark">
-        OperAIte is the trade name of BLAKERS18, INC. (&ldquo;OperAIte,&rdquo;
+        OperAite is the trade name of BLAKERS18, INC. (&ldquo;OperAite,&rdquo;
         &ldquo;we,&rdquo; &ldquo;us&rdquo;). This page explains what information
         we collect through this website and our business phone line, and what we
         do with it.

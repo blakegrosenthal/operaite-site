@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   alternates: { canonical: '/contact' },
   title: 'Contact',
   description:
-    'Contact OperAIte to discuss operational systems, automation, and workflow stabilization.'
+    'Contact OperAite to discuss operational systems, automation, and workflow stabilization.'
 }
 
 export default function ContactPage() {

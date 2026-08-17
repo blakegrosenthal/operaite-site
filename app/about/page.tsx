@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   alternates: { canonical: '/about' },
   title: 'About',
   description:
-    'About Blake Rosenthal and OperAIte: practical systems that help owner-led service businesses run with more reliability and less operational strain.'
+    'About Blake Rosenthal and OperAite: practical systems that help owner-led service businesses run with more reliability and less operational strain.'
 }
 
 const STORY_TOP = [
@@ -31,8 +31,8 @@ export default function AboutPage() {
             About
           </span>
           <h1 className="mt-4 max-w-3xl font-display text-display-lg text-ink sm:text-display-xl">
-            Hi, I’m Blake Rosenthal, founder of oper
-            <span className="brand-ai">AI</span>te.
+            Hi, I’m Blake Rosenthal, founder of Oper
+            <span className="brand-ai">Ai</span>te.
           </h1>
         </Reveal>
 
@@ -42,7 +42,7 @@ export default function AboutPage() {
               <div className="relative aspect-[4/5] overflow-hidden rounded-xl bg-neutral-100">
                 <Image
                   src="/blake-founder.jpg"
-                  alt="Blake Rosenthal, founder of OperAIte"
+                  alt="Blake Rosenthal, founder of OperAite"
                   fill
                   sizes="(max-width: 767px) 100vw, 38vw"
                   className="object-cover object-center"

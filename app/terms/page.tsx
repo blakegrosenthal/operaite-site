@@ -7,20 +7,20 @@ export const metadata: Metadata = {
   alternates: { canonical: '/terms' },
   title: 'Terms & Conditions',
   description:
-    'The terms that cover your use of the OperAIte website and our text messaging program. Operated by BLAKERS18, INC.'
+    'The terms that cover your use of the OperAite website and our text messaging program. Operated by BLAKERS18, INC.'
 }
 
 export default function TermsPage() {
   return (
     <LegalShell title="Terms & Conditions" updated="August 7, 2026">
       <p className="text-[16px] leading-7 text-ash-dark">
-        This website is operated by BLAKERS18, INC., doing business as OperAIte
-        (&ldquo;OperAIte,&rdquo; &ldquo;we,&rdquo; &ldquo;us&rdquo;). By using
+        This website is operated by BLAKERS18, INC., doing business as OperAite
+        (&ldquo;OperAite,&rdquo; &ldquo;we,&rdquo; &ldquo;us&rdquo;). By using
         the site, or by opting in to receive text messages from us, you agree to
         these terms.
       </p>
 
-      <LegalSection title="What OperAIte does">
+      <LegalSection title="What OperAite does">
         <p>
           We set up and manage operational systems for service businesses, like
           making sure missed calls and web inquiries get an immediate response.

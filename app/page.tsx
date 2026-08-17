@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   alternates: { canonical: '/' },
   title: 'Operational systems for owner-led service businesses',
   description:
-    'Stop losing revenue to missed follow-ups, no-shows, and delayed invoices. OperAIte installs simple systems so leads get answered fast, appointments hold, and invoices go out on time.'
+    'Stop losing revenue to missed follow-ups, no-shows, and delayed invoices. OperAite installs simple systems so leads get answered fast, appointments hold, and invoices go out on time.'
 }
 
 const LEAKS = [
@@ -178,7 +178,7 @@ export default function HomePage() {
         <div className="mx-auto w-full max-w-6xl px-5 sm:px-6 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
             <Reveal>
-              <Caption tone="cobalt">What makes OperAIte different</Caption>
+              <Caption tone="cobalt">What makes OperAite different</Caption>
               <h2 className="mt-4 font-display text-display-md text-ink sm:text-display-lg">
                 I don’t hand you a report and disappear.
               </h2>
