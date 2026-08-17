@@ -135,7 +135,7 @@ export function Hero() {
         </div>
 
         <header className={styles.header}>
-          <Link href="/" className={styles.logo}>Oper<b>AI</b>te</Link>
+          <Link href="/" className={styles.logo}>Oper<b>Ai</b>te</Link>
           <nav className={styles.navPill} aria-label="Primary">
             {NAV.map((item, i) => (
               <Link
