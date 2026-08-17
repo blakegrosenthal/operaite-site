@@ -191,7 +191,7 @@ export function SelfCheck() {
                   tell you which one to fix first.
                 </p>
                 <Link
-                  href={env.calendlyUrl}
+                  href={env.bookingUrl}
                   className="mt-5 inline-flex rounded-lg bg-cobalt px-6 py-3.5 text-[15px] font-semibold text-white shadow-[0_12px_36px_rgba(43,79,224,0.35)] transition hover:-translate-y-0.5 hover:bg-cobalt-soft"
                 >
                   Book a 30-Minute Operations Review

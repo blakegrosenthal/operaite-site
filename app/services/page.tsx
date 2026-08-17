@@ -133,7 +133,7 @@ export default function ServicesPage() {
             title="Book your free 30-minute review"
             description="Low pressure. We map how work runs today, find where it's getting stuck, and you leave knowing what I'd fix first."
             primaryLabel="Book your free 30-minute review"
-            primaryHref={env.calendlyUrl}
+            primaryHref={env.bookingUrl}
             secondaryLabel="Or send me a note"
             secondaryHref="/contact"
           >

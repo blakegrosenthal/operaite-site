@@ -39,7 +39,7 @@ export default function ContactPage() {
               text="Book your free 30-minute review. You leave with your top two or three leaks, whether or not we work together."
             >
               <Link
-                href={env.calendlyUrl}
+                href={env.bookingUrl}
                 className="mt-4 inline-flex rounded-lg bg-cobalt px-6 py-3.5 text-[15px] font-semibold text-white transition hover:-translate-y-0.5 hover:bg-cobalt-soft"
               >
                 Book your free 30-minute review

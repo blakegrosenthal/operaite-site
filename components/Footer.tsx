@@ -17,7 +17,7 @@ export function Footer() {
               owner-led service businesses.
             </p>
             <Link
-              href={env.calendlyUrl}
+              href={env.bookingUrl}
               className="mt-6 inline-flex rounded-lg bg-cobalt px-5 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-cobalt-soft"
             >
               Book your free 30-minute review
@@ -36,10 +36,12 @@ export function Footer() {
           </nav>
         </div>
         <div className="mt-12 flex flex-col gap-3 border-t border-bone/10 pt-6 text-xs text-bone/45 sm:flex-row sm:items-center sm:justify-between">
-          <p>
-            © {new Date().getFullYear()} BLAKERS18, INC. dba OperAIte. All
-            rights reserved.
-          </p>
+          <div className="space-y-1.5">
+            <p>
+              © {new Date().getFullYear()} BLAKERS18, INC. All rights reserved.
+            </p>
+            <p className="not-italic">{siteConfig.postalAddress}</p>
+          </div>
           <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
             <Link href="/privacy" className="hover:text-bone/70">
               Privacy

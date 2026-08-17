@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { LegalSection, LegalShell } from '@/components/LegalShell'
 import { env } from '@/lib/env'
+import { siteConfig } from '@/lib/site'
 
 export const metadata: Metadata = {
   alternates: { canonical: '/privacy' },
@@ -117,7 +118,9 @@ export default function PrivacyPage() {
 
       <LegalSection title="Contact">
         <p>
-          BLAKERS18, INC. dba OperAIte
+          BLAKERS18, INC.
+          <br />
+          {siteConfig.postalAddress}
           <br />
           <a
             href={`mailto:${env.contactEmail}`}

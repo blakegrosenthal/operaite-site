@@ -2,12 +2,15 @@ export function PatientThread() {
   return (
     <div className="mt-10">
       <p className="text-[12px] font-semibold uppercase tracking-[0.2em] text-amber">
-        What the patient saw
+        How the first reply looks
+      </p>
+      <p className="mt-2 text-[14.5px] leading-6 text-ash-dark">
+        Illustration of the message flow. Not a real patient message.
       </p>
       <div className="mt-4 overflow-hidden rounded-2xl border border-line bg-white shadow-soft">
         <div className="bg-bone-2/60 p-6 sm:p-8">
           <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-ash">
-            Tuesday · 7:41 PM
+            Tuesday · 8:12 PM
           </p>
           <div className="mt-4 max-w-[85%] rounded-2xl rounded-tl-sm border border-line bg-white px-4 py-3 text-[14px] leading-6 text-ink sm:text-[14.5px]">
             Hi, I hurt my lower back over the weekend. Do you have anything
@@ -20,9 +23,6 @@ export function PatientThread() {
               book a consultation
             </span>
           </div>
-          <p className="mt-2 text-right text-[12px] text-ash">
-            Sent 41 seconds later
-          </p>
           <div className="mt-3 max-w-[85%] rounded-2xl rounded-tl-sm border border-line bg-white px-4 py-3 text-[14px] leading-6 text-ink sm:text-[14.5px]">
             Just booked Thursday at 2. Thank you!
           </div>

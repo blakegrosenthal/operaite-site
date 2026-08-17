@@ -17,7 +17,7 @@ export function TallyForm() {
 
   useEffect(() => {
     // embed.js copies data-tally-src into src when it loads. If the script is
-    // blocked (ad blockers), src never becomes a tally.so URL — show fallback.
+    // blocked (ad blockers), src never becomes a tally.so URL - show fallback.
     const timer = setTimeout(() => {
       const src = iframeRef.current?.src ?? ''
       if (!src.includes('tally.so')) setFailed(true)
@@ -42,7 +42,7 @@ export function TallyForm() {
             Email {env.contactEmail}
           </a>
           <Link
-            href={env.calendlyUrl}
+            href={env.bookingUrl}
             className="rounded-lg border border-line px-6 py-3.5 text-[15px] font-semibold text-ink transition hover:bg-bone-2"
           >
             Book your free 30-minute review

@@ -1,8 +1,8 @@
 const ROWS: [string, string, 'confirmed' | 'needs reminder'][] = [
-  ['7:30', 'AC tune-up — Morrison', 'confirmed'],
-  ['9:15', 'Water heater install — Delgado', 'confirmed'],
-  ['11:00', 'Quote visit — new lead from Tuesday', 'needs reminder'],
-  ['1:30', 'Furnace inspection — Okafor', 'confirmed']
+  ['7:30', 'AC tune-up, Morrison', 'confirmed'],
+  ['9:15', 'Water heater install, Delgado', 'confirmed'],
+  ['11:00', 'Quote visit, new lead from Tuesday', 'needs reminder'],
+  ['1:30', 'Furnace inspection, Okafor', 'confirmed']
 ]
 
 export function DailySchedule() {

@@ -147,7 +147,7 @@ export function Hero() {
               </Link>
             ))}
           </nav>
-          <Link className={`${styles.btn} ${styles.btnHeader}`} href={env.calendlyUrl}>
+          <Link className={`${styles.btn} ${styles.btnHeader}`} href={env.bookingUrl}>
             Book a free review <Arrow />
           </Link>
         </header>
@@ -201,7 +201,7 @@ export function Hero() {
         </div>
 
         <div className={styles.bottom}>
-          <div className={styles.label}>{splitWords('01 — The problem', 1.0)}</div>
+          <div className={styles.label}>{splitWords('01 / The problem', 1.0)}</div>
           <p className={styles.desc}>
             {splitWords(
               'Most revenue loss in service businesses doesn’t come from big mistakes. It leaks. One missed follow-up, one late invoice at a time. I install the simple systems that stop it.',
@@ -209,7 +209,7 @@ export function Hero() {
             )}
           </p>
           <div className={styles.actions}>
-            <Link className={`${styles.btn} ${styles.btnFooter}`} href={env.calendlyUrl}>
+            <Link className={`${styles.btn} ${styles.btnFooter}`} href={env.bookingUrl}>
               Book your free 30-minute review <Arrow />
             </Link>
             <button className={styles.scrollDown} onClick={scrollDown} type="button">

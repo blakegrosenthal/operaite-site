@@ -57,7 +57,7 @@ export function Navbar() {
         </nav>
 
         <Link
-          href={env.calendlyUrl}
+          href={env.bookingUrl}
           className="inline-flex shrink-0 items-center gap-[clamp(7px,0.7vw,10px)] rounded-[10px] bg-cobalt px-[clamp(18px,2vw,28px)] py-[clamp(9px,0.8vw,12px)] text-[clamp(13px,1.05vw,15px)] font-semibold text-white transition hover:bg-cobalt-soft"
         >
           Book a free review

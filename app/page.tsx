@@ -22,7 +22,7 @@ const LEAKS = [
 const FAQS = [
   {
     q: 'What happens on the call?',
-    a: 'You talk, I ask questions, and we map where money is slipping: leads, quotes, no-shows, invoices. You leave with your top two or three leaks and what I’d fix first, whether or not we work together.'
+    a: 'Thirty minutes, usually less. We look at what happens to a new lead when nobody can answer, and what that’s costing you in real numbers: what a job is worth, and how many slip. You’ll leave knowing whether it’s worth fixing, whether or not we work together.'
   },
   {
     q: 'Do I need new software?',
@@ -93,15 +93,15 @@ export default function HomePage() {
           <Reveal delay={0.1} className="mt-16 border-t border-line pt-8">
             <p className="text-[17px] leading-8 text-ash-dark">
               <span className="font-semibold text-ink">Built on what you already use.</span>{' '}
-              I start with your phones, your calendar, your invoicing — and
-              when a fix needs something new, I choose the simplest tool that
-              works, set it up, train your team, and stay until it sticks.
+              I start with your phones, your calendar, your invoicing. When a
+              fix needs something new, I choose the simplest tool that works,
+              set it up, train your team, and stay until it sticks.
             </p>
           </Reveal>
         </div>
       </section>
 
-      {/* SPEED TO LEAD — where most owners start */}
+      {/* SPEED TO LEAD - where most owners start */}
       <section id="speed-to-lead" className="bg-bone-2 pb-24 sm:pb-32">
         <div className="mx-auto w-full max-w-6xl px-5 sm:px-6 lg:px-8">
           <Reveal>
@@ -122,7 +122,7 @@ export default function HomePage() {
                     I install.
                   </p>
                   <Link
-                    href={env.calendlyUrl}
+                    href={env.bookingUrl}
                     className="mt-8 inline-flex rounded-lg bg-cobalt px-6 py-3.5 text-[15px] font-semibold text-white transition hover:-translate-y-0.5 hover:bg-cobalt-soft"
                   >
                     Book your free 30-minute review
@@ -131,6 +131,9 @@ export default function HomePage() {
                 <div className="flex flex-col justify-center border-t border-line bg-bone-2/60 p-8 sm:p-10 md:border-l md:border-t-0">
                   <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-ash">
                     Saturday · 6:12 PM
+                  </p>
+                  <p className="mt-1.5 text-[12px] leading-5 text-ash">
+                    Illustration of the message flow.
                   </p>
                   <div className="mt-4 flex items-center gap-3.5 rounded-xl border border-line bg-white px-4 py-3.5">
                     <span className="flex h-9 w-9 flex-none items-center justify-center rounded-full bg-bone-2 text-ink">
@@ -161,7 +164,7 @@ export default function HomePage() {
                     </span>
                   </div>
                   <p className="mt-2.5 text-right text-[12px] text-ash">
-                    Sent 41 seconds later
+                    Sent in under 20 seconds
                   </p>
                 </div>
               </div>
@@ -170,7 +173,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* WHAT MAKES OPERAITE DIFFERENT — light, readable */}
+      {/* WHAT MAKES OPERAITE DIFFERENT - light, readable */}
       <section className="border-t border-line bg-white py-24 sm:py-28">
         <div className="mx-auto w-full max-w-6xl px-5 sm:px-6 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
@@ -257,9 +260,9 @@ export default function HomePage() {
                 </div>
                 <div className="flex flex-col justify-center gap-5 border-t border-line bg-bone-2/60 p-8 sm:p-10 md:border-l md:border-t-0">
                   {[
-                    ['Before', 'Inquiries waited hours for a manual reply'],
-                    ['After', 'Booking link sent the moment the form is submitted'],
-                    ['Result', 'Consultations booked from the first response']
+                    ['Median form to booked', '2 minutes'],
+                    ['Consultations booked', '21 in the first 30 days'],
+                    ['Coverage', 'Nights, weekends, before the office opens']
                   ].map(([k, v]) => (
                     <div key={k}>
                       <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-ash">{k}</p>
@@ -273,7 +276,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* FAQ — before you book */}
+      {/* FAQ - before you book */}
       <section className="bg-bone-2 pb-24 sm:pb-32">
         <div className="mx-auto w-full max-w-5xl px-5 sm:px-6 lg:px-8">
           <Reveal>
@@ -299,7 +302,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* FINAL CTA — ink band */}
+      {/* FINAL CTA - ink band */}
       <section className="bg-ink py-24 text-bone sm:py-28">
         <div className="mx-auto w-full max-w-3xl px-5 text-center sm:px-6">
           <Reveal>
@@ -314,7 +317,7 @@ export default function HomePage() {
               with a short plan and a next step, whether or not we work together.
             </p>
             <Link
-              href={env.calendlyUrl}
+              href={env.bookingUrl}
               className="mt-9 inline-flex rounded-lg bg-cobalt px-7 py-4 text-[15px] font-semibold text-white shadow-[0_12px_36px_rgba(43,79,224,0.4)] transition hover:-translate-y-0.5 hover:bg-cobalt-soft"
             >
               Book your free 30-minute review

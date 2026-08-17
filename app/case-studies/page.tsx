@@ -35,8 +35,8 @@ export default function CaseStudiesPage() {
                 </p>
                 <p className="mt-3 text-[16px] leading-7 text-muted">
                   Thousand Oaks Disc Center is my family’s practice. That’s how
-                  I had access to the real before-and-after numbers instead of
-                  an estimate. Measured, not reconstructed.
+                  I had access to the real numbers instead of an estimate.
+                  Measured from the clinic’s own inbox, not estimated.
                 </p>
                 <h2 className="mt-5 font-display text-display-md text-ink">
                   Instant response for new patient inquiries
@@ -55,9 +55,9 @@ export default function CaseStudiesPage() {
               </div>
               <div className="flex flex-col justify-center gap-5 border-t border-line bg-bone-2/60 p-8 sm:p-10 md:border-l md:border-t-0">
                 {[
-                  ['Before', 'Inquiries waited hours for a manual reply'],
-                  ['After', 'Booking link sent the moment the form is submitted'],
-                  ['Result', 'Consultations booked from the first response']
+                  ['Median form to booked', '2 minutes'],
+                  ['Consultations booked', '21 in the first 30 days'],
+                  ['Coverage', 'Nights, weekends, before the office opens']
                 ].map(([k, v]) => (
                   <div key={k}>
                     <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-ash">
@@ -82,7 +82,7 @@ export default function CaseStudiesPage() {
             plan and a next step, whether or not we work together.
           </p>
           <Link
-            href={env.calendlyUrl}
+            href={env.bookingUrl}
             className="mt-8 inline-flex rounded-lg bg-cobalt px-7 py-4 text-[15px] font-semibold text-white shadow-[0_12px_36px_rgba(43,79,224,0.4)] transition hover:-translate-y-0.5 hover:bg-cobalt-soft"
           >
             Book your free 30-minute review

@@ -15,8 +15,8 @@ export const metadata: Metadata = {
 }
 
 const SNAPSHOT = [
-  ['Before', 'Inquiries waited hours for a manual reply'],
-  ['After', 'Booking link sent the moment the form is submitted'],
+  ['What happens now', 'Booking link sent the moment the form is submitted'],
+  ['Coverage', 'Nights, weekends, and before the office opens'],
   ['Result', 'Consultations booked from the first response']
 ]
 
@@ -45,39 +45,25 @@ export default function ChiropracticClinicCaseStudyPage() {
             <p className="mt-5 max-w-[62ch] text-base leading-8 text-muted sm:text-lg">
               {caseStudy.subtitle}
             </p>
+            <p className="mt-6 max-w-[62ch] font-display text-display-sm text-ink">
+              {caseStudy.headline}
+            </p>
           </div>
 
-          <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-4">
-            <div>
-              <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-ash">
-                Before
-              </p>
-              <p className="mt-1 font-display text-display-lg text-ash-dark">
-                Hours
-              </p>
-            </div>
-            <svg
-              className="h-5 w-5 flex-none text-ash"
-              viewBox="0 0 24 24"
-              fill="none"
-              aria-hidden
-            >
-              <path
-                d="M4 12h16m0 0-6-6m6 6-6 6"
-                stroke="currentColor"
-                strokeWidth="1.8"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-            <div>
-              <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-cobalt">
-                After
-              </p>
-              <p className="mt-1 font-display text-display-lg text-ink">
-                41 seconds
-              </p>
-            </div>
+          <p className="mt-10 max-w-[62ch] text-[15.5px] leading-7 text-ash-dark">
+            {caseStudy.metricsIntro}
+          </p>
+          <div className="mt-6 grid max-w-3xl gap-x-16 gap-y-8 sm:grid-cols-2">
+            {caseStudy.metrics.map((metric) => (
+              <div key={metric.label} className="border-t border-line pt-5">
+                <p className="text-[16.5px] font-medium leading-6 text-ink">
+                  {metric.label}
+                </p>
+                <p className="mt-2.5 font-display text-display-lg text-ink">
+                  {metric.value}
+                </p>
+              </div>
+            ))}
           </div>
 
           <div className="mt-10 overflow-hidden rounded-2xl border border-line bg-white shadow-soft">
@@ -97,6 +83,10 @@ export default function ChiropracticClinicCaseStudyPage() {
           </div>
 
           <PatientThread />
+
+          <p className="mt-8 max-w-[62ch] border-l-2 border-cobalt pl-5 text-[16px] leading-8 text-ink">
+            {caseStudy.namedMoment}
+          </p>
         </div>
       </section>
 
@@ -140,13 +130,22 @@ export default function ChiropracticClinicCaseStudyPage() {
 
             <div className="border-t border-line pt-10">
               <h2 className="font-display text-display-md text-ink">
+                How this was measured
+              </h2>
+              <p className="mt-4 text-base leading-8 text-muted">
+                {caseStudy.howMeasured}
+              </p>
+            </div>
+
+            <div className="border-t border-line pt-10">
+              <h2 className="font-display text-display-md text-ink">
                 Where this one came from
               </h2>
               <p className="mt-4 text-base leading-8 text-muted">
                 {caseStudy.keyInsight}
               </p>
               <Link
-                href={env.calendlyUrl}
+                href={env.bookingUrl}
                 className="mt-6 inline-flex rounded-lg bg-cobalt px-6 py-3.5 text-[15px] font-semibold text-white transition hover:-translate-y-0.5 hover:bg-cobalt-soft"
               >
                 Book your free 30-minute review

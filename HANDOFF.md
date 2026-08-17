@@ -34,8 +34,10 @@ npm run dev      # http://localhost:3000
    5 clips, compress each to ~2-3 MB 720p, pre-trim the clinic clip to start at
    its 30s mark, drop them in `public/video/`, and point the `CLIPS` array in
    `Hero.tsx` at the local paths.
-2. **Set env vars** in Vercel: `NEXT_PUBLIC_CALENDLY_URL` (your real link is the
+2. **Set env vars** in Vercel: `NEXT_PUBLIC_BOOKING_URL` (the Dub short link is the
    default fallback), `NEXT_PUBLIC_CONTACT_EMAIL`, `NEXT_PUBLIC_GA_ID`.
+   Note: `NEXT_PUBLIC_*` values are inlined at build time, so changing one in Vercel
+   does nothing until a new build ships.
 
 ## Push to your repo
 From a clean clone of your repo, copy these folders/files over the old ones:
