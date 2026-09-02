@@ -15,8 +15,8 @@ export const metadata: Metadata = {
 }
 
 const SNAPSHOT = [
-  ['What happens now', 'Booking link sent the moment the form is submitted'],
-  ['Coverage', 'Nights, weekends, and before the office opens'],
+  ['What happened', 'Booking link sent the moment the form was submitted'],
+  ['Coverage', 'Nights, weekends, and before the office opened'],
   ['Result', 'Consultations booked from the first response']
 ]
 

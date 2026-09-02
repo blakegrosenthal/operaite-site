@@ -42,9 +42,9 @@ export default function CaseStudiesPage() {
                   Instant response for new patient inquiries
                 </h2>
                 <p className="mt-4 text-[16px] leading-7 text-ash-dark">
-                  New inquiries now get an immediate message with a booking
-                  link, so patients schedule in minutes instead of waiting on a
-                  manual reply.
+                  For its first 30 measured days, new inquiries got an immediate
+                  message with a booking link, so patients scheduled in minutes
+                  instead of waiting on a manual reply.
                 </p>
                 <Link
                   href="/case-studies/chiropractic-clinic"
@@ -57,7 +57,45 @@ export default function CaseStudiesPage() {
                 {[
                   ['Median form to booked', '2 minutes'],
                   ['Consultations booked', '21 in the first 30 days'],
-                  ['Coverage', 'Nights, weekends, before the office opens']
+                  ['Coverage', 'Nights, weekends, before the office opened']
+                ].map(([k, v]) => (
+                  <div key={k}>
+                    <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-ash">
+                      {k}
+                    </p>
+                    <p className="mt-1 text-[16px] leading-6 text-ink">{v}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-8 overflow-hidden rounded-3xl border border-line bg-white shadow-soft">
+            <div className="grid gap-0 md:grid-cols-[1fr_0.9fr]">
+              <div className="p-8 sm:p-10">
+                <p className="text-[12px] font-semibold uppercase tracking-[0.18em] text-cobalt">
+                  Research · Conejo Valley, CA
+                </p>
+                <h2 className="mt-5 font-display text-display-md text-ink">
+                  Who answers? Lead response at 86 home-service businesses
+                </h2>
+                <p className="mt-4 text-[16px] leading-7 text-ash-dark">
+                  I posed as a homeowner and sent one inquiry to 86 owner-operated
+                  businesses across nine trades, then recorded the first human
+                  contact by email, text, call or voicemail. Nobody is named.
+                </p>
+                <Link
+                  href="/research/conejo-valley-lead-response"
+                  className="mt-6 inline-flex items-center gap-2 text-[15px] font-semibold text-cobalt transition hover:gap-3"
+                >
+                  Read the study <span aria-hidden>→</span>
+                </Link>
+              </div>
+              <div className="flex flex-col justify-center gap-5 border-t border-line bg-bone-2/60 p-8 sm:p-10 md:border-l md:border-t-0">
+                {[
+                  ['Never responded, any channel', '40% (34 of 84)'],
+                  ['Median time to a human', '12.6 hours, among those who replied'],
+                  ['Auto-acks followed by a person within two hours', '5 of 16']
                 ].map(([k, v]) => (
                   <div key={k}>
                     <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-ash">

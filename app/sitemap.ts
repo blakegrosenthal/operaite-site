@@ -10,6 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/self-check',
     '/case-studies',
     '/case-studies/chiropractic-clinic',
+    '/research/conejo-valley-lead-response',
     '/privacy',
     '/terms'
   ]
